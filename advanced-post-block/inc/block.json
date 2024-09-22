@@ -1,0 +1,536 @@
+{
+	"apiVersion": 1,
+	"name": "ap-block/posts",
+	"title": "Advanced Posts",
+	"description": "Elevate Your Posts Display with Advanced Layouts",
+	"category": "APBlock",
+	"keywords": [
+		"show posts",
+		"embed blog posts",
+		"custom posts"
+	],
+	"textdomain": "advanced-post-block",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"layout": {
+			"type": "string",
+			"default": "grid"
+		},
+		"subLayout": {
+			"type": "string",
+			"default": "default"
+		},
+		"columns": {
+			"type": "object",
+			"default": {
+				"desktop": 3,
+				"tablet": 2,
+				"mobile": 1
+			}
+		},
+		"columnGap": {
+			"type": "number",
+			"default": 15
+		},
+		"rowGap": {
+			"type": "number",
+			"default": 15
+		},
+		"isContentEqualHight": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderHeight": {
+			"type": "string",
+			"default": "350px"
+		},
+		"content": {
+			"type": "object",
+			"default": {
+				"height": "auto"
+			}
+		},
+		"postType": {
+			"type": "string",
+			"default": "post"
+		},
+		"selectedTaxonomies": {
+			"type": "object",
+			"default": {}
+		},
+		"selectedCategories": {
+			"type": "array",
+			"default": []
+		},
+		"selectedTags": {
+			"type": "array",
+			"default": []
+		},
+		"isPostsPerPageAll": {
+			"type": "boolean",
+			"default": false
+		},
+		"postsPerPage": {
+			"type": "number",
+			"default": 12
+		},
+		"postsOrderBy": {
+			"type": "string",
+			"default": "date"
+		},
+		"postsOrder": {
+			"type": "string",
+			"default": "desc"
+		},
+		"postsOffset": {
+			"type": "number",
+			"default": 0
+		},
+		"postsInclude": {
+			"type": "array",
+			"default": []
+		},
+		"postsExclude": {
+			"type": "array",
+			"default": []
+		},
+		"isExcludeCurrent": {
+			"type": "boolean",
+			"default": false
+		},
+		"isPagination": {
+			"type": "boolean",
+			"default": false
+		},
+		"paginationCurrentPage": {
+			"type": "number",
+			"default": 1
+		},
+		"paginationPrevLabel": {
+			"type": "string",
+			"default": "Prev"
+		},
+		"paginationNextLabel": {
+			"type": "string",
+			"default": "Next"
+		},
+		"paginationColors": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "#4527a4"
+			}
+		},
+		"paginationHovColors": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "#8344c5"
+			}
+		},
+		"paginationPadding": {
+			"type": "object",
+			"default": {
+				"vertical": "8px",
+				"horizontal": "15px"
+			}
+		},
+		"paginationSpacing": {
+			"type": "string",
+			"default": "15px"
+		},
+		"contentAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"contentBG": {
+			"type": "object",
+			"default": {
+				"color": "#f4f2fc"
+			}
+		},
+		"contentPadding": {
+			"type": "object",
+			"default": {
+				"vertical": "20px",
+				"horizontal": "25px"
+			}
+		},
+		"border": {
+			"type": "object",
+			"default": {
+				"radius": "5px"
+			}
+		},
+		"sliderIsLoop": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderIsTouchMove": {
+			"type": "boolean",
+			"default": false
+		},
+		"sliderIsAutoplay": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderAutoplayOptions": {
+			"type": "object",
+			"default": {
+				"delay": 1.5
+			}
+		},
+		"sliderSpeed": {
+			"type": "number",
+			"default": 1.5
+		},
+		"sliderEffect": {
+			"type": "string",
+			"default": "slide"
+		},
+		"sliderIsPage": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderIsPageClickable": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderIsPageDynamic": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderPageColor": {
+			"type": "string",
+			"default": "#4527a4"
+		},
+		"sliderPageWidth": {
+			"type": "string",
+			"default": "15px"
+		},
+		"sliderPageHeight": {
+			"type": "string",
+			"default": "15px"
+		},
+		"sliderPageBorder": {
+			"type": "object",
+			"default": {
+				"radius": "50%"
+			}
+		},
+		"sliderIsPrevNext": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderPrevNextColor": {
+			"type": "string",
+			"default": "#4527a4"
+		},
+		"tickerDirection": {
+			"type": "string",
+			"default": "up"
+		},
+		"tickerSpeed": {
+			"type": "string",
+			"default": "slow"
+		},
+		"tickerInterval": {
+			"type": "number",
+			"default": 2000
+		},
+		"tickerHeight": {
+			"type": "string",
+			"default": "0px"
+		},
+		"tickerVisible": {
+			"type": "number",
+			"default": 3
+		},
+		"tickerIsMousePause": {
+			"type": "boolean",
+			"default": true
+		},
+		"elementsSort": {
+			"type": "array",
+			"default": [
+				"title",
+				"meta"
+			]
+		},
+		"isFImg": {
+			"type": "boolean",
+			"default": true
+		},
+		"fImgSize": {
+			"type": "string",
+			"default": "full"
+		},
+		"fImgFitting": {
+			"type": "string",
+			"default": "cover"
+		},
+		"isFImgLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"isTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"isTitleLink": {
+			"type": "boolean",
+			"default": true
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {
+				"fontFamily": "Roboto",
+				"fontSize": {
+					"desktop": 25,
+					"tablet": 22,
+					"mobile": 20
+				},
+				"googleFontLink": "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			}
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#4527a4"
+		},
+		"titleMargin": {
+			"type": "object",
+			"default": {
+				"side": 4,
+				"bottom": "15px"
+			}
+		},
+		"isMeta": {
+			"type": "boolean",
+			"default": true
+		},
+		"isMetaAuthor": {
+			"type": "boolean",
+			"default": true
+		},
+		"isMetaAuthorLink": {
+			"type": "boolean",
+			"default": true
+		},
+		"metaAuthorIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"isMetaDate": {
+			"type": "boolean",
+			"default": true
+		},
+		"metaDateFormat": {
+			"type": "string",
+			"default": "M j, Y"
+		},
+		"metaDateIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"isMetaCategory": {
+			"type": "boolean",
+			"default": true
+		},
+		"metaCategoryIn": {
+			"type": "string",
+			"default": "content"
+		},
+		"metaCategoryIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"metaTaxonomies": {
+			"type": "object",
+			"default": {
+				"selected": []
+			}
+		},
+		"isMetaReadTime": {
+			"type": "boolean",
+			"default": false
+		},
+		"metaReadTimeIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"isMetaReadTimeSec": {
+			"type": "boolean",
+			"default": false
+		},
+		"metaReadTimeLabel": {
+			"type": "string",
+			"default": "Min read"
+		},
+		"isMetaComment": {
+			"type": "boolean",
+			"default": false
+		},
+		"metaCommentIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"metaTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 13,
+					"tablet": 13,
+					"mobile": 13
+				},
+				"textTransform": "uppercase"
+			}
+		},
+		"metaTextColor": {
+			"type": "string",
+			"default": "#333"
+		},
+		"metaLinkColor": {
+			"type": "string",
+			"default": "#8344c5"
+		},
+		"metaIconColor": {
+			"type": "string",
+			"default": "#4527a4"
+		},
+		"metaColorsOnImage": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "#8344c5"
+			}
+		},
+		"metaMargin": {
+			"type": "object",
+			"default": {
+				"side": 4,
+				"bottom": "15px"
+			}
+		},
+		"isExcerpt": {
+			"type": "boolean",
+			"default": true
+		},
+		"isExcerptFromContent": {
+			"type": "boolean",
+			"default": false
+		},
+		"isEllipsisOnExcerpt": {
+			"type": "boolean",
+			"default": false
+		},
+		"excerptLength": {
+			"type": "number",
+			"default": 25
+		},
+		"excerptAlign": {
+			"type": "string",
+			"default": "justify"
+		},
+		"excerptTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 15,
+					"tablet": 15,
+					"mobile": 15
+				}
+			}
+		},
+		"excerptColor": {
+			"type": "string",
+			"default": "#333"
+		},
+		"excerptMargin": {
+			"type": "object",
+			"default": {
+				"side": 4,
+				"bottom": "10px"
+			}
+		},
+		"isReadMore": {
+			"type": "boolean",
+			"default": true
+		},
+		"readMorePosition": {
+			"type": "string",
+			"default": "auto"
+		},
+		"readMoreLabel": {
+			"type": "string",
+			"default": "Read More"
+		},
+		"isLinkNewTab": {
+			"type": "boolean",
+			"default": false
+		},
+		"readMoreAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"readMoreTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 14,
+					"tablet": 14,
+					"mobile": 14
+				},
+				"textTransform": "uppercase",
+				"fontWeight": 600
+			}
+		},
+		"readMoreColors": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "#8344c5"
+			}
+		},
+		"readMoreHovColors": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "#4527a4"
+			}
+		},
+		"readMorePadding": {
+			"type": "object",
+			"default": {
+				"vertical": "12px",
+				"horizontal": "35px"
+			}
+		},
+		"readMoreBorder": {
+			"type": "object",
+			"default": {
+				"radius": "3px"
+			}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"columns": {
+				"desktop": 1,
+				"tablet": 1,
+				"mobile": 1
+			}
+		}
+	},
+	"editorScript": "file:../dist/editor.js"
+}

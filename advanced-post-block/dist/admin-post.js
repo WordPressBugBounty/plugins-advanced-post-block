@@ -1,0 +1,2 @@
+!function(){"use strict";window.copyBPlAdminShortcode=function(o){var e=document.querySelector("#bPlAdminShortcode-"+o+" input"),n=document.querySelector("#bPlAdminShortcode-"+o+" .tooltip");e.select(),e.setSelectionRange(0,30),document.execCommand("copy"),n.innerHTML=wp.i18n.__("Copied Successfully!","advanced-post-block"),setTimeout((function(){n.innerHTML=wp.i18n.__("Copy To Clipboard","advanced-post-block")}),1500)}}();
+//# sourceMappingURL=admin-post.js.map

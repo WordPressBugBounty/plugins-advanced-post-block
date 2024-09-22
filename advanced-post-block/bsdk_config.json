@@ -1,0 +1,12 @@
+{
+	"prefix": "apb_pro",
+	"blockHandler": "ap-block-posts-editor-script",
+	"permalinks": [
+		"bpapb"
+	],
+	"features": {
+		"license": true,
+		"optIn": true
+	},
+	"isBlock": true
+}
