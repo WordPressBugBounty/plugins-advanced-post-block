@@ -56,14 +56,42 @@ class APBCustomPost{
 
 	function onAddShortcode( $atts ) {
 		$post_id = $atts['id'];
-
 		$post = get_post( $post_id );
+
+		if ( !$post ) {
+			return '';
+		}
+
+		if ( post_password_required( $post ) ) {
+			return get_the_password_form( $post );
+		}
+
+		switch ( $post->post_status ) {
+			case 'publish':
+				return $this->displayContent( $post );
+
+			case 'private':
+				if (current_user_can('read_private_posts')) {
+					return $this->displayContent( $post );
+				}
+				return '';
+
+			case 'draft':
+			case 'pending':
+			case 'future':
+				if ( current_user_can( 'edit_post', $post_id ) ) {
+					return $this->displayContent( $post );
+				}
+				return '';
+
+			default:
+				return '';
+		}
+	}
+
+	function displayContent( $post ){
 		$blocks = parse_blocks( $post->post_content );
-
-		ob_start();
-		echo render_block( $blocks[0] );
-
-		return ob_get_clean();
+		return render_block( $blocks[0] );
 	}
 
 	function manageAPBPostsColumns( $defaults ) {
@@ -92,7 +120,7 @@ class APBCustomPost{
 	function orderSubMenu( $menu_ord ){
 		global $submenu;
 
-		$sMenu = $submenu['edit.php?post_type=apb'];
+		$sMenu = $submenu['edit.php?post_type=apb'] ?? [];
 		$arr = [];
 		if( apbIsPremium() ){
 			if( isset( $sMenu[5] ) ){
