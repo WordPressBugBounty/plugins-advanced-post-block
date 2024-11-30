@@ -39,12 +39,15 @@ class BSDK{
             require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
         }
 
-        $plugin_data = \get_plugin_data( $this->__FILE__ );
-        $this->plugin_name = $plugin_data['Name'];
-        $this->version = $plugin_data['Version'];
+        add_action('init', [$this, 'init']);
     }
 
-    // function 
+    // function
+	function init(){
+		$plugin_data = \get_plugin_data( $this->__FILE__ );
+        $this->plugin_name = $plugin_data['Name'];
+        $this->version = $plugin_data['Version'];
+	}
 
     function __($name){
         $data = get_option($name);
