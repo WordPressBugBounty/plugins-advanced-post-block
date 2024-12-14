@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 1.15.0
+ * Version: 1.15.1
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -23,7 +23,7 @@ if ( function_exists( 'apb_fs' ) || function_exists( 'apb_init' ) ) {
 		}
 	} );
 }else{
-	define( 'APB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.15.0' );
+	define( 'APB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.15.1' );
 	define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
 	define( 'APB_HAS_FREE', 'advanced-post-block/plugin.php' === plugin_basename( __FILE__ ) );
@@ -150,8 +150,8 @@ if ( function_exists( 'apb_fs' ) || function_exists( 'apb_init' ) ) {
 		function getPosts( $attributes, $pageNumber = 1 ){
 			extract( $attributes );
 
-			$attributes['isPostsPerPageAll'] = 'true' === $isPostsPerPageAll;
-			$attributes['isExcludeCurrent'] = 'true' === $isExcludeCurrent;
+			$attributes['isPostsPerPageAll'] = $isPostsPerPageAll || 'true' === $isPostsPerPageAll;
+			$attributes['isExcludeCurrent'] = $isExcludeCurrent || 'true' === $isExcludeCurrent;
 
 			$newArgs = wp_parse_args( [ 'offset' => ( $postsPerPage * ( $pageNumber - 1 ) ) + $postsOffset ], $this->query( $attributes ) );
 			$posts = APB\Inc\Functions::arrangedPosts(
