@@ -51,7 +51,7 @@ class Functions{
 		return apbIsPremium() ? apply_filters( 'apb_excerpt_filter', $plainText, $content ) : $plainText;
 	}
 
-	static function arrangedPosts ( $posts, $postType, $fImgSize = 'full', $metaDateFormat = 'M j, Y', $excerptLength = 25 ) {
+	static function arrangedPosts ( $posts, $postType, $fImgSize = 'full', $metaDateFormat = 'M j, Y', $isExcerptFromContent = false, $excerptLength = 25 ) {
 		$arranged = [];
 
 		$excerptLength = (int)$excerptLength;
@@ -82,14 +82,14 @@ class Functions{
 				$taxonomies[$slug] = $links;
 			}
 
-			$arranged[] = [
+			$contentOrExcerptArr = $isExcerptFromContent ? [ 'content' => $excerptLength > -1 ? wp_trim_words( self::applyAPBFilter( $post->post_content ), $excerptLength, '' ) : self::applyAPBFilter( $post->post_content ) ] : [ 'excerpt' => self::applyAPBFilter( $post->post_excerpt ) ];
+
+			$arranged[] = array_merge( [
 				'id' => $id,
 				'link' => get_permalink( $post ),
 				'name' => $post->post_name,
 				'thumbnail' => $thumbnail,
 				'title' => $post->post_title,
-				'excerpt' => self::applyAPBFilter( $post->post_excerpt ),
-				'content' => $excerptLength > -1 ? wp_trim_words( self::applyAPBFilter( $post->post_content ), $excerptLength, '' ) : self::applyAPBFilter( $post->post_content ),
 				'author' => [
 					'name' => get_the_author_meta( 'display_name', $post->post_author ),
 					'link' => get_author_posts_url( $post->post_author )
@@ -111,7 +111,7 @@ class Functions{
 					'sec' => floor( $contentWords % 200 / ( 200 / 60 ) )
 				],
 				'status' => $post->post_status
-			];
+			], $contentOrExcerptArr );
 		}
 
 		return $arranged;

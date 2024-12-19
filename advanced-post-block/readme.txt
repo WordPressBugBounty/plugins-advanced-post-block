@@ -5,7 +5,7 @@ Tags: block, show posts, display blog posts, embed custom posts, Gutenberg posts
 Requires at least: 6.5+
 Tested up to: 6.7.1
 Requires PHP: 7.1
-Stable tag: 1.15.1
+Stable tag: 1.15.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -244,6 +244,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.15.2 - 19 Dec 2024 =
+* Only load essential content or excerpt.
 
 = 1.15.1 - 14 Dec 2024 =
 * Current Post Exclude option for every condition.
