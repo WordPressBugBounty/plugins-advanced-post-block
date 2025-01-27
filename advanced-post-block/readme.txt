@@ -1,11 +1,11 @@
 === Advanced Post Block- Great solution for displaying Posts ===
 Contributors: bplugins, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, show posts, display blog posts, embed custom posts, Gutenberg posts
+Tags: block, show posts, display posts, custom posts, embed posts
 Requires at least: 6.5+
 Tested up to: 6.7.1
 Requires PHP: 7.1
-Stable tag: 1.15.2
+Stable tag: 1.15.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,19 +13,21 @@ Enhance Your Post Displays in Gutenberg with Advanced Layouts. Create Grids, Mas
 
 == Description ==
 
-Advanced Post Block is a powerful and flexible block plugin that allows you to display your WordPress posts and pages in customizable and engaging layouts. With this plugin, you can create advanced post listings, highlight specific posts, and showcase your content in unique and interactive ways.
+Advanced Post Block is a powerful and flexible block plugin that allows you to display posts, display blog posts, and embed custom posts in a fully customizable and responsive layout. Whether you want to showcase your recent posts, popular posts, featured posts, and more, this plugin gives you the tools to easily design a dynamic and interactive wordpress posts display.
 
-The plugin includes a range of customizable blocks that you can use to create dynamic post listings, such as recent posts, popular posts, and featured posts. You can also customize the post layout with a range of settings, including post order, post excerpt length, and thumbnail size, to create a layout that best suits your needs.
+Use a variety of customizable blocks to create an impressive list of posts tailored to your needs. Adjust settings such as post order, excerpt length, and thumbnail size to create a layout that suits your style and goals. Advanced Post Block allows you to display blog posts and embed posts seamlessly, giving your WordPress site a polished and professional look. The plugin also includes a powerful post filtering system that allows you to filter posts by category, tag, author, and more. This ensures that your audience sees the most relevant content, making it easy to display posts that are specifically tailored to their interests.
 
-Advanced Post Block also includes a powerful post filter system that allows you to filter posts by category, tag, author, and more. This makes it easy to create post listings that are specific to your content and your users' interests.
+Advanced Post Block features an intuitive Gutenberg block interface that makes it easy to add and customize your post list. Simply select a block from the Gutenberg library, choose your preferred post display style, and easily customize the settings.
 
-The plugin includes an intuitive block interface that makes it easy to add and customize post listings in your content. Simply select the Advanced Post Block from the Gutenberg block library, choose the post listing style you want, and customize the settings to your liking.
+The plugin is optimized for performance and security, and designed to have minimal impact on your website speed. All post listings are automatically cleaned and verified so your content remains safe.
 
-Advanced Post Block is also optimized for performance and security. The plugin is designed to minimize its impact on your site's performance, and all post listings are automatically sanitized and validated to prevent security vulnerabilities.
-
-Overall, Advanced Post Block is a powerful and essential block plugin for anyone looking to create advanced and customizable post listings on their WordPress website. Try it out today and take your content to the next level!
+Whether you're a blogger, marketer or developer, Advanced Post Block is the ultimate solution for creating advanced, customizable post layouts. Try it now to take your content to the next level and transform the way your blog posts are displayed on your WordPress site.
 
 [Plugin Demo](https://bplugins.com/products/advanced-post-block) | [Documentation](https://bplugins.com/docs/advanced-post-block) | [Get Pro Version](https://bplugins.com/products/advanced-post-block/#pricing)
+
+
+### Video Tutorial
+https://www.youtube.com/watch?v=milYZrqLJsE
 
 
 ### Advanced Post Block Features
@@ -244,6 +246,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.15.3 - 27 Jan 2025 =
+* Update SDK.
 
 = 1.15.2 - 19 Dec 2024 =
 * Only load essential content or excerpt.
@@ -514,4 +519,4 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Compatible with PHP 5.4
 
 = 1.0 =
-* Initial Release
+* Initial Release.

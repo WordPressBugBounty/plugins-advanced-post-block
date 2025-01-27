@@ -2,7 +2,7 @@
 class BSDK{
 
     protected $prefix = '';
-    protected $config = '';
+    protected $config = null;
     protected $base_name = null;
     protected $plugin_name = '';
     protected $product = "";

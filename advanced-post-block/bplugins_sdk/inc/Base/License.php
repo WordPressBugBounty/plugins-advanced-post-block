@@ -125,7 +125,7 @@ class BSDKLicense extends BSDK{
     }
 
     function syncLicense(){
-        $nonce = sanitize_text_field( $_POST['_wpnonce'] ) ?? null;
+        $nonce = sanitize_text_field( $_POST['_wpnonce'] ?? null );
 
 		if( !wp_verify_nonce( $nonce, 'wp_ajax' )){
 			wp_send_json_error( 'Invalid Request' );
