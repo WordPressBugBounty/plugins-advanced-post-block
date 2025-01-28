@@ -5,7 +5,7 @@ Tags: block, show posts, display posts, custom posts, embed posts
 Requires at least: 6.5+
 Tested up to: 6.7.1
 Requires PHP: 7.1
-Stable tag: 1.15.3
+Stable tag: 1.15.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -246,6 +246,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.15.4 - 28 Jan 2025 =
+* Update SDK.
 
 = 1.15.3 - 27 Jan 2025 =
 * Update SDK.

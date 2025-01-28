@@ -18,12 +18,12 @@ if ( ! defined( 'WP_B__DIR' ) ) {
 
 if ( ! defined( 'WP_B__CONFIG' ) ) {
     define( 'WP_B__CONFIG', [
-        'prefix' => '',
-        'blockHandler' => false,
-        'permalinks' => [],
+        'prefix' => 'apb_pro',
+        'blockHandler' => 'ap-block-posts-editor-script',
+        'permalinks' => [ 'bpapb' ],
         'features' => [
-            'license' => false,
-            'optIn' => false
+            'license' => true,
+            'optIn' => true
         ],
         "isBlock" => true
     ] );

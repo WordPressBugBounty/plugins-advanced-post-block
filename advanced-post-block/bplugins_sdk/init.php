@@ -17,30 +17,15 @@ if(!class_exists('BPlugins_SDK')){
 
         protected $file = null;
         public $prefix = '';
-        protected $config = [];
+        protected $config = null;
         protected $__FILE__ = __FILE__;
         private $lc = null;
         
-        function __construct($__FILE__, $config = null){
+        function __construct($__FILE__, $config = []){
             $this->__FILE__ = $__FILE__;
-            $config_file = plugin_dir_url( $this->__FILE__ ).'bsdk_config.json';
 
-            if($config){
-                $this->config = (object) wp_parse_args(json_decode(wp_json_encode($config)), WP_B__CONFIG);
-            }else {
-				$response = wp_remote_get($config_file);
-                $this->config =  (object) wp_parse_args(json_decode(wp_remote_retrieve_body($response)), WP_B__CONFIG);
+            $this->config = (object) wp_parse_args(json_decode(wp_json_encode($config)), WP_B__CONFIG);
 
-                if(!$this->config){
-                    $config_file = plugin_dir_url( $this->__FILE__ ).basename(__DIR__).'/config.json';
-                    if(file_exists($config_file)){
-                        $response = wp_remote_get($config_file);
-                        $this->config =  (object) wp_parse_args(json_decode(wp_remote_retrieve_body($response)), WP_B__CONFIG);
-                    }else {
-                        $this->config =  (object) wp_parse_args($config, WP_B__CONFIG);
-                    }
-                }
-            }
 			$this->config->features = (object) $this->config->features;
 
             $this->prefix = $this->config->prefix ?? '';
