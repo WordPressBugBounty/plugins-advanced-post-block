@@ -1,103 +1,174 @@
 === Advanced Post Block- Great solution for displaying Posts ===
 Contributors: bplugins, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, show posts, display posts, custom posts, embed posts
+Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 Requires PHP: 7.1
-Stable tag: 1.15.4
+Stable tag: 1.16.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Enhance Your Post Displays in Gutenberg with Advanced Layouts. Create Grids, Masonry, Sliders, or Tickers Easily. Transform your posts now!
+Advanced Post Block lets you add dynamic post grids, lists, sliders, and tickers. Filter content by category, tag, author, or custom post type.
 
 == Description ==
-
-Advanced Post Block is a powerful and flexible block plugin that allows you to display posts, display blog posts, and embed custom posts in a fully customizable and responsive layout. Whether you want to showcase your recent posts, popular posts, featured posts, and more, this plugin gives you the tools to easily design a dynamic and interactive wordpress posts display.
-
-Use a variety of customizable blocks to create an impressive list of posts tailored to your needs. Adjust settings such as post order, excerpt length, and thumbnail size to create a layout that suits your style and goals. Advanced Post Block allows you to display blog posts and embed posts seamlessly, giving your WordPress site a polished and professional look. The plugin also includes a powerful post filtering system that allows you to filter posts by category, tag, author, and more. This ensures that your audience sees the most relevant content, making it easy to display posts that are specifically tailored to their interests.
-
-Advanced Post Block features an intuitive Gutenberg block interface that makes it easy to add and customize your post list. Simply select a block from the Gutenberg library, choose your preferred post display style, and easily customize the settings.
-
-The plugin is optimized for performance and security, and designed to have minimal impact on your website speed. All post listings are automatically cleaned and verified so your content remains safe.
-
-Whether you're a blogger, marketer or developer, Advanced Post Block is the ultimate solution for creating advanced, customizable post layouts. Try it now to take your content to the next level and transform the way your blog posts are displayed on your WordPress site.
-
-[Plugin Demo](https://bplugins.com/products/advanced-post-block) | [Documentation](https://bplugins.com/docs/advanced-post-block) | [Get Pro Version](https://bplugins.com/products/advanced-post-block/#pricing)
+**​The Ultimate Gutenberg Block to Display Posts, Pages, and Custom Content Beautifully**
 
 
-### Video Tutorial
-https://www.youtube.com/watch?v=milYZrqLJsE
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) | [**Documentation**](https://bplugins.com/docs/advanced-post-block/) | [**Pricing**](https://bplugins.com/products/advanced-post-block/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/advanced-post-block/#demos)
+
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) is a flexible plugin for displaying WordPress posts, pages, or custom post types using the Gutenberg editor. It offers multiple layouts and filtering options, making it useful for content creators who want greater control over how content appears on the front end.
+
+This plugin is suitable for anyone who wants to present content in a structured, responsive format using native WordPress blocks. It allows fine control over content queries, metadata visibility, featured image handling, and more, without the need for coding.
 
 
-### Advanced Post Block Features
-- **Layouts:** Customize the layout of posts to options such as Grid, Masonry, Slider, and Ticker.
+### Layout Options
 
--**Sub Layouts:** Combine the layout with these sub-layouts: Default, Title Meta, Left Image, Right Image, Overlay Content, Overlay Content Hover, and Overlay Box.
+Choose from various display styles:
 
-- **Responsive:** Works great with any devices with any screen size.
+- **Grid:** Arrange posts in a column-based format.
 
-- **Post Query:** You can filter your posts by queries like post type, categories, posts per page, and post order.
+- **Masonry:** Automatically position posts in a staggered, flowing layout.
 
-- **Elements:** Show/Hide and customize post elements (image, title, meta, excerpt, read more).
+- **Slider:** Create carousel-style post sections.
 
-- **Content:** Custom typography with margin and padding spacing.
+- **Ticker:** Show content as a scrolling headline list.
 
-- **Feature Image:** Show/Hide the feature image and also enable/disable the link.
-
-- **Post Title:** Show/Hide the post title, make it linkable and change typography.
-
-- **Meta Data:** Custom Typography with customizable Icons, Links, and Text color for metadata.
-
-- **Read More Link:** Custom read more label, normal and hover color with typography.
+Each layout includes sub-layouts such as Title Meta, Left or Right Image, and Overlay Content.
 
 
-### Advanced Post Block Pro Features
-- **Layouts:** Check out more layouts and sub-layouts.
+### Filtering and Query Controls
 
-- **Display Pages:** Effortlessly showcase pages, just like you do with posts.
+- Easily select and organize the content you want to display:
 
-- **Tag Filter:** Post filter by tags (only for default post).
+- Display standard posts, pages, or custom post types.
 
-- **Custom Taxonomy Filter:** Custom Taxonomy filter for post and custom posts.
+- Filter by categories, tags, or authors.
 
-- **Post Offset:** Offset to exclude first N posts.
+- Control post order and offset.
 
-- **Include or Exclude Posts:** Include or Exclude the posts by IDs.
 
-- **Exclude Current Post:** If you use this block in a post and that post type is selected post then you can exclude the post.
+### Design Customization
 
-- **Pagination:** Add custom pagination bottom of the posts.
+Fine-tune the look and feel of your content listings:
 
-- **Sort Elements:** Sort the title and meta elements.
+- Show or hide featured images, and choose whether they link to the post.
 
-- **Meta Data Icon:** Custom icon for metadata.
+- Customize post titles, excerpts, and read more links.
 
-- **Meta Author Link Toggle:** Show meta author with or without link.
+- Display post metadata such as date, author, and categories, with control over visibility and styling.
 
-- **Taxonomies in Meta:** Display taxonomies within the metadata, including tags.
 
-- **Reading Time:** Show post reading time in the meta area.
+### Responsive and Performance-Focused
 
-- **Excerpt from Content:** Show excerpt from main content.
+All layouts are optimized for mobile and desktop devices. The plugin is built to load efficiently and minimize impact on performance.
 
-- **Ticker Layout Options:** Options for ticker post layout.
 
-- **Feature Image Size:** Options to set feature image size.
+### Key Features – Free Version
 
-- **Read More Position:** Options to set the position for the Read More button.
+Everything you need to build a clean and modern content display:
 
-- **ShortCode Powered:** Shortcode option to use anywhere.
+- **Multiple Layouts:** Grid, Masonry, Ticker, and Slider views.
 
-- **Update Post Query:** Update Post Query using apb_query filter.
+- **Sub-layout Options:** Choose from Left/Right Image, Overlay Box, Title Meta, and more.
 
-### How to use Advanced Post Block
-- First, install the Advanced Post Block plugin from the WordPress dashboard.
-- Add the Advanced Post Block from the block category called "Advanced Post Block" in the Gutenberg editor.
-- You can change block settings from the right-side settings sidebar.
-- Enjoy!
+- **Post Query Controls:** Filter by post type, categories, author, post count, and order.
 
-* For installation help click on Installation Tab
+- **Show/Hide Elements:** Toggle thumbnails, titles, meta data, excerpts, and more.
+
+- **Feature Image Settings:** Show/hide, link toggle, and size adjustments.
+
+- **Post Title Options:** Enable links, customize typography, and layout.
+
+- **Meta Info Customization:** Choose icons, colors, links, and display format.
+
+- **Custom Read More Button:** Set label, hover color, and position.
+
+- **Fully Responsive:** Optimized for mobile, tablet, and desktop.
+
+- **Lightweight & Fast:** Minimal load time and optimized queries.
+
+- **Secure & Clean:** Built with the best coding practices in mind.
+
+
+### Pro Version – Unlock Premium Power
+[**Advanced Post Block Pro**](https://bplugins.com/products/advanced-post-block/#pricing) adds precision filtering, layout enhancements, and deeper content control for advanced users and high-performing websites.
+
+**What’s Included in Pro:**
+
+- **Display Pages & Custom Post Types:** Showcase pages alongside posts.
+
+- **Advanced Filtering:** Filter by tag, taxonomy, author, and more.
+
+- **Post Offset:** Skip the first N posts in a list.
+
+- **Include/Exclude Posts:** Use post IDs to control which posts appear.
+
+- **Exclude Current Post:** Great for single post templates.
+
+- **Pagination Support:** Add customizable pagination below post grids.
+
+- **Sortable Elements:** Rearrange post title and metadata.
+
+- **Feature Image Custom Size:** Define image dimensions per layout.
+
+- **Reading Time Indicator:** Display estimated reading time in meta.
+
+- **Excerpt from Main Content:** Pull excerpts directly from the post body.
+
+- **Custom Post Query Hook:** Use **`apb_query`** filter for dev-level control.
+
+- **Post Ticker Options:** Configure ticker settings for headlines or news feeds.
+
+- **Shortcode Support:** Use shortcode to display post blocks anywhere.
+
+- **Read More Placement Options:** Place the button exactly where you want it.
+
+- **Meta Author Link Toggle:** Choose whether the author name is clickable.
+
+- **Taxonomies in Metadata:** Display categories, tags, and custom taxonomies.
+
+- **Custom Meta Icons:** Choose icons for metadata like date, category, and author.
+
+
+### How to Use – Step-by-Step Setup
+
+Getting started is fast and beginner-friendly.
+
+https://youtube.com/watch?v=milYZrqLJsE
+
+You can set up your first post grid in just a few clicks.
+
+
+**Step-by-Step Setup:**
+
+- Install and activate the **Advanced Post Block** plugin.
+
+- Open a post or page in the Gutenberg editor.
+
+- Click the + icon.
+
+- Find the block called **Advanced Post Block** under the **"Advanced Post Block"** category.
+
+- Choose your layout style, post type, and configure display settings.
+
+- Save and publish.
+
+- That’s it!
+
+
+**Gutenberg Block Support**
+Using the Block Editor? You’re covered.
+
+- Easily find the **Advanced Post Block** in the Gutenberg block library.
+
+- Drag and drop to add dynamic post lists to any page or post.
+
+- Customize layout and design using the right-hand block settings panel.
+
+
+[**Live Demo**](https://bplugins.com/products/advanced-post-block/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/advanced-post-block/#pricing)
+
 
 ### User Feedback
 
@@ -132,22 +203,22 @@ https://www.youtube.com/watch?v=milYZrqLJsE
 #### - Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
 
-### ⭐ Check out the Parent Plugin of this plugin-
+### Check out the Parent Plugin of this plugin-
 
-🔥 **[B Blocks](https://bblockswp.com)** – Best gutenberg blocks collections for WordPress.
+[**B Blocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
 
 
-### ⭐ Check out our other WordPress Plugins-
+### Check out our other WordPress Plugins-
 
-🔥 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
+[**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
 
-🔥 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
+[**PDF Poster**](https://bplugins.com/products/pdf-poster/) – Display/Embed PDF files with different styles.
 
-🔥 **[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
+[**Html5 Audio Player**](https://bplugins.com/products/html5-audio-player/) – Listen audios with awesome visuals.
 
-🔥 **[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embedder Plugin.
+[**StreamCast**](https://bplugins.com/products/streamcast-radio-player/) – Customizable radio player with different skins.
 
-🔥 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
+[**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
 
 
 == Installation ==
@@ -213,39 +284,24 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Screenshots ==
 
-1. Settings- General
-2. Settings- Elements
-3. Settings- Style
-4. Grid- Default
-5. Grid- Default Customize
-6. Grid- Title Meta
-7. Grid- Left Image
-8. Grid- Right Image
-9. Grid- Overlay
-10. Grid- Overlay on Hover
-11. Grid- Overlay Box
-12. Grid- Overlay Half Content
-13. Masonry- Default
-14. Masonry- Title Meta
-15. Masonry- Left Image
-16. Masonry- Right Image
-17. Masonry- Overlay
-18. Masonry- Overlay on Hover
-19. Masonry- Overlay Box
-20. Slider- Left Image
-21. Slider- Right Image
-22. Slider- Overlay
-23. Slider- Overlay on Hover
-24. Slider- Overlay Box
-25. Slider- Overlay Half Content
-26. Ticker- Left Image
-27. Ticker- Right Image
-28. Ticker- Overlay
-29. Ticker- Overlay on Hover
-30. Ticker- Overlay Box
+1. Add "Advanced Posts" Block
+2. General Configuration
+3. Elements and Style Config
+4. Preview - Grid Layout
+5. Preview - Overlay Half Content
+6. Preview - List Style
+7. Preview - Overlay Box
+8. Preview - Left Image
+9. Preview - Masonry
+10. Preview - Grid List
 
 
 == Changelog ==
+
+= 1.16.0 - 18 Jun 2025 =
+* Update Upgrade Page
+* Fix other users premium unlock issue
+* Update SDK
 
 = 1.15.4 - 28 Jan 2025 =
 * Update SDK.
@@ -516,7 +572,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Custom Typography with Google fonts.
 * Compatible with block directory
 * Fixing Issue
-* UI Change
+* UI Change.
 
 = 1.1 =
 * Compatible with PHP 5.4

@@ -2,111 +2,113 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Post Block 1.15.4\n"
+"Project-Id-Version: Advanced Post Block 1.16.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-post-block-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-28T04:03:33+00:00\n"
+"POT-Creation-Date: 2025-06-19T08:11:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: advanced-post-block\n"
 
 #. Plugin Name of the plugin
+#: plugin.php
 msgid "Advanced Post Block"
 msgstr ""
 
 #. Description of the plugin
+#: plugin.php
 msgid "Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements."
 msgstr ""
 
 #. Author of the plugin
+#: plugin.php
 msgid "bPlugins"
 msgstr ""
 
 #. Author URI of the plugin
+#: plugin.php
 msgid "https://bplugins.com"
 msgstr ""
 
-#: inc/CustomPost.php:30
-#: inc/CustomPost.php:31
+#: includes/admin/CustomPost.php:32
+#: includes/admin/CustomPost.php:33
 msgid "Advanced Posts"
 msgstr ""
 
-#: inc/CustomPost.php:32
-#: inc/CustomPost.php:33
+#: includes/admin/CustomPost.php:34
+#: includes/admin/CustomPost.php:35
 msgid "Add New"
 msgstr ""
 
-#: inc/CustomPost.php:34
+#: includes/admin/CustomPost.php:36
 msgid "Edit"
 msgstr ""
 
-#: inc/CustomPost.php:35
+#: includes/admin/CustomPost.php:37
 msgid "New"
 msgstr ""
 
-#: inc/CustomPost.php:36
+#: includes/admin/CustomPost.php:38
 msgid "View"
 msgstr ""
 
-#: inc/CustomPost.php:37
+#: includes/admin/CustomPost.php:39
 msgid "Search"
 msgstr ""
 
-#: inc/CustomPost.php:38
+#: includes/admin/CustomPost.php:40
 msgid "Sorry, we couldn't find the that you are looking for."
 msgstr ""
 
-#: inc/HelpPage.php:13
+#: includes/admin/HelpPage.php:15
 msgid "Advanced Posts - Help"
 msgstr ""
 
-#: inc/HelpPage.php:14
+#: includes/admin/HelpPage.php:16
 msgid "Help"
 msgstr ""
 
-#: inc/UpgradePage.php:13
+#: includes/admin/UpgradePage.php:14
 msgid "Advanced Posts - Upgrade"
 msgstr ""
 
-#: inc/UpgradePage.php:14
+#: includes/admin/UpgradePage.php:15
 msgid "Upgrade"
 msgstr ""
 
-#: dist/admin-post.js:1
-#: dist/admin-post.js:9
+#: build/admin-post.js:1
 msgid "Copied Successfully!"
 msgstr ""
 
-#: dist/admin-post.js:1
-#: dist/admin-post.js:11
+#: build/admin-post.js:1
 msgid "Copy To Clipboard"
 msgstr ""
 
-#: inc/block.json
+#: build/block.json
 msgctxt "block title"
 msgid "Advanced Posts"
 msgstr ""
 
-#: inc/block.json
+#: build/block.json
 msgctxt "block description"
 msgid "Elevate Your Posts Display with Advanced Layouts"
 msgstr ""
 
-#: inc/block.json
+#: build/block.json
 msgctxt "block keyword"
 msgid "show posts"
 msgstr ""
 
-#: inc/block.json
+#: build/block.json
 msgctxt "block keyword"
 msgid "embed blog posts"
 msgstr ""
 
-#: inc/block.json
+#: build/block.json
 msgctxt "block keyword"
 msgid "custom posts"
 msgstr ""
