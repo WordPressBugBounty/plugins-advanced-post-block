@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 1.16.0
+ * Version: 1.16.1
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -17,7 +17,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'apb_fs' ) ) {
     apb_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'APB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.16.0' ) );
+    define( 'APB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.16.1' ) );
     define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'APB_HAS_PRO', file_exists( dirname( __FILE__ ) . '/freemius/start.php' ) );
