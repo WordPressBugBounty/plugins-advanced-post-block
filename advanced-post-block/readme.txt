@@ -1,11 +1,11 @@
-=== Advanced Post Block- Great solution for displaying Posts ===
+=== Advanced Post Block – Showcase Posts with Grid, List, Card Layouts and Filters ===
 Contributors: bplugins, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
-Tested up to: 6.8.1
+Tested up to: 6.8
 Requires PHP: 7.1
-Stable tag: 1.16.1
+Stable tag: 2.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,7 +15,7 @@ Advanced Post Block lets you add dynamic post grids, lists, sliders, and tickers
 **​The Ultimate Gutenberg Block to Display Posts, Pages, and Custom Content Beautifully**
 
 
-[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) | [**Documentation**](https://bplugins.com/docs/advanced-post-block/) | [**Pricing**](https://bplugins.com/products/advanced-post-block/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/advanced-post-block/#demos)
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) | [**Documentation**](https://bplugins.com/docs/advanced-post-block/) | [**Pricing**](https://bplugins.com/products/advanced-post-block/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/advanced-post-block/#demos)
 
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) is a flexible plugin for displaying WordPress posts, pages, or custom post types using the Gutenberg editor. It offers multiple layouts and filtering options, making it useful for content creators who want greater control over how content appears on the front end.
 
@@ -92,7 +92,7 @@ Everything you need to build a clean and modern content display:
 
 
 ### Pro Version – Unlock Premium Power
-[**Advanced Post Block Pro**](https://bplugins.com/products/advanced-post-block/#pricing) adds precision filtering, layout enhancements, and deeper content control for advanced users and high-performing websites.
+[**Advanced Post Block Pro**](https://bplugins.com/products/advanced-post-block/pricing/) adds precision filtering, layout enhancements, and deeper content control for advanced users and high-performing websites.
 
 **What’s Included in Pro:**
 
@@ -167,7 +167,7 @@ Using the Block Editor? You’re covered.
 - Customize layout and design using the right-hand block settings panel.
 
 
-[**Live Demo**](https://bplugins.com/products/advanced-post-block/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/advanced-post-block/#pricing)
+[**Live Demo**](https://bplugins.com/products/advanced-post-block/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/advanced-post-block/pricing/)
 
 
 ### User Feedback
@@ -297,6 +297,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.0.0 - 20 Aug 2025 =
+* Fix Post Type Issues
+* Update SDK
+* Change UI
+* Admin Dashboard
 
 = 1.16.1 - 3 Jul 2025 =
 * Fix Pagination issue

@@ -2,21 +2,26 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Post Block 1.16.1\n"
+"Project-Id-Version: Advanced Post Block 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-post-block-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-03T04:48:50+00:00\n"
+"POT-Creation-Date: 2025-08-20T13:30:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: advanced-post-block\n"
 
 #. Plugin Name of the plugin
 #: plugin.php
 msgid "Advanced Post Block"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: plugin.php
+msgid "https://bplugins.com/products/advanced-post-block"
 msgstr ""
 
 #. Description of the plugin
@@ -34,58 +39,62 @@ msgstr ""
 msgid "https://bplugins.com"
 msgstr ""
 
-#: includes/admin/CustomPost.php:32
-#: includes/admin/CustomPost.php:33
-msgid "Advanced Posts"
+#: includes/admin/CPT.php:31
+#: includes/admin/CPT.php:32
+msgid "Post ShortCode"
 msgstr ""
 
-#: includes/admin/CustomPost.php:34
-#: includes/admin/CustomPost.php:35
+#: includes/admin/CPT.php:33
 msgid "Add New"
 msgstr ""
 
-#: includes/admin/CustomPost.php:36
-msgid "Edit"
+#: includes/admin/CPT.php:34
+msgid "Add New Post ShortCode"
 msgstr ""
 
-#: includes/admin/CustomPost.php:37
-msgid "New"
+#: includes/admin/CPT.php:35
+msgid "Edit Post ShortCode"
 msgstr ""
 
-#: includes/admin/CustomPost.php:38
-msgid "View"
+#: includes/admin/CPT.php:36
+msgid "New Post ShortCode"
 msgstr ""
 
-#: includes/admin/CustomPost.php:39
-msgid "Search"
+#: includes/admin/CPT.php:37
+msgid "View Post ShortCode"
 msgstr ""
 
-#: includes/admin/CustomPost.php:40
-msgid "Sorry, we couldn't find the that you are looking for."
+#: includes/admin/CPT.php:38
+msgid "Search Post ShortCodes"
 msgstr ""
 
-#: includes/admin/HelpPage.php:15
-msgid "Advanced Posts - Help"
+#: includes/admin/CPT.php:39
+msgid "Sorry, we couldn't find the Post ShortCode you are looking for."
 msgstr ""
 
-#: includes/admin/HelpPage.php:16
-msgid "Help"
+#: includes/admin/CPT.php:110
+#: build/admin-post.js:1
+msgid "Copy To Clipboard"
 msgstr ""
 
-#: includes/admin/UpgradePage.php:14
-msgid "Advanced Posts - Upgrade"
+#: includes/admin/Menu.php:14
+msgid "Advanced Post Block - bPlugins"
 msgstr ""
 
-#: includes/admin/UpgradePage.php:15
-msgid "Upgrade"
+#: includes/admin/Menu.php:15
+msgid "Advanced Post"
+msgstr ""
+
+#: includes/admin/Menu.php:25
+msgid "Dashboard - Advanced Post Block"
+msgstr ""
+
+#: includes/admin/Menu.php:26
+msgid "Dashboard"
 msgstr ""
 
 #: build/admin-post.js:1
 msgid "Copied Successfully!"
-msgstr ""
-
-#: build/admin-post.js:1
-msgid "Copy To Clipboard"
 msgstr ""
 
 #: build/block.json

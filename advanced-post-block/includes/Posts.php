@@ -126,6 +126,7 @@ class Posts{
 					case 'grid1': ?>
 						<div class='<?php echo esc_attr( $prefix ); ?>Grid1Posts'>
 							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
 								echo self::skeletonArticle( $prefix );
 							} ?>
 						</div>
@@ -137,7 +138,8 @@ class Posts{
 						<div class='<?php echo esc_attr( $prefix ); ?>SliderSkeleton'>
 							<div class='swiper-wrapper'>
 								<?php foreach ( range( 1, 2 ) as $item ) {
-									echo self::skeletonArticle( $prefix );
+									// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
+								echo self::skeletonArticle( $prefix );
 								} ?>
 							</div>
 							<?php echo $sliderIsPage ? "<div class='swiper-pagination'></div>" : ''; ?>
@@ -147,6 +149,7 @@ class Posts{
 					case 'ticker': ?>
 						<div class='<?php echo esc_attr( $prefix ); ?>TickerPosts'>
 							<?php foreach ( range( 1, $tickerVisible ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
 								echo self::skeletonArticle( $prefix );
 							} ?>
 						</div>
@@ -154,6 +157,7 @@ class Posts{
 					default: ?>
 						<div class='<?php echo esc_attr( $gridClass ); ?>'>
 							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
 								echo self::skeletonArticle( $prefix );
 							} ?>
 						</div>
@@ -162,8 +166,4 @@ class Posts{
 			</div>
 		<?php return ob_get_clean();
 	}
-}
-
-if( apbIsPremium() ) {
-	require_once APB_DIR_PATH . '/includes/Ajax.php';
 }

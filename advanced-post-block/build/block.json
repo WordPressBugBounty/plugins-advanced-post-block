@@ -121,14 +121,14 @@
       "type": "object",
       "default": {
         "color": "#fff",
-        "bg": "#4527a4"
+        "bg": "#146EF5"
       }
     },
     "paginationHovColors": {
       "type": "object",
       "default": {
         "color": "#fff",
-        "bg": "#8344c5"
+        "bg": "#070127"
       }
     },
     "paginationPadding": {
@@ -149,7 +149,7 @@
     "contentBG": {
       "type": "object",
       "default": {
-        "color": "#f4f2fc"
+        "color": ""
       }
     },
     "contentPadding": {
@@ -162,6 +162,8 @@
     "border": {
       "type": "object",
       "default": {
+        "width": "1px",
+        "color": "#0c0d3c1a",
         "radius": "5px"
       }
     },
@@ -205,7 +207,7 @@
     },
     "sliderPageColor": {
       "type": "string",
-      "default": "#4527a4"
+      "default": "#146EF5"
     },
     "sliderPageWidth": {
       "type": "string",
@@ -227,7 +229,7 @@
     },
     "sliderPrevNextColor": {
       "type": "string",
-      "default": "#4527a4"
+      "default": "#146EF5"
     },
     "tickerDirection": {
       "type": "string",
@@ -289,16 +291,16 @@
       "default": {
         "fontFamily": "Roboto",
         "fontSize": {
-          "desktop": 25,
-          "tablet": 22,
-          "mobile": 20
+          "desktop": "25px",
+          "tablet": "22px",
+          "mobile": "20px"
         },
         "googleFontLink": "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       }
     },
     "titleColor": {
       "type": "string",
-      "default": "#4527a4"
+      "default": ""
     },
     "titleMargin": {
       "type": "object",
@@ -381,30 +383,28 @@
       "type": "object",
       "default": {
         "fontSize": {
-          "desktop": 13,
-          "tablet": 13,
-          "mobile": 13
+          "desktop": "13px"
         },
         "textTransform": "uppercase"
       }
     },
     "metaTextColor": {
       "type": "string",
-      "default": "#333"
+      "default": ""
     },
     "metaLinkColor": {
       "type": "string",
-      "default": "#8344c5"
+      "default": "#146EF5"
     },
     "metaIconColor": {
       "type": "string",
-      "default": "#4527a4"
+      "default": ""
     },
     "metaColorsOnImage": {
       "type": "object",
       "default": {
         "color": "#fff",
-        "bg": "#8344c5"
+        "bg": "#146EF5"
       }
     },
     "metaMargin": {
@@ -438,15 +438,13 @@
       "type": "object",
       "default": {
         "fontSize": {
-          "desktop": 15,
-          "tablet": 15,
-          "mobile": 15
+          "desktop": "15px"
         }
       }
     },
     "excerptColor": {
       "type": "string",
-      "default": "#333"
+      "default": ""
     },
     "excerptMargin": {
       "type": "object",
@@ -479,9 +477,7 @@
       "type": "object",
       "default": {
         "fontSize": {
-          "desktop": 14,
-          "tablet": 14,
-          "mobile": 14
+          "desktop": "14px"
         },
         "textTransform": "uppercase",
         "fontWeight": 600
@@ -491,14 +487,14 @@
       "type": "object",
       "default": {
         "color": "#fff",
-        "bg": "#8344c5"
+        "bg": "#146EF5"
       }
     },
     "readMoreHovColors": {
       "type": "object",
       "default": {
         "color": "#fff",
-        "bg": "#4527a4"
+        "bg": "#FF7A00"
       }
     },
     "readMorePadding": {
