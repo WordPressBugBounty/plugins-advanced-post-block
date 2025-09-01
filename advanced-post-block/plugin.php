@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * Plugin URI: https://bplugins.com/products/advanced-post-block
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'apb_fs' ) ) {
     apb_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'APB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.0' ) );
+    define( 'APB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.1' ) );
     define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'APB_HAS_PRO', file_exists( dirname( __FILE__ ) . '/vendor/freemius/start.php' ) );
@@ -68,7 +68,7 @@ if ( function_exists( 'apb_fs' ) ) {
 
     require_once APB_DIR_PATH . 'includes/admin/Menu.php';
     require_once APB_DIR_PATH . 'includes/Posts.php';
-    if ( apbIsPremium() ) {
+    if ( APB_HAS_PRO && apbIsPremium() ) {
         require_once APB_DIR_PATH . 'includes/admin/CPT.php';
         require_once APB_DIR_PATH . '/includes/Ajax.php';
     }
