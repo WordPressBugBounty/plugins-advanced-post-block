@@ -1,5 +1,5 @@
 <?php
-$this_sdk_version = '2.1.1';
+$this_sdk_version = '2.1.3';
 
 if (!class_exists('BPluginsFSLite')) {
     require_once(dirname(__FILE__) . '/require.php');
@@ -78,15 +78,15 @@ if (!function_exists('fs_lite_dynamic_init')) {
 
             $caller = debug_backtrace();
 
-            if (isset($caller[0]['file'])) {
-                $module['__FILE__'] = $caller[0]['file'];
+            if( !isset( $module['__FILE__'] ) && empty( $module['__FILE__'] ) ){
+                if (isset($caller[0]['file'])) {
+                    $module['__FILE__'] = $caller[0]['file'];
+                }
+
+                if (!isset($module['__FILE__'])) {
+                    throw new Error("No __FILE__");
+                }
             }
-
-            if (!isset($module['__FILE__'])) {
-                throw new Error("No __FILE__");
-            }
-
-
 
             $fs = new BPluginsFSLite($module);
             return $fs;

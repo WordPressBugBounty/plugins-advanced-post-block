@@ -9,6 +9,7 @@
     "embed blog posts",
     "custom posts"
   ],
+  "version": "2.0.4",
   "textdomain": "advanced-post-block",
   "attributes": {
     "align": {
@@ -105,10 +106,6 @@
       "type": "boolean",
       "default": false
     },
-    "paginationCurrentPage": {
-      "type": "number",
-      "default": 1
-    },
     "paginationPrevLabel": {
       "type": "string",
       "default": "Prev"
@@ -141,6 +138,25 @@
     "paginationSpacing": {
       "type": "string",
       "default": "15px"
+    },
+    "loadMore": {
+      "type": "object",
+      "default": {
+        "type": "",
+        "alignment": "center",
+        "scrollTop": {
+          "enabled": false,
+          "offset": 50
+        },
+        "infinityScroll": {
+          "offset": -100,
+          "spinner": true,
+          "label": "Loading..."
+        },
+        "button": {
+          "label": "Load More"
+        }
+      }
     },
     "contentAlign": {
       "type": "string",
@@ -530,6 +546,8 @@
   },
   "editorScript": [
     "file:./index.js",
+    "wp-server-side-render",
+    "ap-block-posts-view-script",
     "wp-api-request",
     "wp-api",
     "easyTicker"

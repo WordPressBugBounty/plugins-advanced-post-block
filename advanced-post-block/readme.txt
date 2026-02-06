@@ -1,11 +1,11 @@
 === Advanced Post Block – Showcase Posts with Grid, List, Card Layouts and Filters ===
-Contributors: bplugins, abuhayat, charlescormier, freemius
+Contributors: bplugins, abuhayat, charlescormier, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.0.1
+Stable tag: 2.0.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -106,7 +106,7 @@ Everything you need to build a clean and modern content display:
 
 - **Exclude Current Post:** Great for single post templates.
 
-- **Pagination Support:** Add customizable pagination below post grids.
+- **Load More / Pagination:** Implement pagination, navigation, infinite scroll, or a "Load More" button to fetch additional posts.
 
 - **Sortable Elements:** Rearrange post title and metadata.
 
@@ -267,7 +267,7 @@ Yes! You can set different columns for different devices.
 
 = Does this plugin have pagination? =
 
-Yes! This plugin has pagination, but it will not for the slider and ticker layout.
+Yes! This plugin has pagination, navigation, infinite scroll, and load more button to fetch more posts, but it will not for the slider and ticker layout.
 
 = Can I visible or hide post elements? =
 
@@ -297,6 +297,18 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.0.4 - 22 Jan 2026 =
+* Add Infinite Scroll (alternative of Pagination)
+* Add Navigation (alternative of Pagination)
+* Add Load More Button (alternative of Pagination)
+
+= 2.0.3 - 11 Dec 2025 =
+* Remove unwanted data from posts query
+
+= 2.0.2 - 03 Dec 2025 =
+* Fix offset query issue
+* Add more options in Order by Query.
 
 = 2.0.1 - 01 Sep 2025 =
 * Update Custom Post type label
@@ -584,7 +596,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 = 1.2 =
 * Custom Typography with Google fonts.
 * Compatible with block directory
-* Fixing Issue
+* Fixing Issue.
 * UI Change.
 
 = 1.1 =

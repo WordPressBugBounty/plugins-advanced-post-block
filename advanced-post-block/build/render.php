@@ -27,7 +27,7 @@ $skeletonAllowedTags = [
 	data-extra='<?php echo esc_attr( wp_json_encode( [ 'totalPosts' => count( $allPosts ) ] ) ); ?>'
 	data-pipecheck='<?php echo esc_attr( apbIsPremium() ); ?>'
 >
-	<pre id='firstPosts' style='display: none;'>
+	<pre id='firstPosts'>
 		<?php echo esc_html( wp_json_encode( APB\Posts::getPosts( $attributes ) ) ) ?>
 	</pre>
 

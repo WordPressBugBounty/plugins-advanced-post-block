@@ -90,6 +90,7 @@ class Functions{
 				'name' => $post->post_name,
 				'thumbnail' => $thumbnail,
 				'title' => $post->post_title,
+				'postMeta' => [], // use get_post_meta( $post->ID ) for the post meta fields
 				'author' => [
 					'name' => get_the_author_meta( 'display_name', $post->post_author ),
 					'link' => get_author_posts_url( $post->post_author )

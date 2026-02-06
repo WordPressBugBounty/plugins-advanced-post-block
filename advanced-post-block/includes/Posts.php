@@ -63,7 +63,14 @@ class Posts{
 		$attributes['isPostsPerPageAll'] = 'true' === $isPostsPerPageAll;
 		$attributes['isExcludeCurrent'] = 'true' === $isExcludeCurrent;
 
-		$newArgs = wp_parse_args( [ 'offset' => ( $postsPerPage * ( $pageNumber - 1 ) ) + $postsOffset ], self::query( $attributes ) );
+		// Ensure numeric values to avoid PHP type errors and handle "all" mode
+		$postsPerPage = isset( $postsPerPage ) ? (int) $postsPerPage : 0;
+		$pageNumber    = (int) $pageNumber;
+		$postsOffset   = isset( $postsOffset ) ? (int) $postsOffset : 0;
+
+		$offset = ( $postsPerPage * max( 0, $pageNumber - 1 ) ) + $postsOffset;
+
+		$newArgs = wp_parse_args( [ 'offset' => $offset ], self::query( $attributes ) );
 		$posts = Functions::arrangedPosts(
 			get_posts( $newArgs ),
 			$postType,
