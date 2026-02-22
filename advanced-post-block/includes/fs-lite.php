@@ -21,13 +21,11 @@ if ( ! function_exists( 'apb_fs' ) ) {
 				'has_addons'			=> false,
 				'has_paid_plans'		=> true,
 				'menu'					=> [
-					'slug'			=> 'advanced-post-block',
-					'first-path'	=> 'tools.php?page=advanced-post-block',
-					'parent'		=> [
-						'slug'	=> 'tools.php'
-					],
+					'slug'			=> 'edit.php?post_type=apb',
+					'first-path'	=> 'edit.php?post_type=apb&page=advanced-post-block',
 					'contact'		=> false,
-					'support'		=> false
+					'support'		=> false,
+					'affiliation'	=> false
 				]
 			] );
 		}

@@ -1,9 +1,11 @@
 <?php
+if ( !defined( 'ABSPATH' ) ) { exit; }
+
 $prefix = 'apbAdvancedPosts';
 $id = wp_unique_id( "$prefix-" );
 $planClass = apbIsPremium() ? 'premium' : 'free';
 
-extract( $attributes );
+extract( $attributes ?? [] );
 
 if( 'ticker' === $layout ){
 	wp_enqueue_script( 'easyTicker' );
@@ -23,7 +25,7 @@ $skeletonAllowedTags = [
 	<?php echo get_block_wrapper_attributes( [ 'class' => "$planClass align$align" ] ); ?>
 	id='<?php echo esc_attr( $id ); ?>'
 	data-nonce='<?php echo esc_attr( wp_json_encode( wp_create_nonce( 'wp_rest' ) ) ); ?>'
-	data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'
+	data-attributes='<?php echo esc_attr( wp_json_encode( array_merge( $attributes, [ 'currentPostId' => get_the_ID() ] ) ) ); ?>'
 	data-extra='<?php echo esc_attr( wp_json_encode( [ 'totalPosts' => count( $allPosts ) ] ) ); ?>'
 	data-pipecheck='<?php echo esc_attr( apbIsPremium() ); ?>'
 >

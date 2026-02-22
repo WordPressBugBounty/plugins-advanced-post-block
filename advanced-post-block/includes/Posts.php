@@ -38,6 +38,8 @@ class Posts{
 		$post__in = !empty( $postsInclude ) ? [ 'post__in' => $postsInclude ] : [];
 		$postsExclude = Functions::filterNaN( $postsExclude ?? [] );
 
+		$currentPostId = get_the_ID() ?: ( $currentPostId ?? 0 );
+
 		$query = array_merge( [
 			'post_type'			=> $postType,
 			'posts_per_page'	=> $isPostsPerPageAll ? -1 : $postsPerPage,
@@ -45,7 +47,7 @@ class Posts{
 			'order'				=> $postsOrder,
 			'tax_query'			=> $termsQuery,
 			'offset'			=> $isPostsPerPageAll ? 0 : $postsOffset,
-			'post__not_in'		=> $isExcludeCurrent ? array_merge( [ get_the_ID() ], $postsExclude ) : $postsExclude,
+			'post__not_in'		=> $isExcludeCurrent && $currentPostId ? array_merge( [ $currentPostId ], $postsExclude ) : $postsExclude,
 			'has_password'		=> false,
 			'post_status'		=> 'publish'
 		], $post__in, $defaultPostQuery );
@@ -60,8 +62,8 @@ class Posts{
 	static function getPosts( $attributes, $pageNumber = 1 ){
 		extract( $attributes );
 
-		$attributes['isPostsPerPageAll'] = 'true' === $isPostsPerPageAll;
-		$attributes['isExcludeCurrent'] = 'true' === $isExcludeCurrent;
+		$attributes['isPostsPerPageAll'] = 'true' == $isPostsPerPageAll || 1 == $isPostsPerPageAll;
+		$attributes['isExcludeCurrent'] = $isExcludeCurrent == 'true' || 1 == $isExcludeCurrent;
 
 		// Ensure numeric values to avoid PHP type errors and handle "all" mode
 		$postsPerPage = isset( $postsPerPage ) ? (int) $postsPerPage : 0;

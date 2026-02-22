@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
 Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -298,21 +298,25 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.0.5 - 22 Feb 2026 =
+* **Update:** Admin Dashboard
+* **Fix:** Issues
+
 = 2.0.4 - 22 Jan 2026 =
-* Add Infinite Scroll (alternative of Pagination)
-* Add Navigation (alternative of Pagination)
-* Add Load More Button (alternative of Pagination)
+* **New:** Add Infinite Scroll (alternative of Pagination)
+* **New:** Add Navigation (alternative of Pagination)
+* **New:** Add Load More Button (alternative of Pagination)
 
 = 2.0.3 - 11 Dec 2025 =
-* Remove unwanted data from posts query
+* **Update:** Remove unwanted data from posts query
 
 = 2.0.2 - 03 Dec 2025 =
-* Fix offset query issue
-* Add more options in Order by Query.
+* **Fix:** Fix offset query issue
+* **Update:** Add more options in Order by Query.
 
 = 2.0.1 - 01 Sep 2025 =
-* Update Custom Post type label
-* Add additional class for pagination page numbers
+* **Update:** Custom Post type label
+* **Update:** Add additional class for pagination page numbers
 
 = 2.0.0 - 20 Aug 2025 =
 * Fix Post Type Issues
