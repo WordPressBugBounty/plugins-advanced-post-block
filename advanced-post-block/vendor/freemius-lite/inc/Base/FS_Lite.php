@@ -1,7 +1,7 @@
 <?php
 class FS_Lite
 {
-    protected const FS_VERSION = '2.5.12';
+    protected const FS_VERSION = '2.12.0';
     protected const ACCOUNTS_KEY = 'fs_lite_accounts';
     protected const UNIQUE_ID_KEY = 'unique_id';
 

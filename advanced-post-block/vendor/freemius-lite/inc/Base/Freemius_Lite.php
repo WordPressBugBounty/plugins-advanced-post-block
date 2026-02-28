@@ -3,7 +3,7 @@
 if (!class_exists('Freemius_Lite')) {
     class Freemius_Lite
     {
-        private const SDK_VERSION = '2.5.12';
+        private const SDK_VERSION = '2.12.0';
         private const API_ENDPOINT = 'https://api.bplugins.com/wp-json/freemius/v1/middleware/';
 
         private $api = null;

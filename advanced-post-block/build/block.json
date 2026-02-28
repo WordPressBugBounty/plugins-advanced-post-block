@@ -9,7 +9,7 @@
     "embed blog posts",
     "custom posts"
   ],
-  "version": "2.0.5",
+  "version": "2.0.6",
   "textdomain": "advanced-post-block",
   "attributes": {
     "align": {
@@ -18,7 +18,7 @@
     },
     "layout": {
       "type": "string",
-      "default": "grid"
+      "default": ""
     },
     "subLayout": {
       "type": "string",

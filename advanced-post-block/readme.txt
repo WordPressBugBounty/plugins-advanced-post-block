@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
 Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -297,6 +297,13 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.0.6 - 28 Feb 2026 =
+* **New:** Added a Layout Selector for new blocks to improve the initial setup experience.
+* **New:** Added helpful descriptions and tooltips to various complex settings in the block sidebar.
+* **Fix:** Critical performance issue resolved in the editor by refactoring data-fetching logic to significantly reduce store calls and prevent infinite loops.
+* **Update:** Optimized data retrieval for authors, taxonomies, and comments to improve overall editor responsiveness.
+* **Fix:** Improved fallback Grid layout display to ensure blocks render correctly even if initial configuration is missing.
 
 = 2.0.5 - 22 Feb 2026 =
 * **Update:** Admin Dashboard
