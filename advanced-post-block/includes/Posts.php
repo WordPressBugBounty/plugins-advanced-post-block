@@ -14,11 +14,30 @@ class Posts{
 
 	static function query( $attributes ){
 		extract( $attributes );
+		$taxonomyRelation = $taxonomyRelation ?? 'AND';
 
 		$selectedCategories = $selectedCategories ?? [];
+		$selectedTags = $selectedTags ?? [];
 		$selectedTaxonomies = $selectedTaxonomies ?? [];
 
-		$termsQuery = ['relation' => 'AND'];
+		$termsQuery = ['relation' => $taxonomyRelation];
+
+		if ( 'post' === $postType && count( $selectedCategories ) ) {
+			$termsQuery[] = [
+				'taxonomy' => 'category',
+				'field'    => 'term_id',
+				'terms'    => $selectedCategories,
+			];
+		}
+
+		if ( 'post' === $postType && count( $selectedTags ) ) {
+			$termsQuery[] = [
+				'taxonomy' => 'post_tag',
+				'field'    => 'term_id',
+				'terms'    => $selectedTags,
+			];
+		}
+
 		foreach ( $selectedTaxonomies as $taxonomy => $terms ){
 			if( count( $terms ) ){
 				$termsQuery[] = [
@@ -29,30 +48,203 @@ class Posts{
 			}
 		}
 
-		$defaultPostQuery = 'post' === $postType ? [
-			'category__in'	=> $selectedCategories,
-			'tag__in'		=> $selectedTags ?? []
-		] : [];
-
 		$postsInclude = Functions::filterNaN( $postsInclude ?? [] );
 		$post__in = !empty( $postsInclude ) ? [ 'post__in' => $postsInclude ] : [];
-		$postsExclude = Functions::filterNaN( $postsExclude ?? [] );
+		$post__not_in = Functions::filterNaN( $postsExclude ?? [] );
+		$postsAuthors = Functions::filterNaN( $postsAuthors ?? [] );
+		$author__in = !empty( $postsAuthors ) ? [ 'author__in' => $postsAuthors ] : [];
 
 		$currentPostId = get_the_ID() ?: ( $currentPostId ?? 0 );
+		if ( $isExcludeCurrent && $currentPostId ) {
+			$post__not_in[] = $currentPostId;
+		}
+
+		if ( !empty( $isExcludeSticky ) ) {
+			$stickyPosts = get_option( 'sticky_posts' );
+			if ( !empty( $stickyPosts ) ) {
+				$post__not_in = array_merge( $post__not_in, $stickyPosts );
+			}
+		}
 
 		$query = array_merge( [
 			'post_type'			=> $postType,
-			'posts_per_page'	=> $isPostsPerPageAll ? -1 : $postsPerPage,
+			'posts_per_page'	=> $isPostsPerPageAll ? -1 : (int) $postsPerPage,
 			'orderby'			=> $postsOrderBy,
 			'order'				=> $postsOrder,
-			'tax_query'			=> $termsQuery,
-			'offset'			=> $isPostsPerPageAll ? 0 : $postsOffset,
-			'post__not_in'		=> $isExcludeCurrent && $currentPostId ? array_merge( [ $currentPostId ], $postsExclude ) : $postsExclude,
+			's'					=> $postsSearch ?? '',
+			'tax_query'			=> count( $termsQuery ) > 1 ? $termsQuery : [],
+			'offset'			=> $isPostsPerPageAll ? 0 : (int) $postsOffset,
+			'post__not_in'		=> array_unique( $post__not_in ),
 			'has_password'		=> false,
 			'post_status'		=> 'publish'
-		], $post__in, $defaultPostQuery );
+		], $post__in, $author__in );
 
 		if( apbIsPremium() ) {
+			if ( ! empty( $queryPreset ) ) {
+				switch ( $queryPreset ) {
+					case 'popular':
+						$query['meta_key'] = 'apb_post_views_count';
+						$query['orderby']  = 'meta_value_num';
+						$query['order']    = 'DESC';
+						break;
+					case 'popular-1-day':
+						$query['meta_key'] = 'apb_post_views_count';
+						$query['orderby']  = 'meta_value_num';
+						$query['order']    = 'DESC';
+						$query['date_query'] = [ [ 'after' => '1 day ago' ] ];
+						break;
+					case 'popular-7-days':
+						$query['meta_key'] = 'apb_post_views_count';
+						$query['orderby']  = 'meta_value_num';
+						$query['order']    = 'DESC';
+						$query['date_query'] = [ [ 'after' => '1 week ago' ] ];
+						break;
+					case 'popular-30-days':
+						$query['meta_key'] = 'apb_post_views_count';
+						$query['orderby']  = 'meta_value_num';
+						$query['order']    = 'DESC';
+						$query['date_query'] = [ [ 'after' => '1 month ago' ] ];
+						break;
+					case 'random':
+						$query['orderby'] = 'rand';
+						break;
+					case 'random-7-days':
+						$query['orderby'] = 'rand';
+						$query['date_query'] = [ [ 'after' => '1 week ago' ] ];
+						break;
+					case 'random-30-days':
+						$query['orderby'] = 'rand';
+						$query['date_query'] = [ [ 'after' => '1 month ago' ] ];
+						break;
+					case 'latest-published':
+						$query['orderby'] = 'date';
+						$query['order']   = 'DESC';
+						break;
+					case 'latest-modified':
+						$query['orderby'] = 'modified';
+						$query['order']   = 'DESC';
+						break;
+					case 'oldest-published':
+						$query['orderby'] = 'date';
+						$query['order']   = 'ASC';
+						break;
+					case 'oldest-modified':
+						$query['orderby'] = 'modified';
+						$query['order']   = 'ASC';
+						break;
+					case 'alphabet-asc':
+						$query['orderby'] = 'title';
+						$query['order']   = 'ASC';
+						break;
+					case 'alphabet-desc':
+						$query['orderby'] = 'title';
+						$query['order']   = 'DESC';
+						break;
+					case 'sticky-posts':
+						$query['post__in'] = get_option( 'sticky_posts' );
+						$query['ignore_sticky_posts'] = 1;
+						break;
+					case 'most-comment':
+						$query['orderby'] = 'comment_count';
+						$query['order']   = 'DESC';
+						break;
+					case 'most-comment-1-day':
+						$query['orderby'] = 'comment_count';
+						$query['order']   = 'DESC';
+						$query['date_query'] = [ [ 'after' => '1 day ago' ] ];
+						break;
+					case 'most-comment-7-days':
+						$query['orderby'] = 'comment_count';
+						$query['order']   = 'DESC';
+						$query['date_query'] = [ [ 'after' => '1 week ago' ] ];
+						break;
+					case 'most-comment-30-days':
+						$query['orderby'] = 'comment_count';
+						$query['order']   = 'DESC';
+						$query['date_query'] = [ [ 'after' => '1 month ago' ] ];
+						break;
+					case 'related-category':
+						if ( $currentPostId ) {
+							$query['post__not_in'][] = $currentPostId;
+							$categories = wp_get_post_terms( $currentPostId, 'category', [ 'fields' => 'ids' ] );
+							if ( ! empty( $categories ) ) {
+								$rel_query = [
+									'taxonomy' => 'category',
+									'field'    => 'term_id',
+									'terms'    => $categories,
+								];
+								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $rel_query ] : array_merge( $query['tax_query'], [ $rel_query ] );
+							} else {
+								$query['post__in'] = [0]; // Force no results if no categories found
+							}
+						}
+						break;
+					case 'related-tag':
+						if ( $currentPostId ) {
+							$query['post__not_in'][] = $currentPostId;
+							$tags = wp_get_post_terms( $currentPostId, 'post_tag', [ 'fields' => 'ids' ] );
+							if ( ! empty( $tags ) ) {
+								$rel_query = [
+									'taxonomy' => 'post_tag',
+									'field'    => 'term_id',
+									'terms'    => $tags,
+								];
+								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $rel_query ] : array_merge( $query['tax_query'], [ $rel_query ] );
+							} else {
+								$query['post__in'] = [0];
+							}
+						}
+						break;
+					case 'related-category-tag':
+						if ( $currentPostId ) {
+							$query['post__not_in'][] = $currentPostId;
+							$tags = wp_get_post_terms( $currentPostId, 'post_tag', [ 'fields' => 'ids' ] );
+							$categories = wp_get_post_terms( $currentPostId, 'category', [ 'fields' => 'ids' ] );
+							$tax_query = [ 'relation' => 'OR' ];
+							if ( ! empty( $tags ) ) {
+								$tax_query[] = [ 'taxonomy' => 'post_tag', 'field' => 'term_id', 'terms' => $tags ];
+							}
+							if ( ! empty( $categories ) ) {
+								$tax_query[] = [ 'taxonomy' => 'category', 'field' => 'term_id', 'terms' => $categories ];
+							}
+							if ( count( $tax_query ) > 1 ) {
+								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $tax_query ] : array_merge( $query['tax_query'], [ $tax_query ] );
+							} else {
+								$query['post__in'] = [0];
+							}
+						}
+						break;
+					case 'related-posts':
+						if ( $currentPostId ) {
+							$query['post__not_in'][] = $currentPostId;
+							$tax_query = [ 'relation' => 'OR' ];
+
+							$post_type  = get_post_type( $currentPostId );
+							$taxonomies = get_object_taxonomies( $post_type );
+
+							if ( ! empty( $taxonomies ) ) {
+								foreach ( $taxonomies as $taxonomy ) {
+									$terms = wp_get_post_terms( $currentPostId, $taxonomy, [ 'fields' => 'ids' ] );
+									if ( ! empty( $terms ) ) {
+										$tax_query[] = [
+											'taxonomy' => $taxonomy,
+											'field'    => 'term_id',
+											'terms'    => $terms,
+										];
+									}
+								}
+							}
+
+							if ( count( $tax_query ) > 1 ) {
+								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $tax_query ] : array_merge( $query['tax_query'], [ $tax_query ] );
+							} else {
+								$query['post__in'] = [0];
+							}
+						}
+						break;
+				}
+			}
+
 			$query = apply_filters( 'apb_query', $query );
 		}
 

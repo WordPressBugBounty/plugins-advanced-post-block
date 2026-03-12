@@ -77,7 +77,7 @@ class Functions{
 					$link = get_term_link( $t->slug, $slug );
 					$terms[$index]->link = $link;
 
-					$links .= "<a href='$link' rel='$slug'>$t->name</a>";
+					$links .= sprintf( "<a href='%s' rel='%s'>%s</a>", esc_url( $link ), esc_attr( $slug ), esc_html( $t->name ) );
 				};
 				$taxonomies[$slug] = $links;
 			}
@@ -89,7 +89,7 @@ class Functions{
 				'link' => get_permalink( $post ),
 				'name' => $post->post_name,
 				'thumbnail' => $thumbnail,
-				'title' => $post->post_title,
+				'title' => esc_html( $post->post_title ),
 				'postMeta' => [], // use get_post_meta( $post->ID ) for the post meta fields
 				'author' => [
 					'name' => get_the_author_meta( 'display_name', $post->post_author ),

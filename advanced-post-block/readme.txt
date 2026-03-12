@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
 Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.0.6
+Stable tag: 2.0.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -66,69 +66,78 @@ All layouts are optimized for mobile and desktop devices. The plugin is built to
 
 ### Key Features – Free Version
 
-Everything you need to build a clean and modern content display:
+Everything you need to build a professional and modern content display:
 
-- **Multiple Layouts:** Grid, Masonry, Ticker, and Slider views.
+- **Core Layouts:** Choose from professional Grid, Masonry, Slider, and Ticker views.
 
-- **Sub-layout Options:** Choose from Left/Right Image, Overlay Box, Title Meta, and more.
+- **Flexible Sub-layouts:** Optimize displays with Left/Right Image, Overlay Box, Title-Meta layouts, and more.
 
-- **Post Query Controls:** Filter by post type, categories, author, post count, and order.
+- **Dynamic Post Query:** Advanced filtering by post type, posts per page, categories, authors, and custom sorting.
 
-- **Show/Hide Elements:** Toggle thumbnails, titles, meta data, excerpts, and more.
+- **Element Visibility:** Full control to show or hide thumbnails, titles, metadata, excerpts, and read more buttons.
 
-- **Feature Image Settings:** Show/hide, link toggle, and size adjustments.
+- **Featured Image Settings:** Toggle links and adjust image fitting (Cover/Contain) for a polished look.
 
-- **Post Title Options:** Enable links, customize typography, and layout.
+- **Title Control:** Customize post title layout, enable link, and set precise typography.
 
-- **Meta Info Customization:** Choose icons, colors, links, and display format.
+- **Metadata Flexibility:** Show or hide post date, author, categories, and comment counts.
 
-- **Custom Read More Button:** Set label, hover color, and position.
+- **Meta Info Customization:** Personalize metadata with custom icons, colors, links, and more.
 
-- **Fully Responsive:** Optimized for mobile, tablet, and desktop.
+- **Custom Read More:** Define labels, colors, and hover effects for your "Read More" or "Continue" buttons.
 
-- **Lightweight & Fast:** Minimal load time and optimized queries.
+- **Shortcode Support:** Seamlessly display post blocks anywhere on your site using shortcodes.
 
-- **Secure & Clean:** Built with the best coding practices in mind.
+- **Responsive Ready:** Fully optimized for a perfect experience on mobile, tablet, and desktop devices.
+
+- **High Performance:** Lightweight design with optimized queries for lightning-fast load times.
+
+- **Developer Friendly:** Built with clean code following the best WordPress developmental standards.
 
 
 ### Pro Version – Unlock Premium Power
-[**Advanced Post Block Pro**](https://bplugins.com/products/advanced-post-block/pricing/) adds precision filtering, layout enhancements, and deeper content control for advanced users and high-performing websites.
+[**Advanced Post Block Pro**](https://bplugins.com/products/advanced-post-block/pricing/) adds precision filtering, layout enhancements, and deeper content control for high-performing websites.
 
 **What’s Included in Pro:**
 
-- **Display Pages & Custom Post Types:** Showcase pages alongside posts.
+- **Exclusive Layouts:** Unlock the **Grid 1** layout and cinematic sub-layouts like **Overlay Half Content**.
 
-- **Advanced Filtering:** Filter by tag, taxonomy, author, and more.
+- **News Ticker Options:** Fine-tune direction, speed, and display intervals for news tickers.
 
-- **Post Offset:** Skip the first N posts in a list.
+- **Display Pages:** Showcase standard WordPress pages alongside your posts.
 
-- **Include/Exclude Posts:** Use post IDs to control which posts appear.
+- **Query Presets:** Instant configurations for **Popular, Random, Sticky, and Related Posts**.
 
-- **Exclude Current Post:** Great for single post templates.
+- **Deeper Filtering:** Advanced filtering by **Tags, Custom Taxonomies, Search Queries,** and more.
 
-- **Load More / Pagination:** Implement pagination, navigation, infinite scroll, or a "Load More" button to fetch additional posts.
+- **Post Precision:** Use **Offset** to skip the first "N" posts or manually **Include/Exclude** content by ID.
 
-- **Sortable Elements:** Rearrange post title and metadata.
+- **Exclude Current Post:** Prevent duplicates by excluding the current post in single templates.
 
-- **Feature Image Custom Size:** Define image dimensions per layout.
+- **Sticky Management:** Easy toggle to include or completely **Exclude Sticky Posts**.
 
-- **Reading Time Indicator:** Display estimated reading time in meta.
+- **Load More / AJAX Loading:** Modern **Pagination, Navigation, Infinite Scroll,** and AJAX **Load More** buttons.
 
-- **Excerpt from Main Content:** Pull excerpts directly from the post body.
 
-- **Custom Post Query Hook:** Use **`apb_query`** filter for dev-level control.
+- **Sortable Elements:** Intuitive drag-and-drop interface to rearrange Post Title and Metadata.
 
-- **Post Ticker Options:** Configure ticker settings for headlines or news feeds.
+- **Feature Image Customization:** Define exact image dimensions and custom sizes per block.
 
-- **Shortcode Support:** Use shortcode to display post blocks anywhere.
+- **Meta Icon Customization:** Upload **Custom Icons** for author, date, category, reading time, and comment counts.
 
-- **Read More Placement Options:** Place the button exactly where you want it.
+- **Meta Author Link:** Choose whether author names link to their archive pages.
 
-- **Meta Author Link Toggle:** Choose whether the author name is clickable.
+- **Meta Date Format:** Full support for custom **PHP Date formats**.
 
-- **Taxonomies in Metadata:** Display categories, tags, and custom taxonomies.
+- **Taxonomies in Metadata:** Display categories, tags, and custom taxonomies within post meta.
 
-- **Custom Meta Icons:** Choose icons for metadata like date, category, and author.
+- **Reading Time Indicator:** Boost engagement with estimated reading time (minutes/seconds).
+
+- **Excerpt from Main Content:** Automatically pull excerpts directly from the post body content.
+
+- **Read More Placement:** Precisely place the "Read More" button where it fits your design best.
+
+- **Custom Query Hook:** Leverage the **`apb_query`** filter for deep developer-level control.
 
 
 ### How to Use – Step-by-Step Setup
@@ -298,6 +307,16 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.0.7 - 12 Mar 2026 =
+* **New:** Query Preset: Introduced a query preset option to select from predefined query configurations, making it easier to set up common post queries.
+* **New:** Taxonomy Relation: Added a new setting to select the relation (AND/OR) between different taxonomy filters, providing more advanced control over the post query.
+* **New:** Search Query: Introduced a search field in the block settings to filter posts by a specific search term, allowing for more precise content display.
+* **New:** Author Filter: Added the ability to filter posts by specific authors, allowing for more personalized content curation.
+* **New:** Exclude Sticky Posts: Introduced an option to exclude sticky posts from the query, providing better control over post visibility.
+* **New:** Post View Tracking: Introduced post view tracking to display posts by popularity.
+* **Update:** AJAX Post Fetching: Implemented AJAX-based post fetching in the editor/backend for a more reliable and faster loading experience.
+* **Fix:** Security Hardening: Enhanced security by restricting license access, improving XSS protection, and enforcing strict type casting for query parameters.
+
 = 2.0.6 - 28 Feb 2026 =
 * **New:** Added a Layout Selector for new blocks to improve the initial setup experience.
 * **New:** Added helpful descriptions and tooltips to various complex settings in the block sidebar.
@@ -306,13 +325,14 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * **Fix:** Improved fallback Grid layout display to ensure blocks render correctly even if initial configuration is missing.
 
 = 2.0.5 - 22 Feb 2026 =
-* **Update:** Admin Dashboard
-* **Fix:** Issues
+* **Add:** ShortCode feature for free users - Easy shortcode support for displaying posts anywhere on your site.
+* **Update:** Admin Dashboard - Improved UI with better navigation and clearer feature organization.
+* **Fix:** Critical performance improvements and bug fixes.
 
 = 2.0.4 - 22 Jan 2026 =
-* **New:** Add Infinite Scroll (alternative of Pagination)
-* **New:** Add Navigation (alternative of Pagination)
-* **New:** Add Load More Button (alternative of Pagination)
+* **New:** Infinite Scroll - Auto-load posts as users scroll down.
+* **New:** Navigation Pagination - Add next/previous buttons for manual browsing.
+* **New:** Load More Button - On-demand post loading with a clickable button.
 
 = 2.0.3 - 11 Dec 2025 =
 * **Update:** Remove unwanted data from posts query
