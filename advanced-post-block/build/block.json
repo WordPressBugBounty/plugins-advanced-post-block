@@ -3,7 +3,7 @@
   "name": "ap-block/posts",
   "title": "Advanced Posts",
   "description": "Elevate Your Posts Display with Advanced Layouts",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "category": "APBlock",
   "keywords": [
     "show posts",
@@ -290,6 +290,17 @@
     "tickerIsMousePause": {
       "type": "boolean",
       "default": true
+    },
+    "newsTicker": {
+      "type": "object",
+      "default": {
+        "theme": "theme1",
+        "type": "vertical",
+        "direction": "up",
+        "speed": 3000,
+        "animation": "slide",
+        "pauseOnHover": true
+      }
     },
     "elementsSort": {
       "type": "array",

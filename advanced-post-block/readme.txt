@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
 Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -306,6 +306,11 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.0.8 - 14 Mar 2026 =
+* **New:** List - Left Even Odd Sub-Layout: Added a new alternating left-aligned list layout for visually distinct even/odd post rows.
+* **New:** List - Right Even Odd Sub-Layout: Added a new alternating right-aligned list layout for visually distinct even/odd post rows.
+* **Fix:** Fixed the issue of posts not loading in the frontend.
 
 = 2.0.7 - 12 Mar 2026 =
 * **New:** Query Preset: Introduced a query preset option to select from predefined query configurations, making it easier to set up common post queries.
