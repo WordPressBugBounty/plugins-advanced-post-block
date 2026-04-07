@@ -25,9 +25,9 @@ class Tracker {
 			return;
 		}
 
-		$ajax_url = admin_url( 'admin-ajax.php' );
-		$nonce    = wp_create_nonce( 'apb_post_view_nonce' );
-		$post_id  = $post->ID;
+		$ajax_url	= admin_url( 'admin-ajax.php' );
+		$nonce		= wp_create_nonce( 'apb_post_view_nonce' );
+		$post_id	= $post->ID;
 
 		?>
 		<script type='text/javascript'>

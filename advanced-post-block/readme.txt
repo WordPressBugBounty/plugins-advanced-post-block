@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5+
 Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.0.8
+Stable tag: 2.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -68,7 +68,7 @@ All layouts are optimized for mobile and desktop devices. The plugin is built to
 
 Everything you need to build a professional and modern content display:
 
-- **Core Layouts:** Choose from professional Grid, Masonry, Slider, and Ticker views.
+- **Core Layouts:** Choose from professional Grid, Masonry, Slider, Ticker and News Ticker views.
 
 - **Flexible Sub-layouts:** Optimize displays with Left/Right Image, Overlay Box, Title-Meta layouts, and more.
 
@@ -100,7 +100,7 @@ Everything you need to build a professional and modern content display:
 
 **What’s Included in Pro:**
 
-- **Exclusive Layouts:** Unlock the **Grid 1** layout and cinematic sub-layouts like **Overlay Half Content**.
+- **Exclusive Layouts:** Unlock the **Grid 1, Magazine 1, and Magazine 2** layouts and cinematic sub-layouts like **Overlay Half Content**.
 
 - **News Ticker Options:** Fine-tune direction, speed, and display intervals for news tickers.
 
@@ -307,6 +307,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.1.0 - 07 Apr 2026 =
+* **New:** News Ticker Layout: Added a new professional news ticker layout (Free).
+* **New:** News Ticker Options: Enhanced News Ticker with direction, speed, and animation controls (Pro).
+* **New:** Magazine Layouts: Introduced Magazine 1 and Magazine 2 layouts for editorial-style post displays (Pro).
+* **New:** Magazine Min Height: Added a responsive minimum height setting for the magazine hero post (Pro).
+
 = 2.0.8 - 14 Mar 2026 =
 * **New:** List - Left Even Odd Sub-Layout: Added a new alternating left-aligned list layout for visually distinct even/odd post rows.
 * **New:** List - Right Even Odd Sub-Layout: Added a new alternating right-aligned list layout for visually distinct even/odd post rows.
@@ -398,7 +404,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Trim Words for the content.
 
 = 1.14.2 - 17 Aug 2024 =
-* Remove Script tag from the content
+* Remove Script tag from the content.
 
 = 1.14.1 - 13 Aug 2024 =
 * Update Initial Posts render

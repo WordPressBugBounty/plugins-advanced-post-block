@@ -24,17 +24,17 @@ class Posts{
 
 		if ( 'post' === $postType && count( $selectedCategories ) ) {
 			$termsQuery[] = [
-				'taxonomy' => 'category',
-				'field'    => 'term_id',
-				'terms'    => $selectedCategories,
+				'taxonomy'	=> 'category',
+				'field'		=> 'term_id',
+				'terms'		=> $selectedCategories,
 			];
 		}
 
 		if ( 'post' === $postType && count( $selectedTags ) ) {
 			$termsQuery[] = [
-				'taxonomy' => 'post_tag',
-				'field'    => 'term_id',
-				'terms'    => $selectedTags,
+				'taxonomy'	=> 'post_tag',
+				'field'		=> 'term_id',
+				'terms'		=> $selectedTags,
 			];
 		}
 
@@ -83,85 +83,85 @@ class Posts{
 			if ( ! empty( $queryPreset ) ) {
 				switch ( $queryPreset ) {
 					case 'popular':
-						$query['meta_key'] = 'apb_post_views_count';
-						$query['orderby']  = 'meta_value_num';
-						$query['order']    = 'DESC';
+						$query['meta_key']	= 'apb_post_views_count';
+						$query['orderby']		= 'meta_value_num';
+						$query['order']			= 'DESC';
 						break;
 					case 'popular-1-day':
-						$query['meta_key'] = 'apb_post_views_count';
-						$query['orderby']  = 'meta_value_num';
-						$query['order']    = 'DESC';
-						$query['date_query'] = [ [ 'after' => '1 day ago' ] ];
+						$query['meta_key']		= 'apb_post_views_count';
+						$query['orderby']		= 'meta_value_num';
+						$query['order']			= 'DESC';
+						$query['date_query']	= [ [ 'after' => '1 day ago' ] ];
 						break;
 					case 'popular-7-days':
-						$query['meta_key'] = 'apb_post_views_count';
-						$query['orderby']  = 'meta_value_num';
-						$query['order']    = 'DESC';
-						$query['date_query'] = [ [ 'after' => '1 week ago' ] ];
+						$query['meta_key']		= 'apb_post_views_count';
+						$query['orderby']		= 'meta_value_num';
+						$query['order']			= 'DESC';
+						$query['date_query']	= [ [ 'after' => '1 week ago' ] ];
 						break;
 					case 'popular-30-days':
-						$query['meta_key'] = 'apb_post_views_count';
-						$query['orderby']  = 'meta_value_num';
-						$query['order']    = 'DESC';
-						$query['date_query'] = [ [ 'after' => '1 month ago' ] ];
+						$query['meta_key']		= 'apb_post_views_count';
+						$query['orderby']		= 'meta_value_num';
+						$query['order']			= 'DESC';
+						$query['date_query']	= [ [ 'after' => '1 month ago' ] ];
 						break;
 					case 'random':
-						$query['orderby'] = 'rand';
+						$query['orderby']		= 'rand';
 						break;
 					case 'random-7-days':
-						$query['orderby'] = 'rand';
-						$query['date_query'] = [ [ 'after' => '1 week ago' ] ];
+						$query['orderby']		= 'rand';
+						$query['date_query']	= [ [ 'after' => '1 week ago' ] ];
 						break;
 					case 'random-30-days':
-						$query['orderby'] = 'rand';
-						$query['date_query'] = [ [ 'after' => '1 month ago' ] ];
+						$query['orderby']		= 'rand';
+						$query['date_query']	= [ [ 'after' => '1 month ago' ] ];
 						break;
 					case 'latest-published':
-						$query['orderby'] = 'date';
-						$query['order']   = 'DESC';
+						$query['orderby']		= 'date';
+						$query['order']			= 'DESC';
 						break;
 					case 'latest-modified':
-						$query['orderby'] = 'modified';
-						$query['order']   = 'DESC';
+						$query['orderby']		= 'modified';
+						$query['order']			= 'DESC';
 						break;
 					case 'oldest-published':
-						$query['orderby'] = 'date';
-						$query['order']   = 'ASC';
+						$query['orderby']		= 'date';
+						$query['order']			= 'ASC';
 						break;
 					case 'oldest-modified':
-						$query['orderby'] = 'modified';
-						$query['order']   = 'ASC';
+						$query['orderby']		= 'modified';
+						$query['order']			= 'ASC';
 						break;
 					case 'alphabet-asc':
-						$query['orderby'] = 'title';
-						$query['order']   = 'ASC';
+						$query['orderby']		= 'title';
+						$query['order']			= 'ASC';
 						break;
 					case 'alphabet-desc':
-						$query['orderby'] = 'title';
-						$query['order']   = 'DESC';
+						$query['orderby']		= 'title';
+						$query['order']			= 'DESC';
 						break;
 					case 'sticky-posts':
-						$query['post__in'] = get_option( 'sticky_posts' );
+						$query['post__in']		= get_option( 'sticky_posts' );
 						$query['ignore_sticky_posts'] = 1;
 						break;
 					case 'most-comment':
-						$query['orderby'] = 'comment_count';
-						$query['order']   = 'DESC';
+						$query['orderby']		= 'comment_count';
+						$query['order']			= 'DESC';
 						break;
 					case 'most-comment-1-day':
-						$query['orderby'] = 'comment_count';
-						$query['order']   = 'DESC';
-						$query['date_query'] = [ [ 'after' => '1 day ago' ] ];
+						$query['orderby']		= 'comment_count';
+						$query['order']			= 'DESC';
+						$query['date_query']	= [ [ 'after' => '1 day ago' ] ];
 						break;
 					case 'most-comment-7-days':
-						$query['orderby'] = 'comment_count';
-						$query['order']   = 'DESC';
-						$query['date_query'] = [ [ 'after' => '1 week ago' ] ];
+						$query['orderby']		= 'comment_count';
+						$query['order']			= 'DESC';
+						$query['date_query']	= [ [ 'after' => '1 week ago' ] ];
 						break;
 					case 'most-comment-30-days':
-						$query['orderby'] = 'comment_count';
-						$query['order']   = 'DESC';
-						$query['date_query'] = [ [ 'after' => '1 month ago' ] ];
+						$query['orderby']		= 'comment_count';
+						$query['order']			= 'DESC';
+						$query['date_query']	= [ [ 'after' => '1 month ago' ] ];
 						break;
 					case 'related-category':
 						if ( $currentPostId ) {
@@ -169,9 +169,9 @@ class Posts{
 							$categories = wp_get_post_terms( $currentPostId, 'category', [ 'fields' => 'ids' ] );
 							if ( ! empty( $categories ) ) {
 								$rel_query = [
-									'taxonomy' => 'category',
-									'field'    => 'term_id',
-									'terms'    => $categories,
+									'taxonomy'	=> 'category',
+									'field'		=> 'term_id',
+									'terms'		=> $categories,
 								];
 								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $rel_query ] : array_merge( $query['tax_query'], [ $rel_query ] );
 							} else {
@@ -185,9 +185,9 @@ class Posts{
 							$tags = wp_get_post_terms( $currentPostId, 'post_tag', [ 'fields' => 'ids' ] );
 							if ( ! empty( $tags ) ) {
 								$rel_query = [
-									'taxonomy' => 'post_tag',
-									'field'    => 'term_id',
-									'terms'    => $tags,
+									'taxonomy'	=> 'post_tag',
+									'field'		=> 'term_id',
+									'terms'		=> $tags,
 								];
 								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $rel_query ] : array_merge( $query['tax_query'], [ $rel_query ] );
 							} else {
@@ -219,17 +219,17 @@ class Posts{
 							$query['post__not_in'][] = $currentPostId;
 							$tax_query = [ 'relation' => 'OR' ];
 
-							$post_type  = get_post_type( $currentPostId );
-							$taxonomies = get_object_taxonomies( $post_type );
+							$post_type	= get_post_type( $currentPostId );
+							$taxonomies	= get_object_taxonomies( $post_type );
 
 							if ( ! empty( $taxonomies ) ) {
 								foreach ( $taxonomies as $taxonomy ) {
 									$terms = wp_get_post_terms( $currentPostId, $taxonomy, [ 'fields' => 'ids' ] );
 									if ( ! empty( $terms ) ) {
 										$tax_query[] = [
-											'taxonomy' => $taxonomy,
-											'field'    => 'term_id',
-											'terms'    => $terms,
+											'taxonomy'	=> $taxonomy,
+											'field'		=> 'term_id',
+											'terms'		=> $terms,
 										];
 									}
 								}
@@ -258,9 +258,9 @@ class Posts{
 		$attributes['isExcludeCurrent'] = $isExcludeCurrent == 'true' || 1 == $isExcludeCurrent;
 
 		// Ensure numeric values to avoid PHP type errors and handle "all" mode
-		$postsPerPage = isset( $postsPerPage ) ? (int) $postsPerPage : 0;
-		$pageNumber    = (int) $pageNumber;
-		$postsOffset   = isset( $postsOffset ) ? (int) $postsOffset : 0;
+		$postsPerPage	= isset( $postsPerPage ) ? (int) $postsPerPage : 0;
+		$pageNumber		= (int) $pageNumber;
+		$postsOffset	= isset( $postsOffset ) ? (int) $postsOffset : 0;
 
 		$offset = ( $postsPerPage * max( 0, $pageNumber - 1 ) ) + $postsOffset;
 
@@ -332,6 +332,22 @@ class Posts{
 							} ?>
 						</div>
 					<?php break;
+					case 'magazine1': ?>
+						<div class='<?php echo esc_attr( $prefix ); ?>Magazine1Posts'>
+							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
+								echo self::skeletonArticle( $prefix );
+							} ?>
+						</div>
+					<?php break;
+					case 'magazine2': ?>
+						<div class='<?php echo esc_attr( $prefix ); ?>Magazine2Posts'>
+							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
+								echo self::skeletonArticle( $prefix );
+							} ?>
+						</div>
+					<?php break;
 					case 'slider': ?>
 						<style>
 							<?php echo esc_html( $sliderStyles ); ?>
@@ -353,6 +369,19 @@ class Posts{
 								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
 								echo self::skeletonArticle( $prefix );
 							} ?>
+						</div>
+					<?php break;
+					case 'newsTicker': 
+						$label = ! empty( $newsTicker['label'] ) ? $newsTicker['label'] : 'Trending Now';
+						$theme = ! empty( $newsTicker['theme'] ) ? $newsTicker['theme'] : 'theme1';
+					?>
+						<div class='<?php echo esc_attr( $prefix ); ?>NewsTicker <?php echo esc_attr( $theme ); ?> newsTickerSkeleton'>
+							<div class='newsTickerLabel'>
+								<span><?php echo esc_html( $label ); ?></span>
+							</div>
+							<div class='newsTickerPostsWrapper'>
+								<span class='<?php echo esc_attr( $prefix ); ?>LoadingItem newsTickerSkeletonBar'></span>
+							</div>
 						</div>
 					<?php break;
 					default: ?>

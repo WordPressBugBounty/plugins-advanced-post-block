@@ -3,7 +3,7 @@
   "name": "ap-block/posts",
   "title": "Advanced Posts",
   "description": "Elevate Your Posts Display with Advanced Layouts",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "category": "APBlock",
   "keywords": [
     "show posts",
@@ -294,12 +294,24 @@
     "newsTicker": {
       "type": "object",
       "default": {
+        "label": "Trending Now",
         "theme": "theme1",
         "type": "vertical",
         "direction": "up",
         "speed": 3000,
         "animation": "slide",
         "pauseOnHover": true
+      }
+    },
+    "magazine": {
+      "type": "object",
+      "default": {
+        "subLayout": "left-image",
+        "minHeight": {
+          "desktop": "450px",
+          "tablet": "400px",
+          "mobile": "350px"
+        }
       }
     },
     "elementsSort": {
