@@ -5,20 +5,42 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 
 require_once APB_DIR_PATH . 'includes/Functions.php';
 
+/**
+ * Posts class
+ * Handles post querying, formatting, and rendering of placeholders.
+ * 
+ * @package APB
+ */
 class Posts{
+	/**
+	 * Constructor.
+	 * Registers excerpt filters.
+	 */
 	public function __construct(){
 		add_filter( 'apb_excerpt_filter', function( $plainText, $htmlContent ){
 			return $htmlContent;
-		}, 10, 3 );
+		}, 10, 2 );
 	}
 
-	static function query( $attributes ){
-		extract( $attributes );
-		$taxonomyRelation = $taxonomyRelation ?? 'AND';
+	/**
+	 * Builds WP_Query arguments based on block attributes.
+	 *
+	 * @param array $queryAttr Block attributes.
+	 * @return array WP_Query arguments.
+	 */
+	public static function arrangeQuery( $queryAttr ){
+		$taxonomyRelation = $queryAttr['taxonomyRelation'] ?? 'AND';
+		$selectedCategories = $queryAttr['selectedCategories'] ?? [];
+		$postType = $queryAttr['postType'] ?? 'post';
+		$isPostsPerPageAll = $queryAttr['isPostsPerPageAll'] ?? false;
+		$postsPerPage = $queryAttr['postsPerPage'] ?? 12;
+		$postsOrderBy = $queryAttr['postsOrderBy'] ?? 'date';
+		$postsOrder = $queryAttr['postsOrder'] ?? 'desc';
+		$currentPostId = $queryAttr['currentPostId'] ?? 0;
 
-		$selectedCategories = $selectedCategories ?? [];
-		$selectedTags = $selectedTags ?? [];
-		$selectedTaxonomies = $selectedTaxonomies ?? [];
+		if ( ! post_type_exists( $postType ) || ! is_post_type_viewable( $postType ) ) {
+			$postType = 'post';
+		}
 
 		$termsQuery = ['relation' => $taxonomyRelation];
 
@@ -30,255 +52,69 @@ class Posts{
 			];
 		}
 
-		if ( 'post' === $postType && count( $selectedTags ) ) {
-			$termsQuery[] = [
-				'taxonomy'	=> 'post_tag',
-				'field'		=> 'term_id',
-				'terms'		=> $selectedTags,
-			];
-		}
-
-		foreach ( $selectedTaxonomies as $taxonomy => $terms ){
-			if( count( $terms ) ){
-				$termsQuery[] = [
-					'taxonomy'	=> $taxonomy,
-					'field'		=> 'term_id',
-					'terms'		=> $terms,
-				];
-			}
-		}
-
-		$postsInclude = Functions::filterNaN( $postsInclude ?? [] );
-		$post__in = !empty( $postsInclude ) ? [ 'post__in' => $postsInclude ] : [];
-		$post__not_in = Functions::filterNaN( $postsExclude ?? [] );
-		$postsAuthors = Functions::filterNaN( $postsAuthors ?? [] );
+		$postsAuthors = Functions::filterNaN( $queryAttr['postsAuthors'] ?? [] );
 		$author__in = !empty( $postsAuthors ) ? [ 'author__in' => $postsAuthors ] : [];
-
-		$currentPostId = get_the_ID() ?: ( $currentPostId ?? 0 );
-		if ( $isExcludeCurrent && $currentPostId ) {
-			$post__not_in[] = $currentPostId;
-		}
-
-		if ( !empty( $isExcludeSticky ) ) {
-			$stickyPosts = get_option( 'sticky_posts' );
-			if ( !empty( $stickyPosts ) ) {
-				$post__not_in = array_merge( $post__not_in, $stickyPosts );
-			}
-		}
 
 		$query = array_merge( [
 			'post_type'			=> $postType,
 			'posts_per_page'	=> $isPostsPerPageAll ? -1 : (int) $postsPerPage,
 			'orderby'			=> $postsOrderBy,
 			'order'				=> $postsOrder,
-			's'					=> $postsSearch ?? '',
 			'tax_query'			=> count( $termsQuery ) > 1 ? $termsQuery : [],
-			'offset'			=> $isPostsPerPageAll ? 0 : (int) $postsOffset,
-			'post__not_in'		=> array_unique( $post__not_in ),
 			'has_password'		=> false,
 			'post_status'		=> 'publish'
-		], $post__in, $author__in );
+		], $author__in );
 
-		if( apbIsPremium() ) {
-			if ( ! empty( $queryPreset ) ) {
-				switch ( $queryPreset ) {
-					case 'popular':
-						$query['meta_key']	= 'apb_post_views_count';
-						$query['orderby']		= 'meta_value_num';
-						$query['order']			= 'DESC';
-						break;
-					case 'popular-1-day':
-						$query['meta_key']		= 'apb_post_views_count';
-						$query['orderby']		= 'meta_value_num';
-						$query['order']			= 'DESC';
-						$query['date_query']	= [ [ 'after' => '1 day ago' ] ];
-						break;
-					case 'popular-7-days':
-						$query['meta_key']		= 'apb_post_views_count';
-						$query['orderby']		= 'meta_value_num';
-						$query['order']			= 'DESC';
-						$query['date_query']	= [ [ 'after' => '1 week ago' ] ];
-						break;
-					case 'popular-30-days':
-						$query['meta_key']		= 'apb_post_views_count';
-						$query['orderby']		= 'meta_value_num';
-						$query['order']			= 'DESC';
-						$query['date_query']	= [ [ 'after' => '1 month ago' ] ];
-						break;
-					case 'random':
-						$query['orderby']		= 'rand';
-						break;
-					case 'random-7-days':
-						$query['orderby']		= 'rand';
-						$query['date_query']	= [ [ 'after' => '1 week ago' ] ];
-						break;
-					case 'random-30-days':
-						$query['orderby']		= 'rand';
-						$query['date_query']	= [ [ 'after' => '1 month ago' ] ];
-						break;
-					case 'latest-published':
-						$query['orderby']		= 'date';
-						$query['order']			= 'DESC';
-						break;
-					case 'latest-modified':
-						$query['orderby']		= 'modified';
-						$query['order']			= 'DESC';
-						break;
-					case 'oldest-published':
-						$query['orderby']		= 'date';
-						$query['order']			= 'ASC';
-						break;
-					case 'oldest-modified':
-						$query['orderby']		= 'modified';
-						$query['order']			= 'ASC';
-						break;
-					case 'alphabet-asc':
-						$query['orderby']		= 'title';
-						$query['order']			= 'ASC';
-						break;
-					case 'alphabet-desc':
-						$query['orderby']		= 'title';
-						$query['order']			= 'DESC';
-						break;
-					case 'sticky-posts':
-						$query['post__in']		= get_option( 'sticky_posts' );
-						$query['ignore_sticky_posts'] = 1;
-						break;
-					case 'most-comment':
-						$query['orderby']		= 'comment_count';
-						$query['order']			= 'DESC';
-						break;
-					case 'most-comment-1-day':
-						$query['orderby']		= 'comment_count';
-						$query['order']			= 'DESC';
-						$query['date_query']	= [ [ 'after' => '1 day ago' ] ];
-						break;
-					case 'most-comment-7-days':
-						$query['orderby']		= 'comment_count';
-						$query['order']			= 'DESC';
-						$query['date_query']	= [ [ 'after' => '1 week ago' ] ];
-						break;
-					case 'most-comment-30-days':
-						$query['orderby']		= 'comment_count';
-						$query['order']			= 'DESC';
-						$query['date_query']	= [ [ 'after' => '1 month ago' ] ];
-						break;
-					case 'related-category':
-						if ( $currentPostId ) {
-							$query['post__not_in'][] = $currentPostId;
-							$categories = wp_get_post_terms( $currentPostId, 'category', [ 'fields' => 'ids' ] );
-							if ( ! empty( $categories ) ) {
-								$rel_query = [
-									'taxonomy'	=> 'category',
-									'field'		=> 'term_id',
-									'terms'		=> $categories,
-								];
-								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $rel_query ] : array_merge( $query['tax_query'], [ $rel_query ] );
-							} else {
-								$query['post__in'] = [0]; // Force no results if no categories found
-							}
-						}
-						break;
-					case 'related-tag':
-						if ( $currentPostId ) {
-							$query['post__not_in'][] = $currentPostId;
-							$tags = wp_get_post_terms( $currentPostId, 'post_tag', [ 'fields' => 'ids' ] );
-							if ( ! empty( $tags ) ) {
-								$rel_query = [
-									'taxonomy'	=> 'post_tag',
-									'field'		=> 'term_id',
-									'terms'		=> $tags,
-								];
-								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $rel_query ] : array_merge( $query['tax_query'], [ $rel_query ] );
-							} else {
-								$query['post__in'] = [0];
-							}
-						}
-						break;
-					case 'related-category-tag':
-						if ( $currentPostId ) {
-							$query['post__not_in'][] = $currentPostId;
-							$tags = wp_get_post_terms( $currentPostId, 'post_tag', [ 'fields' => 'ids' ] );
-							$categories = wp_get_post_terms( $currentPostId, 'category', [ 'fields' => 'ids' ] );
-							$tax_query = [ 'relation' => 'OR' ];
-							if ( ! empty( $tags ) ) {
-								$tax_query[] = [ 'taxonomy' => 'post_tag', 'field' => 'term_id', 'terms' => $tags ];
-							}
-							if ( ! empty( $categories ) ) {
-								$tax_query[] = [ 'taxonomy' => 'category', 'field' => 'term_id', 'terms' => $categories ];
-							}
-							if ( count( $tax_query ) > 1 ) {
-								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $tax_query ] : array_merge( $query['tax_query'], [ $tax_query ] );
-							} else {
-								$query['post__in'] = [0];
-							}
-						}
-						break;
-					case 'related-posts':
-						if ( $currentPostId ) {
-							$query['post__not_in'][] = $currentPostId;
-							$tax_query = [ 'relation' => 'OR' ];
-
-							$post_type	= get_post_type( $currentPostId );
-							$taxonomies	= get_object_taxonomies( $post_type );
-
-							if ( ! empty( $taxonomies ) ) {
-								foreach ( $taxonomies as $taxonomy ) {
-									$terms = wp_get_post_terms( $currentPostId, $taxonomy, [ 'fields' => 'ids' ] );
-									if ( ! empty( $terms ) ) {
-										$tax_query[] = [
-											'taxonomy'	=> $taxonomy,
-											'field'		=> 'term_id',
-											'terms'		=> $terms,
-										];
-									}
-								}
-							}
-
-							if ( count( $tax_query ) > 1 ) {
-								$query['tax_query'] = empty( $query['tax_query'] ) ? [ $tax_query ] : array_merge( $query['tax_query'], [ $tax_query ] );
-							} else {
-								$query['post__in'] = [0];
-							}
-						}
-						break;
-				}
-			}
-
-			$query = apply_filters( 'apb_query', $query );
-		}
+		// Query Presets are available in the premium version.
 
 		return $query;
 	}
 
-	static function getPosts( $attributes, $pageNumber = 1 ){
-		extract( $attributes );
+	/**
+	 * Fetches posts based on attributes and page number.
+	 *
+	 * @param array $queryAttr Block attributes.
+	 * @param int $pageNumber Current page number.
+	 * @return array Arranged posts data.
+	 */
+	public static function getPosts( $queryAttr, $pageNumber = 1 ){
+		$isPostsPerPageAll = $queryAttr['isPostsPerPageAll'] ?? false;
+		$postsPerPage = $queryAttr['postsPerPage'] ?? 12;
+		$postType = $queryAttr['postType'] ?? 'post';
+		$excerptLength = $queryAttr['excerptLength'] ?? 25;
+		$isExcerptFromContent = $queryAttr['isExcerptFromContent'] ?? false;
 
-		$attributes['isPostsPerPageAll'] = 'true' == $isPostsPerPageAll || 1 == $isPostsPerPageAll;
-		$attributes['isExcludeCurrent'] = $isExcludeCurrent == 'true' || 1 == $isExcludeCurrent;
+		$queryAttr['isPostsPerPageAll'] = true === $isPostsPerPageAll || 'true' === $isPostsPerPageAll;
 
 		// Ensure numeric values to avoid PHP type errors and handle "all" mode
-		$postsPerPage	= isset( $postsPerPage ) ? (int) $postsPerPage : 0;
+		$postsPerPage	= (int) $postsPerPage;
 		$pageNumber		= (int) $pageNumber;
-		$postsOffset	= isset( $postsOffset ) ? (int) $postsOffset : 0;
 
-		$offset = ( $postsPerPage * max( 0, $pageNumber - 1 ) ) + $postsOffset;
+		// Extract excerptFrom with fallback to legacy isExcerptFromContent
+		$excerptFrom = $queryAttr['excerptFrom'] ?? ( isset( $queryAttr['excerpt']['from'] ) ? $queryAttr['excerpt']['from'] : 'excerpt' );
+		$excerptFrom = ( 'content' === $excerptFrom || $isExcerptFromContent ) ? 'content' : 'excerpt';
 
-		$newArgs = wp_parse_args( [ 'offset' => $offset ], self::query( $attributes ) );
+		$offset = ( $postsPerPage * max( 0, $pageNumber - 1 ) );
+
+		$newArgs = wp_parse_args( [ 'offset' => $offset ], self::arrangeQuery( $queryAttr ) );
 		$posts = Functions::arrangedPosts(
 			get_posts( $newArgs ),
 			$postType,
-			$fImgSize,
-			$metaDateFormat,
-			$isExcerptFromContent || 'true' === $isExcerptFromContent,
-			$excerptLength
+			$excerptFrom,
+			$excerptLength ?? 25
 		);
 
 		return $posts;
 	}
 
-	static function skeletonArticle( $prefix ){
-		$articleEl = "<article class='". $prefix ."Post'>
+	/**
+	 * Generates a skeleton article HTML for loading state.
+	 *
+	 * @param string $prefix CSS class prefix.
+	 * @return string Skeleton article HTML.
+	 */
+	public static function skeletonArticle( $prefix ){
+		$articleEl = "<article class='". $prefix ."Post' aria-hidden='true'>
 			<span class='". $prefix ."LoadingItem ". $prefix ."Thumb'></span>
 			
 			<div class='". $prefix ."Text'>
@@ -301,14 +137,26 @@ class Posts{
 			</div>
 		</article>";
 
-		ob_start();
-			echo wp_kses( $articleEl, [ 'article' => [ 'class' => [] ], 'div' => [ 'class' => [] ], 'span' => [ 'class' => [] ] ] );
-		return ob_get_clean();
+		return wp_kses( $articleEl, [ 'article' => [ 'class' => [], 'aria-hidden' => [] ], 'div' => [ 'class' => [] ], 'span' => [ 'class' => [] ] ] );
 	}
 
-	static function loadingPlaceholder( $attributes, $prefix ){
-		extract( $attributes );
-		$posts = self::getPosts( $attributes );
+	/**
+	 * Generates a loading placeholder HTML based on layout and attributes.
+	 *
+	 * @param array $attributes Block attributes.
+	 * @param string $prefix CSS class prefix.
+	 * @return string Loading placeholder HTML.
+	 */
+	public static function loadingPlaceholder( $attributes, $prefix ){
+		$countQuery = new \WP_Query( Posts::arrangeQuery( $attributes ?? [] ) );
+		$postCount = $countQuery->found_posts;
+
+		$layout = $attributes['layout'] ?? '';
+		$columns = $attributes['columns'] ?? [ 'desktop' => 3, 'tablet' => 2, 'mobile' => 1 ];
+		$sliderHeight = $attributes['sliderHeight'] ?? '350px';
+		$sliderIsPage = $attributes['sliderIsPage'] ?? true;
+		$sliderIsPrevNext = $attributes['sliderIsPrevNext'] ?? true;
+		$tickerVisible = $attributes['tickerVisible'] ?? 3;
 
 		$colD = $columns['desktop'];
 		$colT = $columns['tablet'];
@@ -321,36 +169,15 @@ class Posts{
 			min-height: $sliderHeight;
 		}";
 
+		$loadingLabel = esc_html__( 'Loading posts…', 'advanced-post-block' );
+
 		ob_start(); ?>
-			<div class='<?php echo esc_attr( $prefix ); ?>LoadingPlaceholder' id='<?php echo esc_attr( $placeholderId ); ?>'>
+			<div class='<?php echo esc_attr( $prefix ); ?>LoadingPlaceholder' id='<?php echo esc_attr( $placeholderId ); ?>' role='status' aria-busy='true'>
+				<span class='screen-reader-text'><?php echo esc_html( $loadingLabel ); ?></span>
 				<?php switch ( $layout ) {
-					case 'grid1': ?>
-						<div class='<?php echo esc_attr( $prefix ); ?>Grid1Posts'>
-							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
-								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
-								echo self::skeletonArticle( $prefix );
-							} ?>
-						</div>
-					<?php break;
-					case 'magazine1': ?>
-						<div class='<?php echo esc_attr( $prefix ); ?>Magazine1Posts'>
-							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
-								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
-								echo self::skeletonArticle( $prefix );
-							} ?>
-						</div>
-					<?php break;
-					case 'magazine2': ?>
-						<div class='<?php echo esc_attr( $prefix ); ?>Magazine2Posts'>
-							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
-								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
-								echo self::skeletonArticle( $prefix );
-							} ?>
-						</div>
-					<?php break;
 					case 'slider': ?>
 						<style>
-							<?php echo esc_html( $sliderStyles ); ?>
+							<?php echo wp_strip_all_tags( $sliderStyles ); ?>
 						</style>
 						<div class='<?php echo esc_attr( $prefix ); ?>SliderSkeleton'>
 							<div class='swiper-wrapper'>
@@ -359,8 +186,13 @@ class Posts{
 								echo self::skeletonArticle( $prefix );
 								} ?>
 							</div>
-							<?php echo $sliderIsPage ? "<div class='swiper-pagination'></div>" : ''; ?>
-							<?php echo $sliderIsPrevNext ? "<div class='swiper-button-prev'></div><div class='swiper-button-next'></div>" : ''; ?>
+							<?php if ( $sliderIsPage ) : ?>
+								<div class='swiper-pagination'></div>
+							<?php endif; ?>
+							<?php if ( $sliderIsPrevNext ) : ?>
+								<div class='swiper-button-prev'></div>
+								<div class='swiper-button-next'></div>
+							<?php endif; ?>
 						</div>
 					<?php break;
 					case 'ticker': ?>
@@ -372,8 +204,8 @@ class Posts{
 						</div>
 					<?php break;
 					case 'newsTicker': 
-						$label = ! empty( $newsTicker['label'] ) ? $newsTicker['label'] : 'Trending Now';
-						$theme = ! empty( $newsTicker['theme'] ) ? $newsTicker['theme'] : 'theme1';
+						$label = __('Trending Now', 'advanced-post-block');
+						$theme = 'theme1';
 					?>
 						<div class='<?php echo esc_attr( $prefix ); ?>NewsTicker <?php echo esc_attr( $theme ); ?> newsTickerSkeleton'>
 							<div class='newsTickerLabel'>
@@ -386,7 +218,7 @@ class Posts{
 					<?php break;
 					default: ?>
 						<div class='<?php echo esc_attr( $gridClass ); ?>'>
-							<?php foreach ( range( 1, count( $posts ) ) as $item ) {
+							<?php foreach ( range( 1, $postCount ) as $item ) {
 								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
 								echo self::skeletonArticle( $prefix );
 							} ?>

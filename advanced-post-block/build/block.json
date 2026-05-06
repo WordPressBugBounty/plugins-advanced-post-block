@@ -1,9 +1,10 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "ap-block/posts",
   "title": "Advanced Posts",
   "description": "Elevate Your Posts Display with Advanced Layouts",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "category": "APBlock",
   "keywords": [
     "show posts",
@@ -188,6 +189,12 @@
         "color": ""
       }
     },
+    "hoverContentBG": {
+      "type": "object",
+      "default": {
+        "color": ""
+      }
+    },
     "contentPadding": {
       "type": "object",
       "default": {
@@ -202,6 +209,22 @@
         "color": "#0c0d3c1a",
         "radius": "5px"
       }
+    },
+    "hoverBorder": {
+      "type": "object",
+      "default": {
+        "width": "1px",
+        "color": "#0c0d3c1a",
+        "radius": "5px"
+      }
+    },
+    "shadow": {
+      "type": "array",
+      "default": []
+    },
+    "hoverShadow": {
+      "type": "array",
+      "default": []
     },
     "sliderIsLoop": {
       "type": "boolean",
@@ -318,7 +341,8 @@
       "type": "array",
       "default": [
         "title",
-        "meta"
+        "meta",
+        "excerpt"
       ]
     },
     "isFImg": {
@@ -568,6 +592,140 @@
       "default": {
         "radius": "3px"
       }
+    },
+    "image": {
+      "type": "object",
+      "default": {
+        "width": "100%",
+        "height": "60%",
+        "lazyLoad": false,
+        "defaultImage": "",
+        "styles": {
+          "grayScale": false,
+          "hoverGrayScale": false,
+          "border": {
+            "width": "0px",
+            "style": "none"
+          },
+          "radius": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          },
+          "hoverRadius": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          },
+          "shadow": [],
+          "hoverShadow": [],
+          "margin": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "hoverAnimation": "none"
+        }
+      }
+    },
+    "title": {
+      "type": "object",
+      "default": {
+        "tag": "h3",
+        "limit": {
+          "type": "word",
+          "value": 10,
+          "ellipsis": false
+        },
+        "styles": {
+          "textAlign": "",
+          "hoverColor": ""
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "default": {
+        "gap": "10px",
+        "separator": "",
+        "sorting": [
+          "author",
+          "date",
+          "category",
+          "readTime",
+          "comment",
+          "viewCount",
+          "taxonomy"
+        ],
+        "date": {
+          "timeAgo": false
+        },
+        "viewCount": {
+          "isVisible": false,
+          "icon": ""
+        },
+        "styles": {
+          "alignment": "",
+          "hoverColor": "",
+          "linkHoverColor": "",
+          "iconHoverColor": "",
+          "separatorColor": ""
+        }
+      }
+    },
+    "excerpt": {
+      "type": "object",
+      "default": {
+        "from": "excerpt",
+        "styles": {
+          "hoverColor": ""
+        }
+      }
+    },
+    "readMore": {
+      "type": "object",
+      "default": {
+        "icon": "",
+        "iconGap": "10px",
+        "iconPosition": "right",
+        "styles": {
+          "hoverBorder": {
+            "radius": "3px"
+          },
+          "hoverAnimation": "none",
+          "shadow": [],
+          "hoverShadow": []
+        }
+      }
+    },
+    "categoryOnImage": {
+      "type": "object",
+      "default": {
+        "styles": {
+          "position": "bottomLeft",
+          "padding": {
+            "top": "3px",
+            "right": "8px",
+            "bottom": "3px",
+            "left": "8px"
+          },
+          "radius": {
+            "top": "3px",
+            "right": "3px",
+            "bottom": "3px",
+            "left": "3px"
+          },
+          "margin": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "10px",
+            "left": "10px"
+          }
+        }
+      }
     }
   },
   "supports": {
@@ -579,7 +737,7 @@
   },
   "example": {
     "attributes": {
-      "preview": true,
+      "layout": "grid",
       "columns": {
         "desktop": 1,
         "tablet": 1,
@@ -589,8 +747,6 @@
   },
   "editorScript": [
     "file:./index.js",
-    "wp-server-side-render",
-    "ap-block-posts-view-script",
     "wp-api-request",
     "wp-api",
     "easyTicker"

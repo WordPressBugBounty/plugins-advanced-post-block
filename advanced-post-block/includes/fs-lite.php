@@ -16,10 +16,6 @@ if ( ! function_exists( 'apb_fs' ) ) {
 				'type'					=> 'plugin',
 				'public_key'			=> 'pk_87f141adce326dfb96ba4e12d8a36',
 				'is_premium'			=> false,
-				'premium_suffix'		=> 'Pro',
-				'has_premium_version'	=> true,
-				'has_addons'			=> false,
-				'has_paid_plans'		=> true,
 				'menu'					=> [
 					'slug'			=> 'edit.php?post_type=apb',
 					'first-path'	=> 'edit.php?post_type=apb&page=advanced-post-block',

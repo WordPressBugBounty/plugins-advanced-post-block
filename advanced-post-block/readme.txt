@@ -2,10 +2,10 @@
 Contributors: bplugins, abuhayat, charlescormier, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, post grid, post slider, post filter, post list
-Requires at least: 6.5+
+Requires at least: 6.5
 Tested up to: 6.9
 Requires PHP: 7.1
-Stable tag: 2.1.0
+Stable tag: 2.2.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,9 +17,13 @@ Advanced Post Block lets you add dynamic post grids, lists, sliders, and tickers
 
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) | [**Documentation**](https://bplugins.com/docs/advanced-post-block/) | [**Pricing**](https://bplugins.com/products/advanced-post-block/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/advanced-post-block/#demos)
 
-[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) is a flexible plugin for displaying WordPress posts, pages, or custom post types using the Gutenberg editor. It offers multiple layouts and filtering options, making it useful for content creators who want greater control over how content appears on the front end.
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) is a Gutenberg blocks plugin for displaying posts, pages, and custom post types in WordPress with advanced query controls, filtering, and multiple layout options.
 
-This plugin is suitable for anyone who wants to present content in a structured, responsive format using native WordPress blocks. It allows fine control over content queries, metadata visibility, featured image handling, and more, without the need for coding.
+It supports grid, list, masonry, slider, ticker, and news-style layouts, allowing you to create dynamic post displays for blogs, magazines, and content-heavy websites. The plugin includes flexible query parameters such as category, tag, author, keyword search, and custom taxonomy filtering, along with query presets for faster setup.
+
+Recent additions include AJAX-based post loading, pagination, load more, and infinite scroll, enabling seamless content browsing without page reloads. It also supports post view tracking and sorting by popularity, helping highlight trending or most-viewed content.
+
+You can control the visibility and structure of post elements, including featured images, titles, metadata, excerpts, and read more links. Built for performance and responsiveness, the plugin integrates directly with the WordPress block editor to create structured, customizable content layouts without coding.
 
 
 ### Layout Options
@@ -70,27 +74,29 @@ Everything you need to build a professional and modern content display:
 
 - **Core Layouts:** Choose from professional Grid, Masonry, Slider, Ticker and News Ticker views.
 
-- **Flexible Sub-layouts:** Optimize displays with Left/Right Image, Overlay Box, Title-Meta layouts, and more.
+- **Flexible Sub-layouts:** Optimize displays with Default, Left/Right Image, Overlay, and Title-Meta layouts.
 
-- **Dynamic Post Query:** Advanced filtering by post type, posts per page, categories, authors, and custom sorting.
+- **Slider Options:** Customize the slider layout with loop, touch move, autoplay, speed, effect, pagination and navigation with the customization and styling.
+
+- **Dynamic Post Query:** Advanced filtering by post type, posts per page, categories, authors, taxonomy relation (AND/OR), post orders and more.
 
 - **Element Visibility:** Full control to show or hide thumbnails, titles, metadata, excerpts, and read more buttons.
 
-- **Featured Image Settings:** Toggle links and adjust image fitting (Cover/Contain) for a polished look.
+- **Feature Image Settings:** Toggle link, set dimensions (Width/Height), and adjust image fitting (Cover/Contain) for a polished look.
 
-- **Title Control:** Customize post title layout, enable link, and set precise typography.
+- **Title Control:** Customize post title with enable link, select tag, set typography, alignment, colors, and margin.
 
-- **Metadata Flexibility:** Show or hide post date, author, categories, and comment counts.
+- **Flexible Metadata:** Show or hide post author, date, categories with position, and comment counts with typography, different colors and margin.
 
-- **Meta Info Customization:** Personalize metadata with custom icons, colors, links, and more.
+- **Dynamic Excerpt:** Display excerpt from post excerpt or content with limit, alignment, typography, colors, and margin.
 
-- **Custom Read More:** Define labels, colors, and hover effects for your "Read More" or "Continue" buttons.
+- **Customized Read More:** Show Read More button with custom label and icon with link tab and style for alignment, typography, padding, colors, borders, shadows and hover animation.
+
+- **Interactive Container Design:** Alignment, backgrounds, borders, and shadows with padding support for article blocks and content areas.
 
 - **Shortcode Support:** Seamlessly display post blocks anywhere on your site using shortcodes.
 
 - **Responsive Ready:** Fully optimized for a perfect experience on mobile, tablet, and desktop devices.
-
-- **High Performance:** Lightweight design with optimized queries for lightning-fast load times.
 
 - **Developer Friendly:** Built with clean code following the best WordPress developmental standards.
 
@@ -100,42 +106,45 @@ Everything you need to build a professional and modern content display:
 
 **What’s Included in Pro:**
 
-- **Exclusive Layouts:** Unlock the **Grid 1, Magazine 1, and Magazine 2** layouts and cinematic sub-layouts like **Overlay Half Content**.
+- **Exclusive Layouts:** Unlock the **Grid 1**, **Magazine 1**, and **Magazine 2** layouts and sub-layouts like **Overlay Content Box**, **Overlay Half Content**, and **List Even/Odd**.
 
-- **News Ticker Options:** Fine-tune direction, speed, and display intervals for news tickers.
+- **Ticker Options:** Customize the Ticker layout with direction, speed, interval, height, and pause on mouse hover options.
+
+- **News Ticker Pro:** Fine-tune News Ticker layout with label, theme, type, direction, speed, animation, and pause on mouse hover options.
 
 - **Display Pages:** Showcase standard WordPress pages alongside your posts.
 
-- **Query Presets:** Instant configurations for **Popular, Random, Sticky, and Related Posts**.
+- **Query Presets:** Instant query configurations for **Popular**, **Random**, **Sticky**, **Most Comments**, **Related Posts**, and more.
 
-- **Deeper Filtering:** Advanced filtering by **Tags, Custom Taxonomies, Search Queries,** and more.
+- **Deeper Filtering:** Advanced posts query by **Tags**, **Custom Taxonomies**, **Search Queries** and more **Order By** options.
 
-- **Post Precision:** Use **Offset** to skip the first "N" posts or manually **Include/Exclude** content by ID.
+- **Post Precision:** Use **Offset** to skip the first "N" posts or manually **Include/Exclude** content by IDs, **Exclude current and sticky posts**.
 
-- **Exclude Current Post:** Prevent duplicates by excluding the current post in single templates.
+- **Pagination & AJAX:** Modern **Pagination**, **Navigation**, **Infinite Scroll**, and **Load More** button to display more posts.
 
-- **Sticky Management:** Easy toggle to include or completely **Exclude Sticky Posts**.
+- **Sortable Elements:** Intuitive drag-and-drop interface to rearrange Post Title, Metadata, and Excerpt.
 
-- **Load More / AJAX Loading:** Modern **Pagination, Navigation, Infinite Scroll,** and AJAX **Load More** buttons.
+- **Title Control:** Set precise **Word/Character limits** with ellipsis to adjust title length.
 
+- **Feature Image:** Define the image size, lazyload, and set default Placeholder image with normal-hover grayscale effects and hover radius styling.
 
-- **Sortable Elements:** Intuitive drag-and-drop interface to rearrange Post Title and Metadata.
+- **Metadata Customization:** Set separator and gaps between meta items, reorder/sorting the meta items, set alignment for the metadata.
 
-- **Feature Image Customization:** Define exact image dimensions and custom sizes per block.
+- **Meta Author:** Set the author link and set custom icon for the author meta.
 
-- **Meta Icon Customization:** Upload **Custom Icons** for author, date, category, reading time, and comment counts.
+- **Meta Date:** Set the date format, show date as time ago and set custom icon for the date meta.
 
-- **Meta Author Link:** Choose whether author names link to their archive pages.
+- **Meta Category:** Set the category on image position, and set padding, border radius for the Badge display.
 
-- **Meta Date Format:** Full support for custom **PHP Date formats**.
+-**Tags and Custom Taxonomies:** Display tags and custom taxonomies in the meta with the custom icon.
 
-- **Taxonomies in Metadata:** Display categories, tags, and custom taxonomies within post meta.
+- **Meta Reading Time:** Show post read time with seconds, label and custom icon.
 
-- **Reading Time Indicator:** Boost engagement with estimated reading time (minutes/seconds).
+- **Post View Count:** Enable post view count with custom to display the post views in meta area.
 
-- **Excerpt from Main Content:** Automatically pull excerpts directly from the post body content.
+- **Excerpt Control:** Display the SEO Meta description from Yoast, Rank Math, or AIOSEO at the excerpt and display the ellipsis.
 
-- **Read More Placement:** Precisely place the "Read More" button where it fits your design best.
+- **Advanced Read More:** Unlock more icons, set icon gap, and position with pulse animations.
 
 - **Custom Query Hook:** Leverage the **`apb_query`** filter for deep developer-level control.
 
@@ -306,6 +315,14 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.2.0 - 06 May 2026 =
+* **New:** Advanced Title Customization: Choose specific SEO title tags, align text perfectly, and set custom hover colors for a professional look.
+* **New:** Enhanced Image Controls: Set custom dimensions, adjust borders, radius, and shadows, and add smooth hover animations for better image presentation.
+* **New:** Refined Metadata & Badges: Position categories above content, set custom hover colors, and adjust category badge margins.
+* **New:** Interactive Container Design: Shadow effects, hover borders, and background hover support for article blocks and content areas.
+* **New:** Engaging "Read More" Buttons: Sleek arrow icons and smooth hover animations to guide your visitors.
+* **New:** Dynamic Excerpts: Custom hover color support for post excerpts to match your brand's style.
 
 = 2.1.0 - 07 Apr 2026 =
 * **New:** News Ticker Layout: Added a new professional news ticker layout (Free).
@@ -646,3 +663,34 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0 =
 * Initial Release.
+
+
+== Source Code ==
+
+You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
+[**Advanced Post Block on GitHub**](https://github.com/bPlugins/advanced-post-block)
+
+== Third-Party Libraries ==
+
+This plugin bundles the following third-party JavaScript/PHP libraries.
+
+= jQuery Easy Ticker =
+* **Source:** https://github.com/vaakash/jquery-easy-ticker
+* **GitHub:** https://github.com/vaakash/jquery-easy-ticker
+* **License:** MIT – [https://github.com/vaakash/jquery-easy-ticker/blob/master/LICENSE](https://github.com/vaakash/jquery-easy-ticker/blob/master/LICENSE)
+* **Purpose:** Provides smooth vertical scrolling for the News Ticker layout.
+
+= Swiper =
+* **Source:** https://swiperjs.com/
+* **GitHub:** https://github.com/nolimits4web/swiper
+* **License:** MIT – [https://github.com/nolimits4web/swiper/blob/master/LICENSE](https://github.com/nolimits4web/swiper/blob/master/LICENSE)
+* **Purpose:** Modern touch slider used for Slider and News Ticker components.
+
+= react-responsive-masonry =
+* **Source:** https://www.npmjs.com/package/react-responsive-masonry
+* **GitHub:** https://github.com/cedricdelpoux/react-responsive-masonry
+* **License:** MIT – [https://github.com/cedricdelpoux/react-responsive-masonry/blob/master/LICENSE](https://github.com/cedricdelpoux/react-responsive-masonry/blob/master/LICENSE)
+* **Purpose:** Handles responsive masonry layouts for post displays.
+
+= Freemius Lite SDK (Custom) =
+* **Purpose:** A custom-made version of the Freemius SDK that calls through api.bplugins.com to handle opt-in usage tracking and analytics to help improve the plugin.

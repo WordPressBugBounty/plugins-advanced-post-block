@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Post Block 2.1.0\n"
+"Project-Id-Version: Advanced Post Block 2.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-post-block\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-07T08:09:39+00:00\n"
+"POT-Creation-Date: 2026-05-06T17:31:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: advanced-post-block\n"
@@ -39,70 +39,144 @@ msgstr ""
 msgid "https://bplugins.com"
 msgstr ""
 
-#: includes/admin/CPT.php:22
+#: includes/admin/CPT.php:41
 msgid "Help & Demos - Advanced Posts"
 msgstr ""
 
-#: includes/admin/CPT.php:23
-msgid "<span style=\"color: #f18500;\">Help & Demos</span>"
+#: includes/admin/CPT.php:42
+#: plugin.php:67
+msgid "Help & Demos"
 msgstr ""
 
-#: includes/admin/CPT.php:43
+#: includes/admin/CPT.php:73
 msgid "Advanced Posts"
 msgstr ""
 
-#: includes/admin/CPT.php:44
+#: includes/admin/CPT.php:74
 msgid "ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:45
+#: includes/admin/CPT.php:75
 msgid "ShortCode Generator"
 msgstr ""
 
-#: includes/admin/CPT.php:46
-#: includes/admin/CPT.php:47
+#: includes/admin/CPT.php:76
+#: includes/admin/CPT.php:77
 msgid "Add New ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:48
+#: includes/admin/CPT.php:78
 msgid "Edit ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:49
+#: includes/admin/CPT.php:79
 msgid "New ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:50
+#: includes/admin/CPT.php:80
 msgid "View ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:51
+#: includes/admin/CPT.php:81
 msgid "Search ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:52
+#: includes/admin/CPT.php:82
 msgid "Sorry, we couldn't find the ShortCode you are looking for."
 msgstr ""
 
-#: includes/admin/CPT.php:126
+#: includes/admin/CPT.php:185
 #: build/admin/post.js:1
 msgid "Copy To Clipboard"
 msgstr ""
 
-#: plugin.php:60
-msgid "Help & Demos"
+#: includes/Ajax.php:32
+msgid "Invalid Request"
+msgstr ""
+
+#: includes/Ajax.php:40
+msgid "Invalid post type"
+msgstr ""
+
+#: includes/Options.php:57
+msgid "Permission denied."
+msgstr ""
+
+#: includes/Options.php:67
+msgid "All plugin data will be deleted when uninstalled."
+msgstr ""
+
+#: includes/Options.php:68
+msgid "Plugin data will be preserved when uninstalled."
+msgstr ""
+
+#: includes/Posts.php:172
+msgid "Loading posts…"
+msgstr ""
+
+#: includes/Posts.php:207
+#: build/view.js:1
+msgid "Trending Now"
+msgstr ""
+
+#: includes/Tracker.php:65
+msgid "Invalid Post ID"
+msgstr ""
+
+#: includes/Tracker.php:71
+msgid "Post is not published"
+msgstr ""
+
+#: includes/Tracker.php:77
+msgid "Post type is not viewable"
+msgstr ""
+
+#: includes/Tracker.php:83
+msgid "Already viewed"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "View More Changelogs"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "Failed to save setting."
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "Delete Data on Uninstall"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "When enabled, all plugin data will be permanently deleted when you uninstall (delete) the plugin. This includes:"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "All shortcode posts (apb post type)"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "Post view tracking data"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "⚠️ This action cannot be undone. Your data will be safe if you only deactivate the plugin."
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "Are you sure? This will permanently delete all Advanced Post Block shortcode posts and post view tracking data when the plugin is uninstalled."
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "Data will be deleted on uninstall"
+msgstr ""
+
+#: build/admin/dashboard.js:1
+msgid "Data will be preserved on uninstall"
 msgstr ""
 
 #: build/admin/post.js:1
 msgid "Copied Successfully!"
-msgstr ""
-
-#: build/view.js:1
-msgid "Load More"
-msgstr ""
-
-#: build/view.js:1
-msgid "Loading..."
 msgstr ""
 
 #: build/block.json
