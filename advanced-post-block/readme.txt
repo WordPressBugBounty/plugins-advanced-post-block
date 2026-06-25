@@ -3,9 +3,9 @@ Contributors: bplugins, abuhayat, charlescormier, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
-Tested up to: 6.9
-Requires PHP: 7.1
-Stable tag: 2.2.0
+Tested up to: 7.0
+Requires PHP: 7.4
+Stable tag: 2.2.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -124,9 +124,9 @@ Everything you need to build a professional and modern content display:
 
 - **Sortable Elements:** Intuitive drag-and-drop interface to rearrange Post Title, Metadata, and Excerpt.
 
-- **Title Control:** Set precise **Word/Character limits** with ellipsis to adjust title length.
-
 - **Feature Image:** Define the image size, lazyload, and set default Placeholder image with normal-hover grayscale effects and hover radius styling.
+
+- **Title Control:** Set precise **Word/Character limits** with ellipsis to adjust title length.
 
 - **Metadata Customization:** Set separator and gaps between meta items, reorder/sorting the meta items, set alignment for the metadata.
 
@@ -315,6 +315,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.2.1 - 25 Jun 2026 =
+* **Update:** Admin Dashboard: Improved UI with better feature organization.
 
 = 2.2.0 - 06 May 2026 =
 * **New:** Advanced Title Customization: Choose specific SEO title tags, align text perfectly, and set custom hover colors for a professional look.
@@ -670,6 +673,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
 [**Advanced Post Block on GitHub**](https://github.com/bPlugins/advanced-post-block)
 
+
 == Third-Party Libraries ==
 
 This plugin bundles the following third-party JavaScript/PHP libraries.
@@ -692,5 +696,15 @@ This plugin bundles the following third-party JavaScript/PHP libraries.
 * **License:** MIT – [https://github.com/cedricdelpoux/react-responsive-masonry/blob/master/LICENSE](https://github.com/cedricdelpoux/react-responsive-masonry/blob/master/LICENSE)
 * **Purpose:** Handles responsive masonry layouts for post displays.
 
-= Freemius Lite SDK (Custom) =
-* **Purpose:** A custom-made version of the Freemius SDK that calls through api.bplugins.com to handle opt-in usage tracking and analytics to help improve the plugin.
+= Freemius Lite SDK =
+* **Source:** [https://bplugins.com/](https://bplugins.com/)
+* **GitHub:** [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+* **License:** GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+* **Purpose:** Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made

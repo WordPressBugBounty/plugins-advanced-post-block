@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Post Block 2.2.0\n"
+"Project-Id-Version: Advanced Post Block 2.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-post-block\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-06T17:31:02+00:00\n"
+"POT-Creation-Date: 2026-06-25T12:53:54+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: advanced-post-block\n"
@@ -44,7 +44,7 @@ msgid "Help & Demos - Advanced Posts"
 msgstr ""
 
 #: includes/admin/CPT.php:42
-#: plugin.php:67
+#: plugin.php:68
 msgid "Help & Demos"
 msgstr ""
 
@@ -136,43 +136,11 @@ msgid "Already viewed"
 msgstr ""
 
 #: build/admin/dashboard.js:1
-msgid "View More Changelogs"
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "Failed to save setting."
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "Delete Data on Uninstall"
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "When enabled, all plugin data will be permanently deleted when you uninstall (delete) the plugin. This includes:"
-msgstr ""
-
-#: build/admin/dashboard.js:1
 msgid "All shortcode posts (apb post type)"
 msgstr ""
 
 #: build/admin/dashboard.js:1
 msgid "Post view tracking data"
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "⚠️ This action cannot be undone. Your data will be safe if you only deactivate the plugin."
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "Are you sure? This will permanently delete all Advanced Post Block shortcode posts and post view tracking data when the plugin is uninstalled."
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "Data will be deleted on uninstall"
-msgstr ""
-
-#: build/admin/dashboard.js:1
-msgid "Data will be preserved on uninstall"
 msgstr ""
 
 #: build/admin/post.js:1

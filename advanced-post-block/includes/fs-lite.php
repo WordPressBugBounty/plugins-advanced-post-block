@@ -18,10 +18,7 @@ if ( ! function_exists( 'apb_fs' ) ) {
 				'is_premium'			=> false,
 				'menu'					=> [
 					'slug'			=> 'edit.php?post_type=apb',
-					'first-path'	=> 'edit.php?post_type=apb&page=advanced-post-block',
-					'contact'		=> false,
-					'support'		=> false,
-					'affiliation'	=> false
+					'first-path'	=> 'edit.php?post_type=apb&page=advanced-post-block'
 				]
 			] );
 		}
