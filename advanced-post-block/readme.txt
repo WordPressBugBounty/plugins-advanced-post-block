@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,6 +22,8 @@ Advanced Post Block lets you add dynamic post grids, lists, sliders, and tickers
 It supports grid, list, masonry, slider, ticker, and news-style layouts, allowing you to create dynamic post displays for blogs, magazines, and content-heavy websites. The plugin includes flexible query parameters such as category, tag, author, keyword search, and custom taxonomy filtering, along with query presets for faster setup.
 
 Recent additions include AJAX-based post loading, pagination, load more, and infinite scroll, enabling seamless content browsing without page reloads. It also supports post view tracking and sorting by popularity, helping highlight trending or most-viewed content.
+
+A built-in Template Library lets you skip the setup entirely — import ready-made, professionally designed post layouts in one click straight from the editor toolbar, with search, category and Free/Pro filters, live previews, and a favorites tab to keep the layouts you use most within reach.
 
 You can control the visibility and structure of post elements, including featured images, titles, metadata, excerpts, and read more links. Built for performance and responsiveness, the plugin integrates directly with the WordPress block editor to create structured, customizable content layouts without coding.
 
@@ -72,6 +74,8 @@ All layouts are optimized for mobile and desktop devices. The plugin is built to
 
 Everything you need to build a professional and modern content display:
 
+- **Template Library:** Import ready-made post layouts in one click from the editor toolbar, with search (title, category, keyword), category and Free/Pro filters with live counts, live scrolling previews, and a Favorites tab to save the layouts you use most.
+
 - **Core Layouts:** Choose from professional Grid, Masonry, Slider, Ticker and News Ticker views.
 
 - **Flexible Sub-layouts:** Optimize displays with Default, Left/Right Image, Overlay, and Title-Meta layouts.
@@ -105,6 +109,8 @@ Everything you need to build a professional and modern content display:
 [**Advanced Post Block Pro**](https://bplugins.com/products/advanced-post-block/pricing/) adds precision filtering, layout enhancements, and deeper content control for high-performing websites.
 
 **What’s Included in Pro:**
+
+- **Premium Templates:** Unlock the full Template Library — import Pro-only, professionally designed post layouts in one click.
 
 - **Exclusive Layouts:** Unlock the **Grid 1**, **Magazine 1**, and **Magazine 2** layouts and sub-layouts like **Overlay Content Box**, **Overlay Half Content**, and **List Even/Odd**.
 
@@ -315,6 +321,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.2.2 - 22 Jul 2026 =
+* **New:** Template Library: Browse and import professionally designed post layouts with one click using the new **Template Library** button in the editor toolbar — complete with search, filters, and live preview.
 
 = 2.2.1 - 25 Jun 2026 =
 * **Update:** Admin Dashboard: Improved UI with better feature organization.

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 2.2.1
+ * Version: 2.2.2
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * Plugin URI: https://bplugins.com/products/advanced-post-block
@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 if ( function_exists( 'apb_fs' ) ) {
 	apb_fs()->set_basename( true, __FILE__ );
 }else{
-	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.2.1' );
+	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.2.2' );
 	define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
 	define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'APB_OPTIONS_KEY', 'apb_options' );
@@ -31,6 +31,7 @@ if ( function_exists( 'apb_fs' ) ) {
 	require_once APB_DIR_PATH . 'includes/Tracker.php';
 	require_once APB_DIR_PATH . 'includes/Ajax.php';
 	require_once APB_DIR_PATH . 'includes/Options.php';
+	require_once APB_DIR_PATH . 'includes/Templates/Templates.php';
 
 	if( !class_exists( 'APBPlugin' ) ){
 		/**
@@ -121,6 +122,13 @@ if ( function_exists( 'apb_fs' ) ) {
 					'const apbpricingurl = %s;',
 					wp_json_encode( admin_url( 'edit.php?post_type=apb&page=advanced-post-block#/pricing' ) )
 				), 'before' );
+
+				wp_enqueue_script( 'apb-template-library-script', APB_DIR_URL . 'build/template-library.js', [ 'wp-api', 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-data', 'wp-dom-ready', 'wp-i18n', 'wp-util', 'react', 'react-dom' ], APB_VERSION, false );
+				wp_set_script_translations( 'apb-template-library-script', 'advanced-post-block', APB_DIR_PATH . 'languages' );
+
+				wp_enqueue_style( 'apb-template-library-style', APB_DIR_URL . 'build/template-library.css', [], APB_VERSION );
+
+				wp_add_inline_script('apb-template-library-script', 'const apbtemplatenonce = "' . wp_create_nonce( 'apb_template' ) . '";', 'before' );
 			}
 
 			/**
