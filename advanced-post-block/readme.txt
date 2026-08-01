@@ -1,11 +1,11 @@
-=== Advanced Post Block – Showcase Posts with Grid, List, Card Layouts and Filters ===
+=== Advanced Post Block – Display Your Posts Exactly How You Want ===
 Contributors: bplugins, abuhayat, charlescormier, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.2.2
+Stable tag: 2.3.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,7 +19,7 @@ Advanced Post Block lets you add dynamic post grids, lists, sliders, and tickers
 
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) is a Gutenberg blocks plugin for displaying posts, pages, and custom post types in WordPress with advanced query controls, filtering, and multiple layout options.
 
-It supports grid, list, masonry, slider, ticker, and news-style layouts, allowing you to create dynamic post displays for blogs, magazines, and content-heavy websites. The plugin includes flexible query parameters such as category, tag, author, keyword search, and custom taxonomy filtering, along with query presets for faster setup.
+It supports grid, list, masonry, slider, ticker, accordion, and news-style layouts, allowing you to create dynamic post displays for blogs, magazines, and content-heavy websites. The plugin includes flexible query parameters such as category, tag, author, keyword search, and custom taxonomy filtering, along with query presets for faster setup.
 
 Recent additions include AJAX-based post loading, pagination, load more, and infinite scroll, enabling seamless content browsing without page reloads. It also supports post view tracking and sorting by popularity, helping highlight trending or most-viewed content.
 
@@ -39,6 +39,8 @@ Choose from various display styles:
 - **Slider:** Create carousel-style post sections.
 
 - **Ticker:** Show content as a scrolling headline list.
+
+- **Accordion:** Display posts as collapsible panels that expand on click — perfect for FAQs, documentation, and long lists.
 
 Each layout includes sub-layouts such as Title Meta, Left or Right Image, and Overlay Content.
 
@@ -78,6 +80,8 @@ Everything you need to build a professional and modern content display:
 
 - **Core Layouts:** Choose from professional Grid, Masonry, Slider, Ticker and News Ticker views.
 
+- **Accordion Layout:** Display posts as collapsible panels with **Classic** and **Card Stack** themes, single open mode, expand icon controls, and header styling.
+
 - **Flexible Sub-layouts:** Optimize displays with Default, Left/Right Image, Overlay, and Title-Meta layouts.
 
 - **Slider Options:** Customize the slider layout with loop, touch move, autoplay, speed, effect, pagination and navigation with the customization and styling.
@@ -113,6 +117,8 @@ Everything you need to build a professional and modern content display:
 - **Premium Templates:** Unlock the full Template Library — import Pro-only, professionally designed post layouts in one click.
 
 - **Exclusive Layouts:** Unlock the **Grid 1**, **Magazine 1**, and **Magazine 2** layouts and sub-layouts like **Overlay Content Box**, **Overlay Half Content**, and **List Even/Odd**.
+
+- **Accordion Pro:** Unlock the **Thumbnail**, **Numbered FAQ**, **Split Panel**, and **Minimal Lines** themes, multiple open panels, animation speed, more indicator icons, and hover animations.
 
 - **Ticker Options:** Customize the Ticker layout with direction, speed, interval, height, and pause on mouse hover options.
 
@@ -321,6 +327,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.3.0 - 30 Jul 2026 =
+* **New:** Accordion Layout: Added a new collapsible Accordion layout to display posts as expandable panels — great for FAQs, docs, and long-form lists. Includes **Classic** and **Card Stack** themes, single open mode, expand-icon controls, and full styling.
 
 = 2.2.2 - 22 Jul 2026 =
 * **New:** Template Library: Browse and import professionally designed post layouts with one click using the new **Template Library** button in the editor toolbar — complete with search, filters, and live preview.

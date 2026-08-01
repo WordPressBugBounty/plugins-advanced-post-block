@@ -141,6 +141,27 @@ class Posts{
 	}
 
 	/**
+	 * Generates a skeleton accordion item HTML for loading state.
+	 *
+	 * @param string $prefix CSS class prefix.
+	 * @return string Skeleton accordion item HTML.
+	 */
+	public static function skeletonAccordionItem( $prefix ){
+		$itemEl = "<div class='". $prefix ."AccordionItem ". $prefix ."Post' aria-hidden='true'>
+			<div class='". $prefix ."AccordionHeader'>
+				<div class='". $prefix ."AccordionTrigger'>
+					<span class='". $prefix ."AccordionHeaderText'>
+						<span class='". $prefix ."LoadingItem' style='width:55%; height:18px;'></span>
+					</span>
+					<span class='". $prefix ."AccordionIndicator ". $prefix ."LoadingItem' style='width:18px;height:18px;'></span>
+				</div>
+			</div>
+		</div>";
+
+		return wp_kses( $itemEl, [ 'div' => [ 'class' => [], 'aria-hidden' => [] ], 'span' => [ 'class' => [], 'style' => [] ] ] );
+	}
+
+	/**
 	 * Generates a loading placeholder HTML based on layout and attributes.
 	 *
 	 * @param array $attributes Block attributes.
@@ -157,6 +178,9 @@ class Posts{
 		$sliderIsPage = $attributes['sliderIsPage'] ?? true;
 		$sliderIsPrevNext = $attributes['sliderIsPrevNext'] ?? true;
 		$tickerVisible = $attributes['tickerVisible'] ?? 3;
+		$accordion = $attributes['accordion'] ?? [];
+		$accordionTheme = ! empty( $accordion['theme'] ) ? $accordion['theme'] : 'classic';
+		$accordionMaxWidth = ! empty( $accordion['maxWidth'] ) ? $accordion['maxWidth']['desktop'] : '';
 
 		$colD = $columns['desktop'];
 		$colT = $columns['tablet'];
@@ -214,6 +238,14 @@ class Posts{
 							<div class='newsTickerPostsWrapper'>
 								<span class='<?php echo esc_attr( $prefix ); ?>LoadingItem newsTickerSkeletonBar'></span>
 							</div>
+						</div>
+					<?php break;
+					case 'accordion': ?>
+						<div class='<?php echo esc_attr( $prefix ); ?>AccordionPosts theme-<?php echo esc_attr( $accordionTheme ); ?>' style="<?php echo ! empty( $accordionMaxWidth ) ? 'max-width: '. esc_attr( $accordionMaxWidth ) .';' : ''; ?>">
+							<?php foreach ( range( 1, max( 1, $postCount ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonAccordionItem is properly escaped
+								echo self::skeletonAccordionItem( $prefix );
+							} ?>
 						</div>
 					<?php break;
 					default: ?>

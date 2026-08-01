@@ -13,9 +13,9 @@ if( 'ticker' === $layout ){
 
 $skeletonAllowedTags = [
 	'style'		=> [],
-	'div'		=> [ 'class' => [], 'id' => [], 'role' => [], 'aria-busy' => [] ],
+	'div'		=> [ 'class' => [], 'id' => [], 'role' => [], 'style' => [], 'aria-busy' => [], 'aria-hidden' => [] ],
 	'article'	=> [ 'class' => [], 'aria-hidden' => [] ],
-	'span'		=> [ 'class' => [] ]
+	'span'		=> [ 'class' => [], 'style' => [] ]
 ];
 ?>
 <div

@@ -4,7 +4,7 @@
   "name": "ap-block/posts",
   "title": "Advanced Posts",
   "description": "Elevate Your Posts Display with Advanced Layouts",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "category": "APBlock",
   "keywords": [
     "show posts",
@@ -324,6 +324,29 @@
         "speed": 3000,
         "animation": "slide",
         "pauseOnHover": true
+      }
+    },
+    "accordion": {
+      "type": "object",
+      "default": {
+        "maxWidth": {
+          "desktop": ""
+        },
+        "theme": "classic",
+        "openMode": "single",
+        "firstOpen": true,
+        "showIcon": true,
+        "iconPosition": "right",
+        "duration": 350,
+        "thumbSize": "64px",
+        "indicatorIconUp": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 64'><path d='m0 32c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32 0 17.7-14.3 32-32 32h-384c-17.7 0-32-14.3-32-32z'></path></svg>",
+        "indicatorIconDown": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 448'><path d='m256 32c0-17.7-14.3-32-32-32-17.7 0-32 14.3-32 32v160h-160c-17.7 0-32 14.3-32 32 0 17.7 14.3 32 32 32h160v160c0 17.7 14.3 32 32 32 17.7 0 32-14.3 32-32v-160h160c17.7 0 32-14.3 32-32 0-17.7-14.3-32-32-32h-160z'></path></svg>",
+        "styles": {
+          "headerBG": "",
+          "hovHeaderBG": "",
+          "indicatorColor": "#6b7280",
+          "indicatorActiveColor": "#146EF5"
+        }
       }
     },
     "magazine": {
