@@ -20,10 +20,13 @@ if ( ! $isDeleteData ) {
 	return;
 }
 
-global $wpdb;
-
-// 1. Delete all 'apb' custom post type posts and their meta/revisions efficiently.
-$apb_post_ids = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_type = %s", 'apb' ) );
+// 1. Delete all 'apb' posts and their meta/revisions. Every status, since `any` skips trash.
+$apb_post_ids = get_posts( [
+	'post_type'			=> 'apb',
+	'posts_per_page'	=> -1,
+	'fields'			=> 'ids',
+	'post_status'		=> array_keys( get_post_stati() ),
+] );
 
 if ( ! empty( $apb_post_ids ) ) {
 	foreach ( $apb_post_ids as $post_id ) {
@@ -31,8 +34,9 @@ if ( ! empty( $apb_post_ids ) ) {
 	}
 }
 
-// 2. Delete post view tracking meta from all posts.
-$wpdb->delete( $wpdb->postmeta, [ 'meta_key' => 'apb_post_views_count' ] ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+// 2. Delete post view tracking meta from every post — the helper clears the meta cache too.
+delete_post_meta_by_key( 'apb_post_views_count' );
 
 // 3. Delete plugin options.
 delete_option( 'apb_options' );
+delete_option( 'apbFavoritesTemplates' ); // Template Library favorites.

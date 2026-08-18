@@ -1,0 +1,12 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: build/index.js:1
+msgid "All shortcode posts (apb post type)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post view tracking data"
+msgstr ""

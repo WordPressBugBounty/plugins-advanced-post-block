@@ -15,11 +15,15 @@ class Templates {
 	}
 
 	public function apb_templates_main(){
-		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? null ) );
-		$type = sanitize_text_field( $_POST['type'] ?? 'patterns');
+		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? '' ) );
+		$type = sanitize_text_field( wp_unslash( $_POST['type'] ?? 'patterns' ) );
 
 		if( !wp_verify_nonce( $nonce, 'apb_template' )){
 			wp_send_json_error( 'Invalid Request' );
+		}
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_send_json_error( 'Insufficient Permissions' );
 		}
 
 		$typeFilter = 'patterns' === $type ? 'patterns-category': 'pages-category';
@@ -64,18 +68,22 @@ class Templates {
 	}
 
 	public function apb_templates(){
-		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? null ) );
+		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? '' ) );
 
 		if( !wp_verify_nonce( $nonce, 'apb_template' )){
 			wp_send_json_error( 'Invalid Request' );
 		}
 
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_send_json_error( 'Insufficient Permissions' );
+		}
+
 		$type = sanitize_text_field( wp_unslash( $_POST['type'] ?? 'patterns') ) ;
 		$category = sanitize_text_field( wp_unslash( $_POST['category'] ?? 'all' ) );
-		$pageNumber = absint( wp_unslash( $_POST['pageNumber'] ) ) ?? 1;
-		$perPage = absint( wp_unslash( $_POST['perPage'] ) ) ?? 12;
+		$pageNumber = max( 1, absint( wp_unslash( $_POST['pageNumber'] ?? 1 ) ) );
+		$perPage = max( 1, absint( wp_unslash( $_POST['perPage'] ?? 12 ) ) );
 		$start = $pageNumber - 1;
-		$search = sanitize_text_field( wp_unslash( $_POST['search'] ) ) ?? '';
+		$search = sanitize_text_field( wp_unslash( $_POST['search'] ?? '' ) );
 
 		$typeFilter = 'patterns' === $type ? 'patterns': 'pages';
 
@@ -90,14 +98,19 @@ class Templates {
 	}
 
 	public function apb_template_import(){
-		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) ?? null;
+		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? '' ) );
 
 		if( !wp_verify_nonce( $nonce, 'apb_template' )){
 			wp_send_json_error( 'Invalid Request' );
 		}
 
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_send_json_error( 'Insufficient Permissions' );
+		}
+
 		try {
-			$data = wp_unslash( $_POST['original_content'] );
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- serialized block markup: kses strips HTML comments, which are the block delimiters, so sanitizing here would break every template. Gated by the nonce and capability checks above.
+			$data = wp_unslash( $_POST['original_content'] ?? '' );
 			wp_send_json_success( $data );
 		} catch ( \Throwable $th ) {
 			wp_send_json_error( $th->getMessage() );
@@ -105,11 +118,15 @@ class Templates {
 	}
 
 	public function apb_template_counts(){
-		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? null ) );
-		$type = sanitize_text_field( $_POST['type'] ?? 'patterns' );
+		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? '' ) );
+		$type = sanitize_text_field( wp_unslash( $_POST['type'] ?? 'patterns' ) );
 
 		if( !wp_verify_nonce( $nonce, 'apb_template' )){
 			wp_send_json_error( 'Invalid Request' );
+		}
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_send_json_error( 'Insufficient Permissions' );
 		}
 
 		try {
@@ -182,10 +199,14 @@ class Templates {
 		}
 	}
 	public function apb_template_favorites(){
-		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? null ) );
+		$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ?? '' ) );
 
 		if( !wp_verify_nonce( $nonce, 'apb_template' )){
 			wp_send_json_error( 'Invalid Request' );
+		}
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_send_json_error( 'Insufficient Permissions' );
 		}
 
 		$prefix = sanitize_key( wp_unslash( $_POST['prefix'] ?? 'apb' ) );
@@ -193,6 +214,7 @@ class Templates {
 
 		// Save when a favorites payload is posted, then return the current state
 		if ( isset( $_POST['favorites'] ) ) {
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- a JSON string, and every decoded value is hard-cast through absint() below.
 			$raw = json_decode( wp_unslash( $_POST['favorites'] ), true );
 
 			$favorites = [

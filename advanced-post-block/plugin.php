@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 2.3.0
+ * Version: 2.4.0
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * Plugin URI: https://bplugins.com/products/advanced-post-block
@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 if ( function_exists( 'apb_fs' ) ) {
 	apb_fs()->set_basename( true, __FILE__ );
 }else{
-	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.3.0' );
+	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.4.0' );
 	define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
 	define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'APB_OPTIONS_KEY', 'apb_options' );
@@ -73,14 +73,17 @@ if ( function_exists( 'apb_fs' ) ) {
 			}
 
 			/**
-			 * Initializes the plugin by registering the block type and loading textdomain.
+			 * Initializes the plugin by registering the block type.
 			 * 
 			 * @return void
 			 */
 			public function onInit(){
 				register_block_type( __DIR__ . '/build' );
 
-				load_plugin_textdomain( 'advanced-post-block', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+				// Core registers the block.json script translations without a path, which
+				// only resolves against WP_LANG_DIR — point them at the bundled JSON files.
+				wp_set_script_translations( 'ap-block-posts-editor-script', 'advanced-post-block', APB_DIR_PATH . 'languages' );
+				wp_set_script_translations( 'ap-block-posts-view-script', 'advanced-post-block', APB_DIR_PATH . 'languages' );
 			}
 
 			/**

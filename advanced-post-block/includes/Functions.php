@@ -87,11 +87,12 @@ class Functions{
 	 *
 	 * @param array		$posts			Array of WP_Post objects.
 	 * @param string	$postType		The post type slug.
+	 * @param string	$fImgSize		Featured image size.
 	 * @param string	$excerptFrom	Where to pull the excerpt from ('excerpt', 'content').
 	 * @param int		$excerptLength	Length of the excerpt.
 	 * @return array	The arranged posts data.
 	 */
-	public static function arrangedPosts ( $posts, $postType, $excerptFrom = 'excerpt', $excerptLength = 25 ) {
+	public static function arrangedPosts ( $posts, $postType, $fImgSize = 'full', $excerptFrom = 'excerpt', $excerptLength = 25 ) {
 		$arranged = [];
 
 		$excerptLength = (int)$excerptLength;
@@ -113,7 +114,7 @@ class Functions{
 			$contentWords = self::wordCount( $content );
 
 			$thumbnail = [
-				'url' => get_the_post_thumbnail_url( $post, 'full' ),
+				'url' => get_the_post_thumbnail_url( $post, $fImgSize ),
 				'alt' => get_post_meta( get_post_thumbnail_id( $id ), '_wp_attachment_image_alt', true )
 			];
 

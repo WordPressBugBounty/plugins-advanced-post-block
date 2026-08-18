@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,6 +27,8 @@ A built-in Template Library lets you skip the setup entirely — import ready-ma
 
 You can control the visibility and structure of post elements, including featured images, titles, metadata, excerpts, and read more links. Built for performance and responsiveness, the plugin integrates directly with the WordPress block editor to create structured, customizable content layouts without coding.
 
+https://youtube.com/watch?v=pVgYL0n-oD4
+
 
 ### Layout Options
 
@@ -42,18 +44,24 @@ Choose from various display styles:
 
 - **Accordion:** Display posts as collapsible panels that expand on click — perfect for FAQs, documentation, and long lists.
 
-Each layout includes sub-layouts such as Title Meta, Left or Right Image, and Overlay Content.
+- **Magazine 1:** Pair a large hero post with a scrollable sidebar list of secondary posts — the classic editorial front page.
+
+Each layout includes sub-layouts such as Title Meta, Left or Right Image, Overlay Content, and Overlay Half Content.
 
 
 ### Filtering and Query Controls
 
 - Easily select and organize the content you want to display:
 
-- Display standard posts, pages, or custom post types.
+- Display standard posts, pages, or any custom post type.
 
 - Filter by categories, tags, or authors.
 
 - Control post order and offset.
+
+- Include or exclude exact posts by ID.
+
+- Split long lists across pages with pagination or prev/next navigation.
 
 
 ### Design Customization
@@ -82,19 +90,27 @@ Everything you need to build a professional and modern content display:
 
 - **Accordion Layout:** Display posts as collapsible panels with **Classic** and **Card Stack** themes, single open mode, expand icon controls, and header styling.
 
-- **Flexible Sub-layouts:** Optimize displays with Default, Left/Right Image, Overlay, and Title-Meta layouts.
+- **Magazine 1 Layout:** Front-page editorial look — a large hero post beside a scrollable sidebar list, with its own sidebar list layout and a responsive hero min-height.
+
+- **Flexible Sub-layouts:** Optimize displays with Default, Left/Right Image, Overlay Content, **Overlay Half Content**, and Title-Meta layouts.
 
 - **Slider Options:** Customize the slider layout with loop, touch move, autoplay, speed, effect, pagination and navigation with the customization and styling.
 
-- **Dynamic Post Query:** Advanced filtering by post type, posts per page, categories, authors, taxonomy relation (AND/OR), post orders and more.
+- **Dynamic Post Query:** Advanced filtering by post type (posts, pages, or any custom post type), posts per page, categories, **tags**, authors, taxonomy relation (AND/OR), and post order.
+
+- **Post Precision:** Use **Post Offset** to skip the first "N" posts, or target exact content with **Include Posts** and **Exclude Posts** by ID.
+
+- **Pagination & AJAX:** Numbered **Pagination** and prev/next **Navigation** — with custom labels, alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
 
 - **Element Visibility:** Full control to show or hide thumbnails, titles, metadata, excerpts, and read more buttons.
 
-- **Feature Image Settings:** Toggle link, set dimensions (Width/Height), and adjust image fitting (Cover/Contain) for a polished look.
+- **Sortable Elements:** Drag and drop to rearrange the Post Title, Metadata, and Excerpt inside each post.
 
-- **Title Control:** Customize post title with enable link, select tag, set typography, alignment, colors, and margin.
+- **Feature Image Settings:** Pick the **image size**, set a **fallback image**, toggle link, set dimensions (Width/Height), adjust image fitting (Cover/Contain), and animate the corner radius on hover.
 
-- **Flexible Metadata:** Show or hide post author, date, categories with position, and comment counts with typography, different colors and margin.
+- **Title Control:** Customize post title with enable link, select tag, **word/character limit**, typography, alignment, colors, and margin.
+
+- **Flexible Metadata:** Show or hide post author, date, categories with position, and comment counts with a custom **separator**, typography, different colors and margin.
 
 - **Dynamic Excerpt:** Display excerpt from post excerpt or content with limit, alignment, typography, colors, and margin.
 
@@ -116,47 +132,47 @@ Everything you need to build a professional and modern content display:
 
 - **Premium Templates:** Unlock the full Template Library — import Pro-only, professionally designed post layouts in one click.
 
-- **Exclusive Layouts:** Unlock the **Grid 1**, **Magazine 1**, and **Magazine 2** layouts and sub-layouts like **Overlay Content Box**, **Overlay Half Content**, and **List Even/Odd**.
+- **Exclusive Layouts:** Unlock the **Grid 1**, **Magazine 2**, and **Timeline** layouts, plus the **List Left/Right Even-Odd** and **Overlay Content Box** sub-layouts.
 
-- **Accordion Pro:** Unlock the **Thumbnail**, **Numbered FAQ**, **Split Panel**, and **Minimal Lines** themes, multiple open panels, animation speed, more indicator icons, and hover animations.
+- **Timeline Layout:** Lay posts out as a dated sequence, **Vertical** or **Horizontal**, with control over max width, orientation, line width, dot style, dot position and dot size, a date shown **Inline**, in the **Gutter** or on a **Badge**, and **Year/Month** grouping.
 
-- **Ticker Options:** Customize the Ticker layout with direction, speed, interval, height, and pause on mouse hover options.
+- **Accordion Pro:** Unlock the **With Thumbnail**, **Numbered FAQ**, **Split Panel**, and **Minimal Lines** themes, multiple open panels, custom animation speed, 12 extra indicator icon sets, and Lift/Zoom hover animations.
 
-- **News Ticker Pro:** Fine-tune News Ticker layout with label, theme, type, direction, speed, animation, and pause on mouse hover options.
+- **Ticker Options:** Set the ticker direction, speed, interval, height, visible post count, and pause on mouse hover.
 
-- **Display Pages:** Showcase standard WordPress pages alongside your posts.
+- **News Ticker Options:** Set the news ticker label, theme, type, direction, speed, animation, and pause on mouse hover.
 
 - **Query Presets:** Instant query configurations for **Popular**, **Random**, **Sticky**, **Most Comments**, **Related Posts**, and more.
 
-- **Deeper Filtering:** Advanced posts query by **Tags**, **Custom Taxonomies**, **Search Queries** and more **Order By** options.
+- **Deeper Filtering:** Filter by **Custom Taxonomies**, run a **Search Query**, and order by **Post ID**, **Name (Slug)**, **Comment Count**, or **Include Posts** order.
 
-- **Post Precision:** Use **Offset** to skip the first "N" posts or manually **Include/Exclude** content by IDs, **Exclude current and sticky posts**.
+- **Post Precision:** **Exclude the current post** and **Exclude sticky posts** from any query.
 
-- **Pagination & AJAX:** Modern **Pagination**, **Navigation**, **Infinite Scroll**, and **Load More** button to display more posts.
+- **More Load More Types:** **Infinite Scroll** with a trigger offset, spinner and loading label, plus a **Load More** button with a custom label.
 
-- **Sortable Elements:** Intuitive drag-and-drop interface to rearrange Post Title, Metadata, and Excerpt.
+- **Feature Image:** Lazy load images and apply normal/hover **grayscale** with the **Scale Up** hover animation.
 
-- **Feature Image:** Define the image size, lazyload, and set default Placeholder image with normal-hover grayscale effects and hover radius styling.
+- **Title Ellipsis:** Append a trailing ellipsis to titles trimmed by the word/character limit.
 
-- **Title Control:** Set precise **Word/Character limits** with ellipsis to adjust title length.
+- **Excerpt Control:** Pull the excerpt from the **Yoast SEO**, **Rank Math**, or **All in One SEO** meta description, and toggle its trailing ellipsis.
 
-- **Metadata Customization:** Set separator and gaps between meta items, reorder/sorting the meta items, set alignment for the metadata.
+- **Advanced Read More:** 14 extra arrow icons, an icon gap and left/right icon position, an **Auto/Bottom** button position, and a pulse hover animation.
 
-- **Meta Author:** Set the author link and set custom icon for the author meta.
+- **Metadata Customization:** Set the gap between meta items, drag-and-drop reorder them, and set the meta alignment and separator color.
 
-- **Meta Date:** Set the date format, show date as time ago and set custom icon for the date meta.
+- **Meta Author:** Link the author name and set a custom author icon.
 
-- **Meta Category:** Set the category on image position, and set padding, border radius for the Badge display.
+- **Meta Date:** Preset or custom date formats, a "Time Ago" display, and a custom date icon.
 
--**Tags and Custom Taxonomies:** Display tags and custom taxonomies in the meta with the custom icon.
+- **Meta Category:** Top Left, Top Right and Bottom Right on-image positions, a custom category icon, and padding and border radius for the category badge.
 
-- **Meta Reading Time:** Show post read time with seconds, label and custom icon.
+- **Tags & Custom Taxonomies:** Show tags and custom taxonomy terms in the meta row, each with its own custom icon.
 
-- **Post View Count:** Enable post view count with custom to display the post views in meta area.
+- **Meta Reading Time:** Show the estimated reading time with seconds, a custom label, and a custom icon.
 
-- **Excerpt Control:** Display the SEO Meta description from Yoast, Rank Math, or AIOSEO at the excerpt and display the ellipsis.
+- **Meta Comment Icon:** Replace the default comment icon with your own.
 
-- **Advanced Read More:** Unlock more icons, set icon gap, and position with pulse animations.
+- **Post View Count:** Track and display post views in the meta row with a custom icon.
 
 - **Custom Query Hook:** Leverage the **`apb_query`** filter for deep developer-level control.
 
@@ -285,7 +301,7 @@ For the query, you can change the post type, filter by taxonomies(categories, ta
 
 = Can I change post layouts? =
 
-Yes! This plugin has five main layouts and multiple sub-layouts.
+Yes! This plugin has seven main layouts (Grid, Masonry, Slider, Ticker, News Ticker, Magazine 1 and Accordion) and multiple sub-layouts.
 
 = I want to slide the post! Is it possible? =
 
@@ -297,7 +313,7 @@ Yes! You can set different columns for different devices.
 
 = Does this plugin have pagination? =
 
-Yes! This plugin has pagination, navigation, infinite scroll, and load more button to fetch more posts, but it will not for the slider and ticker layout.
+Yes! This plugin has pagination and prev/next navigation to fetch more posts, but not for the slider and ticker layouts. Infinite scroll and the load more button are available in the Premium version.
 
 = Can I visible or hide post elements? =
 
@@ -327,6 +343,18 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.4.0 - 18 Aug 2026 =
+* **New:** Magazine 1 Layout: The hero-plus-sidebar magazine layout is now free — pair a large featured post with a scrollable list of secondary posts, with its own sidebar list layout and responsive hero min-height.
+* **New:** Overlay Half Content Sub Layout: Text sits over the bottom half of the image behind a soft gradient.
+* **New:** Load More / Pagination: Numbered pagination and prev/next navigation — with custom labels, alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
+* **New:** Query Controls: Select **Pages** as a post source, filter posts by tags, skip posts with Post Offset, and target exact posts with Include Posts and Exclude Posts.
+* **New:** Element Sorting: Drag and drop to reorder the title, meta data, and excerpt inside each post.
+* **New:** Feature Image Size: Pick any registered image size (thumbnail, medium, large, full) for faster pages.
+* **New:** Fallback Image: Set a default image shown when a post has no featured image.
+* **New:** Title Limit: Trim titles by word or character count.
+* **New:** Meta Separator: Add a custom character between meta data items.
+* **New:** Image Hover Radius: Animate the feature image corner radius on hover.
 
 = 2.3.0 - 30 Jul 2026 =
 * **New:** Accordion Layout: Added a new collapsible Accordion layout to display posts as expandable panels — great for FAQs, docs, and long-form lists. Includes **Classic** and **Card Stack** themes, single open mode, expand-icon controls, and full styling.

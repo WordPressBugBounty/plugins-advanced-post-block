@@ -31,11 +31,13 @@ class Posts{
 	public static function arrangeQuery( $queryAttr ){
 		$taxonomyRelation = $queryAttr['taxonomyRelation'] ?? 'AND';
 		$selectedCategories = $queryAttr['selectedCategories'] ?? [];
+		$selectedTags = $queryAttr['selectedTags'] ?? [];
 		$postType = $queryAttr['postType'] ?? 'post';
 		$isPostsPerPageAll = $queryAttr['isPostsPerPageAll'] ?? false;
 		$postsPerPage = $queryAttr['postsPerPage'] ?? 12;
 		$postsOrderBy = $queryAttr['postsOrderBy'] ?? 'date';
 		$postsOrder = $queryAttr['postsOrder'] ?? 'desc';
+		$postsOffset = $queryAttr['postsOffset'] ?? 0;
 		$currentPostId = $queryAttr['currentPostId'] ?? 0;
 
 		if ( ! post_type_exists( $postType ) || ! is_post_type_viewable( $postType ) ) {
@@ -52,6 +54,17 @@ class Posts{
 			];
 		}
 
+		if ( 'post' === $postType && count( $selectedTags ) ) {
+			$termsQuery[] = [
+				'taxonomy'	=> 'post_tag',
+				'field'		=> 'term_id',
+				'terms'		=> $selectedTags,
+			];
+		}
+
+		$postsInclude = Functions::filterNaN( $queryAttr['postsInclude'] ?? [] );
+		$post__in = !empty( $postsInclude ) ? [ 'post__in' => $postsInclude ] : [];
+		$post__not_in = Functions::filterNaN( $queryAttr['postsExclude'] ?? [] );
 		$postsAuthors = Functions::filterNaN( $queryAttr['postsAuthors'] ?? [] );
 		$author__in = !empty( $postsAuthors ) ? [ 'author__in' => $postsAuthors ] : [];
 
@@ -61,9 +74,11 @@ class Posts{
 			'orderby'			=> $postsOrderBy,
 			'order'				=> $postsOrder,
 			'tax_query'			=> count( $termsQuery ) > 1 ? $termsQuery : [],
+			'offset'			=> $isPostsPerPageAll ? 0 : (int) $postsOffset,
+			'post__not_in'		=> array_unique( $post__not_in ),
 			'has_password'		=> false,
 			'post_status'		=> 'publish'
-		], $author__in );
+		], $post__in, $author__in );
 
 		// Query Presets are available in the premium version.
 
@@ -80,7 +95,9 @@ class Posts{
 	public static function getPosts( $queryAttr, $pageNumber = 1 ){
 		$isPostsPerPageAll = $queryAttr['isPostsPerPageAll'] ?? false;
 		$postsPerPage = $queryAttr['postsPerPage'] ?? 12;
+		$postsOffset = $queryAttr['postsOffset'] ?? 0;
 		$postType = $queryAttr['postType'] ?? 'post';
+		$fImgSize = $queryAttr['fImgSize'] ?? 'full';
 		$excerptLength = $queryAttr['excerptLength'] ?? 25;
 		$isExcerptFromContent = $queryAttr['isExcerptFromContent'] ?? false;
 
@@ -89,17 +106,19 @@ class Posts{
 		// Ensure numeric values to avoid PHP type errors and handle "all" mode
 		$postsPerPage	= (int) $postsPerPage;
 		$pageNumber		= (int) $pageNumber;
+		$postsOffset	= (int) $postsOffset;
 
 		// Extract excerptFrom with fallback to legacy isExcerptFromContent
 		$excerptFrom = $queryAttr['excerptFrom'] ?? ( isset( $queryAttr['excerpt']['from'] ) ? $queryAttr['excerpt']['from'] : 'excerpt' );
 		$excerptFrom = ( 'content' === $excerptFrom || $isExcerptFromContent ) ? 'content' : 'excerpt';
 
-		$offset = ( $postsPerPage * max( 0, $pageNumber - 1 ) );
+		$offset = ( $postsPerPage * max( 0, $pageNumber - 1 ) ) + $postsOffset;
 
 		$newArgs = wp_parse_args( [ 'offset' => $offset ], self::arrangeQuery( $queryAttr ) );
 		$posts = Functions::arrangedPosts(
 			get_posts( $newArgs ),
 			$postType,
+			$fImgSize ?? 'full',
 			$excerptFrom,
 			$excerptLength ?? 25
 		);
@@ -199,6 +218,14 @@ class Posts{
 			<div class='<?php echo esc_attr( $prefix ); ?>LoadingPlaceholder' id='<?php echo esc_attr( $placeholderId ); ?>' role='status' aria-busy='true'>
 				<span class='screen-reader-text'><?php echo esc_html( $loadingLabel ); ?></span>
 				<?php switch ( $layout ) {
+					case 'magazine1': ?>
+						<div class='<?php echo esc_attr( $prefix ); ?>Magazine1Posts'>
+							<?php foreach ( range( 1, max( 1, $postCount ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
+								echo self::skeletonArticle( $prefix );
+							} ?>
+						</div>
+					<?php break;
 					case 'slider': ?>
 						<style>
 							<?php echo wp_strip_all_tags( $sliderStyles ); ?>
@@ -241,7 +268,7 @@ class Posts{
 						</div>
 					<?php break;
 					case 'accordion': ?>
-						<div class='<?php echo esc_attr( $prefix ); ?>AccordionPosts theme-<?php echo esc_attr( $accordionTheme ); ?>' style="<?php echo ! empty( $accordionMaxWidth ) ? 'max-width: '. esc_attr( $accordionMaxWidth ) .';' : ''; ?>">
+						<div class='<?php echo esc_attr( $prefix ); ?>AccordionPosts theme-<?php echo esc_attr( $accordionTheme ); ?>' style="<?php echo esc_attr( $accordionMaxWidth ? "max-width: $accordionMaxWidth;" : '' ); ?>">
 							<?php foreach ( range( 1, max( 1, $postCount ) ) as $item ) {
 								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonAccordionItem is properly escaped
 								echo self::skeletonAccordionItem( $prefix );
