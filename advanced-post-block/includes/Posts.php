@@ -39,6 +39,7 @@ class Posts{
 		$postsOrder = $queryAttr['postsOrder'] ?? 'desc';
 		$postsOffset = $queryAttr['postsOffset'] ?? 0;
 		$currentPostId = $queryAttr['currentPostId'] ?? 0;
+		$isExcludeSticky = $queryAttr['isExcludeSticky'] ?? false;
 
 		if ( ! post_type_exists( $postType ) || ! is_post_type_viewable( $postType ) ) {
 			$postType = 'post';
@@ -67,6 +68,13 @@ class Posts{
 		$post__not_in = Functions::filterNaN( $queryAttr['postsExclude'] ?? [] );
 		$postsAuthors = Functions::filterNaN( $queryAttr['postsAuthors'] ?? [] );
 		$author__in = !empty( $postsAuthors ) ? [ 'author__in' => $postsAuthors ] : [];
+
+		if ( ! empty( $isExcludeSticky ) ) {
+			$stickyPosts = get_option( 'sticky_posts' );
+			if ( ! empty( $stickyPosts ) ) {
+				$post__not_in = array_merge( $post__not_in, $stickyPosts );
+			}
+		}
 
 		$query = array_merge( [
 			'post_type'			=> $postType,
@@ -220,6 +228,14 @@ class Posts{
 				<?php switch ( $layout ) {
 					case 'magazine1': ?>
 						<div class='<?php echo esc_attr( $prefix ); ?>Magazine1Posts'>
+							<?php foreach ( range( 1, max( 1, $postCount ) ) as $item ) {
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
+								echo self::skeletonArticle( $prefix );
+							} ?>
+						</div>
+					<?php break;
+					case 'magazine2': ?>
+						<div class='<?php echo esc_attr( $prefix ); ?>Magazine2Posts'>
 							<?php foreach ( range( 1, max( 1, $postCount ) ) as $item ) {
 								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- self::skeletonArticle is properly escaped
 								echo self::skeletonArticle( $prefix );

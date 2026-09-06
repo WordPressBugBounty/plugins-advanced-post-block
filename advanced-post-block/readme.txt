@@ -3,9 +3,9 @@ Contributors: bplugins, abuhayat, charlescormier, farazi1, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.4.0
+Stable tag: 2.5.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,9 +42,13 @@ Choose from various display styles:
 
 - **Ticker:** Show content as a scrolling headline list.
 
+- **News Ticker:** Run headlines through a compact bar with its own label ribbon — ideal for breaking news and announcements.
+
 - **Accordion:** Display posts as collapsible panels that expand on click — perfect for FAQs, documentation, and long lists.
 
 - **Magazine 1:** Pair a large hero post with a scrollable sidebar list of secondary posts — the classic editorial front page.
+
+- **Magazine 2:** Stack a full-width hero post above a responsive grid of the remaining posts.
 
 Each layout includes sub-layouts such as Title Meta, Left or Right Image, Overlay Content, and Overlay Half Content.
 
@@ -92,25 +96,31 @@ Everything you need to build a professional and modern content display:
 
 - **Magazine 1 Layout:** Front-page editorial look — a large hero post beside a scrollable sidebar list, with its own sidebar list layout and a responsive hero min-height.
 
+- **Magazine 2 Layout:** A full-width hero post above a responsive grid of the remaining posts, with its own grid sub-layout and a responsive hero min-height.
+
 - **Flexible Sub-layouts:** Optimize displays with Default, Left/Right Image, Overlay Content, **Overlay Half Content**, and Title-Meta layouts.
 
 - **Slider Options:** Customize the slider layout with loop, touch move, autoplay, speed, effect, pagination and navigation with the customization and styling.
 
 - **Dynamic Post Query:** Advanced filtering by post type (posts, pages, or any custom post type), posts per page, categories, **tags**, authors, taxonomy relation (AND/OR), and post order.
 
-- **Post Precision:** Use **Post Offset** to skip the first "N" posts, or target exact content with **Include Posts** and **Exclude Posts** by ID.
+- **Post Precision:** Use **Post Offset** to skip the first "N" posts, target exact content with **Include Posts** and **Exclude Posts** by ID, or **Exclude Sticky Posts** from any query.
 
-- **Pagination & AJAX:** Numbered **Pagination** and prev/next **Navigation** — with custom labels, alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
+- **Pagination & AJAX:** Numbered **Pagination**, prev/next **Navigation**, and a **Load More** button with a custom label — with alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
 
 - **Element Visibility:** Full control to show or hide thumbnails, titles, metadata, excerpts, and read more buttons.
 
 - **Sortable Elements:** Drag and drop to rearrange the Post Title, Metadata, and Excerpt inside each post.
 
-- **Feature Image Settings:** Pick the **image size**, set a **fallback image**, toggle link, set dimensions (Width/Height), adjust image fitting (Cover/Contain), and animate the corner radius on hover.
+- **Feature Image Settings:** Pick the **image size**, set a **fallback image**, toggle link, set dimensions (Width/Height), adjust image fitting (Cover/Contain), apply a normal or hover **grayscale** filter, and animate the corner radius on hover.
 
 - **Title Control:** Customize post title with enable link, select tag, **word/character limit**, typography, alignment, colors, and margin.
 
-- **Flexible Metadata:** Show or hide post author, date, categories with position, and comment counts with a custom **separator**, typography, different colors and margin.
+- **Flexible Metadata:** Show or hide the post author (with an optional **author link**), date (with a **“Time Ago”** display), categories with position, **reading time** with a custom label, comment counts, and the **post view count** — with a custom **separator**, typography, different colors and margin.
+
+- **Meta Separator Color:** Give the character between meta items its own color.
+
+- **Category Badge Styling:** Set the padding, border radius and margin of the on-image category badge.
 
 - **Dynamic Excerpt:** Display excerpt from post excerpt or content with limit, alignment, typography, colors, and margin.
 
@@ -132,7 +142,7 @@ Everything you need to build a professional and modern content display:
 
 - **Premium Templates:** Unlock the full Template Library — import Pro-only, professionally designed post layouts in one click.
 
-- **Exclusive Layouts:** Unlock the **Grid 1**, **Magazine 2**, and **Timeline** layouts, plus the **List Left/Right Even-Odd** and **Overlay Content Box** sub-layouts.
+- **Exclusive Layouts:** Unlock the **Grid 1** and **Timeline** layouts, plus the **List Left/Right Even-Odd** and **Overlay Content Box** sub-layouts.
 
 - **Timeline Layout:** Lay posts out as a dated sequence, **Vertical** or **Horizontal**, with control over max width, orientation, line width, dot style, dot position and dot size, a date shown **Inline**, in the **Gutter** or on a **Badge**, and **Year/Month** grouping.
 
@@ -146,11 +156,11 @@ Everything you need to build a professional and modern content display:
 
 - **Deeper Filtering:** Filter by **Custom Taxonomies**, run a **Search Query**, and order by **Post ID**, **Name (Slug)**, **Comment Count**, or **Include Posts** order.
 
-- **Post Precision:** **Exclude the current post** and **Exclude sticky posts** from any query.
+- **Post Precision:** **Exclude the current post** from any query.
 
-- **More Load More Types:** **Infinite Scroll** with a trigger offset, spinner and loading label, plus a **Load More** button with a custom label.
+- **More Load More Types:** **Infinite Scroll** with a trigger offset, spinner and loading label.
 
-- **Feature Image:** Lazy load images and apply normal/hover **grayscale** with the **Scale Up** hover animation.
+- **Feature Image:** Lazy load images and apply the **Scale Up** hover animation.
 
 - **Title Ellipsis:** Append a trailing ellipsis to titles trimmed by the word/character limit.
 
@@ -158,21 +168,21 @@ Everything you need to build a professional and modern content display:
 
 - **Advanced Read More:** 14 extra arrow icons, an icon gap and left/right icon position, an **Auto/Bottom** button position, and a pulse hover animation.
 
-- **Metadata Customization:** Set the gap between meta items, drag-and-drop reorder them, and set the meta alignment and separator color.
+- **Metadata Customization:** Set the gap between meta items, drag-and-drop reorder them, and set the meta alignment.
 
-- **Meta Author:** Link the author name and set a custom author icon.
+- **Meta Author:** Set a custom author icon.
 
-- **Meta Date:** Preset or custom date formats, a "Time Ago" display, and a custom date icon.
+- **Meta Date:** Preset or custom date formats and a custom date icon.
 
-- **Meta Category:** Top Left, Top Right and Bottom Right on-image positions, a custom category icon, and padding and border radius for the category badge.
+- **Meta Category:** Top Left, Top Right and Bottom Right on-image positions, plus a custom category icon.
 
-- **Tags & Custom Taxonomies:** Show tags and custom taxonomy terms in the meta row, each with its own custom icon.
+- **Custom Taxonomies:** Show custom taxonomy terms in the meta row, each with its own custom icon.
 
-- **Meta Reading Time:** Show the estimated reading time with seconds, a custom label, and a custom icon.
+- **Meta Reading Time:** Show the reading time **with seconds**, and replace the default reading time icon with your own.
 
 - **Meta Comment Icon:** Replace the default comment icon with your own.
 
-- **Post View Count:** Track and display post views in the meta row with a custom icon.
+- **Post View Count:** Replace the default view count icon with your own.
 
 - **Custom Query Hook:** Leverage the **`apb_query`** filter for deep developer-level control.
 
@@ -313,7 +323,7 @@ Yes! You can set different columns for different devices.
 
 = Does this plugin have pagination? =
 
-Yes! This plugin has pagination and prev/next navigation to fetch more posts, but not for the slider and ticker layouts. Infinite scroll and the load more button are available in the Premium version.
+Yes! This plugin has pagination, prev/next navigation and a Load More button to fetch more posts, but not for the slider and ticker layouts. Infinite scroll is available in the Premium version.
 
 = Can I visible or hide post elements? =
 
@@ -343,6 +353,18 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.5.0 - 6 Sep 2026 =
+* **New:** Magazine 2 Layout: A full-width hero post above a responsive grid of the remaining posts, with its own **Magazine Grid Layout** selector, column and gap controls, and a responsive hero min-height.
+* **New:** Load More Button: A third Load More type that appends the next posts in place, with a custom button label and a loading state.
+* **New:** Exclude Sticky Posts: Completely remove sticky posts from any query.
+* **New:** Meta Author Link: Link the author name to their author archive.
+* **New:** Meta Date as Time Ago: Show the post date as "3 days ago" instead of a fixed date.
+* **New:** Meta Reading Time: Show the estimated reading time in the meta row, with a custom label.
+* **New:** Post View Count: Display tracked post views in the meta row.
+* **New:** Meta Separator Color: Give the separator character between meta items its own color.
+* **New:** Category Badge Spacing: Padding and border radius controls for the on-image category badge.
+* **New:** Image Grayscale: Apply a grayscale filter to the feature image, on normal state and on hover.
 
 = 2.4.0 - 18 Aug 2026 =
 * **New:** Magazine 1 Layout: The hero-plus-sidebar magazine layout is now free — pair a large featured post with a scrollable list of secondary posts, with its own sidebar list layout and responsive hero min-height.

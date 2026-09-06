@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 2.4.0
+ * Version: 2.5.0
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * Plugin URI: https://bplugins.com/products/advanced-post-block
@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: advanced-post-block
  * Requires at least: 6.5
- * Tested up to: 7.0
+ * Tested up to: 7.1
  * Requires PHP: 7.4
  */
 
@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 if ( function_exists( 'apb_fs' ) ) {
 	apb_fs()->set_basename( true, __FILE__ );
 }else{
-	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.4.0' );
+	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.5.0' );
 	define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
 	define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'APB_OPTIONS_KEY', 'apb_options' );

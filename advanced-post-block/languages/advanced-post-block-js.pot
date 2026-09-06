@@ -4,9 +4,1304 @@ msgstr ""
 "X-Generator: babel-plugin-makepot\n"
 
 #: build/index.js:1
+msgid "Select/Choose Preferred Posts Layout"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"If you already added the block before and don't know what was selected then "
+"select the Grid layout"
+msgstr ""
+
+#: build/index.js:1
+msgid "Grid 1 and Timeline layouts are available in the"
+msgstr ""
+
+#: build/index.js:1
+msgid "PREMIUM VERSION"
+msgstr ""
+
+#: build/index.js:1
+msgid "No posts found!! Please update the query or add some posts"
+msgstr ""
+
+#: build/index.js:1
+msgid "Excerpt"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Excerpt"
+msgstr ""
+
+#: build/index.js:1
+msgid "Excerpt From:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Choose where to pull the excerpt text from: the manual excerpt field, the "
+"post content, or an SEO meta description."
+msgstr ""
+
+#: build/index.js:1
+msgid "Excerpt Length:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Number of words to show in the excerpt. Set -1 to show all content."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"SEO meta content and precise ellipsis control are available in the Premium "
+"version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Content"
+msgstr ""
+
+#: build/index.js:1
+msgid "Feature Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Feature Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Link"
+msgstr ""
+
+#: build/index.js:1
+msgid "Size:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Select the image size (thumbnail, medium, large, full). Image may crop "
+"based on the image size."
+msgstr ""
+
+#: build/index.js:1
+msgid "Width:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Define custom width for the post image."
+msgstr ""
+
+#: build/index.js:1
+msgid "Height:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Define custom height for the post image."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"For specific ratios, set height to 100% (1:1), 56.25% (16:9), 75% (4:3), "
+"66.67% (3:2), or 42.85% (21:9)."
+msgstr ""
+
+#: build/index.js:1
+msgid "Fitting:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Choose how the image should fit within its container."
+msgstr ""
+
+#: build/index.js:1
+msgid "Default Image:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Placeholder Image URL"
+msgstr ""
+
+#: build/index.js:1
+msgid "Image lazy loading is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Meta item gaps and drag-and-drop meta sorting are available in the Premium "
+"version."
+msgstr ""
+
+#: build/index.js:1
+msgid "With Meta"
+msgstr ""
+
+#: build/index.js:1
+msgid "With Title"
+msgstr ""
+
+#: build/index.js:1
+msgid "Meta Data"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Meta Data"
+msgstr ""
+
+#: build/index.js:1
+msgid "Separator:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Choose the separator character to display between meta data items."
+msgstr ""
+
+#: build/index.js:1
+msgid "Author"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Author"
+msgstr ""
+
+#: build/index.js:1
+msgid "Author Link"
+msgstr ""
+
+#: build/index.js:1
+msgid "Custom author icons are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Date"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Date"
+msgstr ""
+
+#: build/index.js:1
+msgid "Date as Time Ago"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Preset and custom date formats and date icons are available in the Premium "
+"version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Category"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Category"
+msgstr ""
+
+#: build/index.js:1
+msgid "Category Position:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Choose where the category labels appear: overlaid on the image or inside "
+"the content area."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Custom positions, icons, and overlay settings are available in the Premium "
+"version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Taxonomies"
+msgstr ""
+
+#: build/index.js:1
+msgid "Taxonomy Filter"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Tags and custom taxonomies with custom icons are available in the Premium "
+"version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Reading Time"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Reading Time"
+msgstr ""
+
+#: build/index.js:1
+msgid "Estimated time to read the post content based on word count."
+msgstr ""
+
+#: build/index.js:1
+msgid "Reading Time will be displayed if the post has content!"
+msgstr ""
+
+#: build/index.js:1
+msgid "Reading Time Label:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Reading Time Label"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Reading time with seconds and a custom reading time icon are available in "
+"the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Comment"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Comment"
+msgstr ""
+
+#: build/index.js:1
+msgid "Comment Count will be displayed if the comment status is open!"
+msgstr ""
+
+#: build/index.js:1
+msgid "Custom comment icon is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "View Count"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show View Count"
+msgstr ""
+
+#: build/index.js:1
+msgid "Custom view count icon is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Read More"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Read More"
+msgstr ""
+
+#: build/index.js:1
+msgid "Read More Label:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Custom text for the link button."
+msgstr ""
+
+#: build/index.js:1
+msgid "Open link in new tab"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select Icon"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"More icons, icon gap and left/right icon position, and an Auto/Bottom "
+"button position are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Title"
+msgstr ""
+
+#: build/index.js:1
+msgid "Elements"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sort Element:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Drag and sort to reorder the appearance of the title, meta data and excerpt."
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Title"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Title Link"
+msgstr ""
+
+#: build/index.js:1
+msgid "Title Tag:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select the HTML tag for the post title (H1-H6, div, p, etc.)."
+msgstr ""
+
+#: build/index.js:1
+msgid "Title Limit"
+msgstr ""
+
+#: build/index.js:1
+msgid "Limit Type:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Word"
+msgstr ""
+
+#: build/index.js:1
+msgid "Character"
+msgstr ""
+
+#: build/index.js:1
+msgid "Limit Value:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Showing an ellipsis on truncated titles is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "List - Left Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "List - Right Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "First Post Min Height:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Set the minimum height for the first (hero) post in the magazine layout."
+msgstr ""
+
+#: build/index.js:1
+msgid "Columns:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Number of columns to display on different devices."
+msgstr ""
+
+#: build/index.js:1
+msgid "Column Gap:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Horizontal space between post items."
+msgstr ""
+
+#: build/index.js:1
+msgid "Gap:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Row Gap:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vertical space between post items."
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Equal Height"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ensures all items in the same row have matching heights."
+msgstr ""
+
+#: build/index.js:1
+msgid "Slider Min Height:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Content Height:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Grid 1 and Timeline layouts, plus the even/odd list and overlay content box "
+"sub layouts, are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Layout"
+msgstr ""
+
+#: build/index.js:1
+msgid "Layout:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Choose your preferred post layout. Magazine 1 and Magazine 2 are available "
+"in the free version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Sub Layout:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Select a sub-layout for your post grid. Some settings may change based on "
+"this selection."
+msgstr ""
+
+#: build/index.js:1
+msgid "Some settings may change when sub layout will be changed."
+msgstr ""
+
+#: build/index.js:1
+msgid "Sidebar List Layout:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Magazine Grid Layout:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select a sub-layout for the secondary items."
+msgstr ""
+
+#: build/index.js:1
+msgid "Load More / Pagination"
+msgstr ""
+
+#: build/index.js:1
+msgid "Type"
+msgstr ""
+
+#: build/index.js:1
+msgid "Choose how to load more posts. Note: Posts Per Page must not be -1."
+msgstr ""
+
+#: build/index.js:1
+msgid "Alignment"
+msgstr ""
+
+#: build/index.js:1
+msgid "Back to Top on Change"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Offset (px)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Previous Label:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Next Label:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Button Label"
+msgstr ""
+
+#: build/index.js:1
+msgid "Colors"
+msgstr ""
+
+#: build/index.js:1
+msgid "Active/Hover Colors"
+msgstr ""
+
+#: build/index.js:1
+msgid "Padding:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Space Between:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Infinity Scroll is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Posts Query"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Type:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select the source for your posts (e.g., Posts, Pages)."
+msgstr ""
+
+#: build/index.js:1
+msgid "If the post type is not viewable then the default post type will work."
+msgstr ""
+
+#: build/index.js:1
+msgid "Taxonomy Relation:"
+msgstr ""
+
+#: build/index.js:1
+msgid "AND"
+msgstr ""
+
+#: build/index.js:1
+msgid "OR"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select Categories:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select Tags:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select Authors:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Per Page:"
+msgstr ""
+
+#: build/index.js:1
+msgid "To show all posts set -1, and do not set 0"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Order By:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Order posts by the IDs specified in the 'Include Posts' field when 'Post "
+"In' is selected."
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Order:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Offset:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Number of posts to skip. This works when Posts Per Page is not set to -1."
+msgstr ""
+
+#: build/index.js:1
+msgid "`Post Offset` will not work if `Post Per Page` is -1"
+msgstr ""
+
+#: build/index.js:1
+msgid "Include Posts:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Specific post IDs to display (separated by commas)."
+msgstr ""
+
+#: build/index.js:1
+msgid "Exclude Posts:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post IDs to skip (separated by commas)."
+msgstr ""
+
+#: build/index.js:1
+msgid "Enter the posts id by coma separated Ex: `23,45,16`"
+msgstr ""
+
+#: build/index.js:1
+msgid "Exclude Sticky Posts"
+msgstr ""
+
+#: build/index.js:1
+msgid "Completely remove sticky posts from the results."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Query presets, custom taxonomy filtering, search queries, advanced sorting, "
+"and excluding the current post are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Accordion Options"
+msgstr ""
+
+#: build/index.js:1
+msgid "Max Width:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Cap the accordion width and center it. Leave empty for full width."
+msgstr ""
+
+#: build/index.js:1
+msgid "Theme:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Pick a preset accordion style. Colors, border, background, shadow and "
+"typography stay driven by the standard controls."
+msgstr ""
+
+#: build/index.js:1
+msgid "Open First Item By Default"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Expand Icon"
+msgstr ""
+
+#: build/index.js:1
+msgid "Icon Position:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Indicator Icon:"
+msgstr ""
+
+#: build/index.js:1
+msgid "First icon shows when open, second when closed."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"More themes (Thumbnail, Numbered FAQ, Split Panel, Minimal Lines), multiple "
+"open panels, animation speed, more indicator icons, and hover animations "
+"are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "News Ticker Options"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"News ticker themes, types, directions, animations and custom configuration "
+"are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Slider Options"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Loop"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Touch Move"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Autoplay"
+msgstr ""
+
+#: build/index.js:1
+msgid "Autoplay Delay (s):"
+msgstr ""
+
+#: build/index.js:1
+msgid "Delay between slides in seconds. Smaller values mean faster autoplay."
+msgstr ""
+
+#: build/index.js:1
+msgid "Smaller delay value will be autoplay faster"
+msgstr ""
+
+#: build/index.js:1
+msgid "Speed (s):"
+msgstr ""
+
+#: build/index.js:1
+msgid "Smaller speed & delay value will be slide faster"
+msgstr ""
+
+#: build/index.js:1
+msgid "Effect:"
+msgstr ""
+
+#: build/index.js:1
+msgid "To work fade & creative effects properly, set single column per view"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pagination:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Pagination"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Pagination Clickable"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable Pagination Dynamic Bullets"
+msgstr ""
+
+#: build/index.js:1
+msgid "Preview Next Button:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show Preview Next Button"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ticker Options"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Ticker speed, direction, and animation style controls are available in the "
+"Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Header Background:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Header Padding:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Indicator Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Indicator Active Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Body background uses Content Background, item border/shadow use the Article "
+"panel (open state = Hover Border), body padding uses Content Padding."
+msgstr ""
+
+#: build/index.js:1
+msgid "Lift Up and Zoom In hover animations are available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Article"
+msgstr ""
+
+#: build/index.js:1
+msgid "Border"
+msgstr ""
+
+#: build/index.js:1
+msgid "Shadow"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Border"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Shadow"
+msgstr ""
+
+#: build/index.js:1
+msgid "Text Align:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Background"
+msgstr ""
+
+#: build/index.js:1
+msgid "Apply a color, image, or gradient to the post box."
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Background"
+msgstr ""
+
+#: build/index.js:1
+msgid "Space inside the post container."
+msgstr ""
+
+#: build/index.js:1
+msgid "Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Margin:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Space around the excerpt text."
+msgstr ""
+
+#: build/index.js:1
+msgid "Grayscale"
+msgstr ""
+
+#: build/index.js:1
+msgid "Radius"
+msgstr ""
+
+#: build/index.js:1
+msgid "Shadow:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Margin"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Grayscale"
+msgstr ""
+
+#: build/index.js:1
+msgid "Animation:"
+msgstr ""
+
+#: build/index.js:1
+msgid "None"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom In"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom Out"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Radius"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Shadow:"
+msgstr ""
+
+#: build/index.js:1
+msgid "The Scale Up hover animation is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Text Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Link Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Icon Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Text Hover Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Link Hover Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Icon Hover Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Separator Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Space around the meta data elements."
+msgstr ""
+
+#: build/index.js:1
+msgid "Custom meta alignment is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Categories Badge"
+msgstr ""
+
+#: build/index.js:1
+msgid "Colors:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Border Radius:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Button Align:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Set button text and background colors."
+msgstr ""
+
+#: build/index.js:1
+msgid "Border:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Colors:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Border:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover Animation:"
+msgstr ""
+
+#: build/index.js:1
+msgid "The interactive pulse hover animation is available in the Premium version."
+msgstr ""
+
+#: build/index.js:1
+msgid "Pagination Bullets Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Color for the slider pagination bullets."
+msgstr ""
+
+#: build/index.js:1
+msgid "Pagination Width:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pagination Height:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pagination Border:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Preview Next Button Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Space around the post title."
+msgstr ""
+
+#: build/index.js:1
+msgid "Trending Now"
+msgstr ""
+
+#: build/index.js:1
+msgid "Load More"
+msgstr ""
+
+#: build/index.js:1
+msgid "Copy To Clipboard"
+msgstr ""
+
+#: build/index.js:1
+msgid "Copied Successfully!"
+msgstr ""
+
+#: build/index.js:1
 msgid "All shortcode posts (apb post type)"
 msgstr ""
 
 #: build/index.js:1
 msgid "Post view tracking data"
+msgstr ""
+
+#: build/index.js:1
+msgid "Template Library"
+msgstr ""
+
+#: build/index.js:1
+msgid "Templates Library"
+msgstr ""
+
+#: build/index.js:1
+msgid "Just now"
+msgstr ""
+
+#: build/index.js:1
+#. %d: number of minutes
+msgid "%d minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: number of hours
+msgid "%d hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: number of days
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: number of weeks
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: number of months
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: number of years
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+msgid "News Ticker"
+msgstr ""
+
+#: build/index.js:1
+msgid "General"
+msgstr ""
+
+#: build/index.js:1
+msgid "Style"
+msgstr ""
+
+#: build/index.js:1
+msgid "H1"
+msgstr ""
+
+#: build/index.js:1
+msgid "H2"
+msgstr ""
+
+#: build/index.js:1
+msgid "H3"
+msgstr ""
+
+#: build/index.js:1
+msgid "H4"
+msgstr ""
+
+#: build/index.js:1
+msgid "Magazine 1"
+msgstr ""
+
+#: build/index.js:1
+msgid "H5"
+msgstr ""
+
+#: build/index.js:1
+msgid "H6"
+msgstr ""
+
+#: build/index.js:1
+msgid "div"
+msgstr ""
+
+#: build/index.js:1
+msgid "span"
+msgstr ""
+
+#: build/index.js:1
+msgid "p"
+msgstr ""
+
+#: build/index.js:1
+msgid "Magazine 2"
+msgstr ""
+
+#: build/index.js:1
+msgid "Accordion"
+msgstr ""
+
+#: build/index.js:1
+msgid "Classic"
+msgstr ""
+
+#: build/index.js:1
+msgid "Card Stack"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plus Minus"
+msgstr ""
+
+#: build/index.js:1
+msgid "Arrow"
+msgstr ""
+
+#: build/index.js:1
+msgid "Long Arrow"
+msgstr ""
+
+#: build/index.js:1
+msgid "Default"
+msgstr ""
+
+#: build/index.js:1
+msgid "Title Meta"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay Content"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay Content Hover"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay Box"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay Half Content"
+msgstr ""
+
+#: build/index.js:1
+msgid "Auto"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fill Available Space"
+msgstr ""
+
+#: build/index.js:1
+msgid "On Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "Above Content"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pagination"
+msgstr ""
+
+#: build/index.js:1
+msgid "Navigation"
+msgstr ""
+
+#: build/index.js:1
+msgid "Load More Button"
+msgstr ""
+
+#: build/index.js:1
+msgid "Grid"
+msgstr ""
+
+#: build/index.js:1
+msgid "Slide"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade"
+msgstr ""
+
+#: build/index.js:1
+msgid "Creative"
+msgstr ""
+
+#: build/index.js:1
+msgid "Masonry"
+msgstr ""
+
+#: build/index.js:1
+msgid "Last Modified"
+msgstr ""
+
+#: build/index.js:1
+msgid "Random"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ascending"
+msgstr ""
+
+#: build/index.js:1
+msgid "Descending"
+msgstr ""
+
+#: build/index.js:1
+msgid "Slider"
+msgstr ""
+
+#: build/index.js:1
+msgid "Cover"
+msgstr ""
+
+#: build/index.js:1
+msgid "Contain"
+msgstr ""
+
+#: build/index.js:1
+msgid "Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ticker"
+msgstr ""
+
+#: build/index.js:1
+msgid "Justify"
+msgstr ""
+
+#: build/index.js:1
+msgid "Start"
+msgstr ""
+
+#: build/index.js:1
+msgid "Center"
+msgstr ""
+
+#: build/index.js:1
+msgid "End"
+msgstr ""
+
+#: build/index.js:1
+msgid "Arrow Up Right From Square"
+msgstr ""
+
+#: build/index.js:1
+msgid "Right Long"
 msgstr ""

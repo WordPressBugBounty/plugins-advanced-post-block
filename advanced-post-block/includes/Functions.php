@@ -157,11 +157,16 @@ class Functions{
 				'modifiedDateGMT' => $post->post_modified_gmt,
 				'commentCount' => $post->comment_count,
 				'commentStatus' => $post->comment_status,
+				'views' => get_post_meta( $id, 'apb_post_views_count', true ) ?: 0,
 				'categories' => [
 					'coma' => get_the_category_list( ', ', '', $id ),
 					'space' => get_the_category_list( ' ', '', $id )
 				],
 				'taxonomies' => $taxonomies,
+				'readTime' => [
+					'min' => floor( $contentWords / 200 ),
+					'sec' => floor( $contentWords % 200 / ( 200 / 60 ) )
+				],
 				'status' => $post->post_status
 			], $contentOrExcerptArr );
 		}
