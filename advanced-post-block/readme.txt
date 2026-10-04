@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.5.0
+Stable tag: 2.5.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,7 +23,7 @@ It supports grid, list, masonry, slider, ticker, accordion, and news-style layou
 
 Recent additions include AJAX-based post loading, pagination, load more, and infinite scroll, enabling seamless content browsing without page reloads. It also supports post view tracking and sorting by popularity, helping highlight trending or most-viewed content.
 
-A built-in Template Library lets you skip the setup entirely — import ready-made, professionally designed post layouts in one click straight from the editor toolbar, with search, category and Free/Pro filters, live previews, and a favorites tab to keep the layouts you use most within reach.
+A built-in Template Library lets you skip the setup entirely - import ready-made, professionally designed post layouts in one click straight from the editor toolbar, with search, category and Free/Pro filters, live previews, and a favorites tab to keep the layouts you use most within reach.
 
 You can control the visibility and structure of post elements, including featured images, titles, metadata, excerpts, and read more links. Built for performance and responsiveness, the plugin integrates directly with the WordPress block editor to create structured, customizable content layouts without coding.
 
@@ -42,11 +42,11 @@ Choose from various display styles:
 
 - **Ticker:** Show content as a scrolling headline list.
 
-- **News Ticker:** Run headlines through a compact bar with its own label ribbon — ideal for breaking news and announcements.
+- **News Ticker:** Run headlines through a compact bar with its own label ribbon - ideal for breaking news and announcements.
 
-- **Accordion:** Display posts as collapsible panels that expand on click — perfect for FAQs, documentation, and long lists.
+- **Accordion:** Display posts as collapsible panels that expand on click - perfect for FAQs, documentation, and long lists.
 
-- **Magazine 1:** Pair a large hero post with a scrollable sidebar list of secondary posts — the classic editorial front page.
+- **Magazine 1:** Pair a large hero post with a scrollable sidebar list of secondary posts - the classic editorial front page.
 
 - **Magazine 2:** Stack a full-width hero post above a responsive grid of the remaining posts.
 
@@ -94,7 +94,7 @@ Everything you need to build a professional and modern content display:
 
 - **Accordion Layout:** Display posts as collapsible panels with **Classic** and **Card Stack** themes, single open mode, expand icon controls, and header styling.
 
-- **Magazine 1 Layout:** Front-page editorial look — a large hero post beside a scrollable sidebar list, with its own sidebar list layout and a responsive hero min-height.
+- **Magazine 1 Layout:** Front-page editorial look - a large hero post beside a scrollable sidebar list, with its own sidebar list layout and a responsive hero min-height.
 
 - **Magazine 2 Layout:** A full-width hero post above a responsive grid of the remaining posts, with its own grid sub-layout and a responsive hero min-height.
 
@@ -106,7 +106,7 @@ Everything you need to build a professional and modern content display:
 
 - **Post Precision:** Use **Post Offset** to skip the first "N" posts, target exact content with **Include Posts** and **Exclude Posts** by ID, or **Exclude Sticky Posts** from any query.
 
-- **Pagination & AJAX:** Numbered **Pagination**, prev/next **Navigation**, and a **Load More** button with a custom label — with alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
+- **Pagination & AJAX:** Numbered **Pagination**, prev/next **Navigation**, and a **Load More** button with a custom label - with alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
 
 - **Element Visibility:** Full control to show or hide thumbnails, titles, metadata, excerpts, and read more buttons.
 
@@ -116,7 +116,7 @@ Everything you need to build a professional and modern content display:
 
 - **Title Control:** Customize post title with enable link, select tag, **word/character limit**, typography, alignment, colors, and margin.
 
-- **Flexible Metadata:** Show or hide the post author (with an optional **author link**), date (with a **“Time Ago”** display), categories with position, **reading time** with a custom label, comment counts, and the **post view count** — with a custom **separator**, typography, different colors and margin.
+- **Flexible Metadata:** Show or hide the post author (with an optional **author link**), date (with a **“Time Ago”** display), categories with position, **reading time** with a custom label, comment counts, and the **post view count** - with a custom **separator**, typography, different colors and margin.
 
 - **Meta Separator Color:** Give the character between meta items its own color.
 
@@ -140,7 +140,7 @@ Everything you need to build a professional and modern content display:
 
 **What’s Included in Pro:**
 
-- **Premium Templates:** Unlock the full Template Library — import Pro-only, professionally designed post layouts in one click.
+- **Premium Templates:** Unlock the full Template Library - import Pro-only, professionally designed post layouts in one click.
 
 - **Exclusive Layouts:** Unlock the **Grid 1** and **Timeline** layouts, plus the **List Left/Right Even-Odd** and **Overlay Content Box** sub-layouts.
 
@@ -354,6 +354,11 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.5.1 - 4 Oct 2026 =
+* **New:** Template Library: Imports and favorites now help rank the most popular templates - only reported when you allow usage tracking.
+* **Improvement:** Translations: The admin dashboard, block settings, and front-end labels (view counts, comment links, ticker navigation) are now fully translatable.
+* **Fix:** Slider: The Autoplay Delay labels used the wrong text domain and could not be translated.
+
 = 2.5.0 - 6 Sep 2026 =
 * **New:** Magazine 2 Layout: A full-width hero post above a responsive grid of the remaining posts, with its own **Magazine Grid Layout** selector, column and gap controls, and a responsive hero min-height.
 * **New:** Load More Button: A third Load More type that appends the next posts in place, with a custom button label and a loading state.
@@ -367,9 +372,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * **New:** Image Grayscale: Apply a grayscale filter to the feature image, on normal state and on hover.
 
 = 2.4.0 - 18 Aug 2026 =
-* **New:** Magazine 1 Layout: The hero-plus-sidebar magazine layout is now free — pair a large featured post with a scrollable list of secondary posts, with its own sidebar list layout and responsive hero min-height.
+* **New:** Magazine 1 Layout: The hero-plus-sidebar magazine layout is now free - pair a large featured post with a scrollable list of secondary posts, with its own sidebar list layout and responsive hero min-height.
 * **New:** Overlay Half Content Sub Layout: Text sits over the bottom half of the image behind a soft gradient.
-* **New:** Load More / Pagination: Numbered pagination and prev/next navigation — with custom labels, alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
+* **New:** Load More / Pagination: Numbered pagination and prev/next navigation - with custom labels, alignment, colors, active/hover colors, padding, spacing, and back-to-top on page change.
 * **New:** Query Controls: Select **Pages** as a post source, filter posts by tags, skip posts with Post Offset, and target exact posts with Include Posts and Exclude Posts.
 * **New:** Element Sorting: Drag and drop to reorder the title, meta data, and excerpt inside each post.
 * **New:** Feature Image Size: Pick any registered image size (thumbnail, medium, large, full) for faster pages.
@@ -379,10 +384,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * **New:** Image Hover Radius: Animate the feature image corner radius on hover.
 
 = 2.3.0 - 30 Jul 2026 =
-* **New:** Accordion Layout: Added a new collapsible Accordion layout to display posts as expandable panels — great for FAQs, docs, and long-form lists. Includes **Classic** and **Card Stack** themes, single open mode, expand-icon controls, and full styling.
+* **New:** Accordion Layout: Added a new collapsible Accordion layout to display posts as expandable panels - great for FAQs, docs, and long-form lists. Includes **Classic** and **Card Stack** themes, single open mode, expand-icon controls, and full styling.
 
 = 2.2.2 - 22 Jul 2026 =
-* **New:** Template Library: Browse and import professionally designed post layouts with one click using the new **Template Library** button in the editor toolbar — complete with search, filters, and live preview.
+* **New:** Template Library: Browse and import professionally designed post layouts with one click using the new **Template Library** button in the editor toolbar - complete with search, filters, and live preview.
 
 = 2.2.1 - 25 Jun 2026 =
 * **Update:** Admin Dashboard: Improved UI with better feature organization.
@@ -742,6 +747,18 @@ You can find the source code, report bugs, and contribute to the development of 
 [**Advanced Post Block on GitHub**](https://github.com/bPlugins/advanced-post-block)
 
 
+== External services ==
+
+= bPlugins Template Library =
+The Template Library in the block editor loads ready-made layouts from the bPlugins template server at https://templates.bplugins.com.
+
+* **When:** Only when you open the Template Library, browse or search it, import a template, or add or remove a favorite.
+* **Data sent while browsing:** The plugin slug, template type (patterns or pages), category, search keywords, and page number. Template thumbnails load from the same server in your browser.
+* **Usage reporting (opt-in only):** If you allowed usage tracking, importing a template or adding or removing a favorite also sends the event name, the template ID, and the plugin slug. Nothing is reported if you did not opt in.
+* **Request headers:** Like every WordPress HTTP request, these requests include your site URL in the User-Agent header.
+* **Terms of service:** https://bplugins.com/terms-of-service/
+* **Privacy policy:** https://bplugins.com/privacy-policy/
+
 == Third-Party Libraries ==
 
 This plugin bundles the following third-party JavaScript/PHP libraries.
@@ -769,7 +786,7 @@ This plugin bundles the following third-party JavaScript/PHP libraries.
 * **GitHub:** [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
 * **License:** GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 * **Purpose:** Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
-* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy/) and [Freemius Privacy Policy](https://freemius.com/privacy/).
 
 = bpl-tools =
 * Source / GitHub: https://github.com/bPlugins/bpl-tools

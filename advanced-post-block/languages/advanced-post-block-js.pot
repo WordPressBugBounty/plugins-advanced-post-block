@@ -52,6 +52,14 @@ msgid "Number of words to show in the excerpt. Set -1 to show all content."
 msgstr ""
 
 #: build/index.js:1
+msgid "Set -1 to show all the content"
+msgstr ""
+
+#: build/index.js:1
+msgid "Set -1 to show all the excerpt"
+msgstr ""
+
+#: build/index.js:1
 msgid ""
 "SEO meta content and precise ellipsis control are available in the Premium "
 "version."
@@ -372,6 +380,22 @@ msgid "Showing an ellipsis on truncated titles is available in the Premium versi
 msgstr ""
 
 #: build/index.js:1
+msgid "Added"
+msgstr ""
+
+#: build/index.js:1
+msgid "Removed"
+msgstr ""
+
+#: build/index.js:1
+msgid "Remove"
+msgstr ""
+
+#: build/index.js:1
+msgid "Invalid item"
+msgstr ""
+
+#: build/index.js:1
 msgid "List - Left Image"
 msgstr ""
 
@@ -452,6 +476,18 @@ msgid ""
 msgstr ""
 
 #: build/index.js:1
+msgid "Configure the <span>Slider Options</span>."
+msgstr ""
+
+#: build/index.js:1
+msgid "Configure the <span>Ticker Options</span>."
+msgstr ""
+
+#: build/index.js:1
+msgid "Configure the <span>News Ticker Options</span>."
+msgstr ""
+
+#: build/index.js:1
 msgid "Sub Layout:"
 msgstr ""
 
@@ -487,6 +523,10 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Choose how to load more posts. Note: Posts Per Page must not be -1."
+msgstr ""
+
+#: build/index.js:1
+msgid "Load More / Pagination will not work if 'Post Per Page' is -1"
 msgstr ""
 
 #: build/index.js:1
@@ -1017,7 +1057,47 @@ msgid "Trending Now"
 msgstr ""
 
 #: build/index.js:1
+msgid "Previous"
+msgstr ""
+
+#: build/index.js:1
+msgid "Next"
+msgstr ""
+
+#: build/index.js:1
 msgid "Load More"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Post title.
+msgid "Comments of %s"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Number of post views.
+msgid "%s View"
+msgid_plural "%s Views"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+msgid "Feature Comparison"
+msgstr ""
+
+#: build/index.js:1
+msgid "Settings"
+msgstr ""
+
+#: build/index.js:1
+msgid "Welcome"
+msgstr ""
+
+#: build/index.js:1
+msgid "Demos"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pricing"
 msgstr ""
 
 #: build/index.js:1
@@ -1029,6 +1109,397 @@ msgid "Copied Successfully!"
 msgstr ""
 
 #: build/index.js:1
+msgid "Preview & Save Favorites"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Click the <strong>eye</strong> icon on a template to open its live demo in "
+"a new tab, or the <strong>heart</strong> icon to save it - favorites stay "
+"one click away under the <strong>Favorites</strong> tab."
+msgstr ""
+
+#: build/index.js:1
+msgid "Import & Customize"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Hit <strong>+ Import</strong> and the template is inserted right into your "
+"content as editable blocks - then tweak the query, elements, and styles as "
+"usual. Pro templates show <strong>Get Pro</strong> until your license is "
+"active."
+msgstr ""
+
+#: build/index.js:1
+msgid "ShortCode"
+msgstr ""
+
+#: build/index.js:1
+msgid "Open ShortCode Generator"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Go to <strong>Advanced Posts &rsaquo; ShortCode Generator</strong> in your "
+"WordPress admin and click <strong>Add New ShortCode</strong>."
+msgstr ""
+
+#: build/index.js:1
+msgid "Configure the Block"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"In the block editor, use the sidebar to choose your layout, set the Posts "
+"Query filters (post type, categories, tags, order), and adjust Elements and "
+"Style settings."
+msgstr ""
+
+#: build/index.js:1
+msgid "Publish & Copy the Shortcode"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Publish the post. Return to the ShortCode Generator list - the shortcode "
+"<code>[apb id=POST_ID]</code> is shown in the list table. Click it to copy "
+"to clipboard."
+msgstr ""
+
+#: build/index.js:1
+msgid "Paste Anywhere"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Paste the copied shortcode (e.g. <code>[apb id=123]</code>) into any post, "
+"page, widget area, or block using the <strong>Shortcode</strong> block."
+msgstr ""
+
+#: build/index.js:1
+msgid "Page Builder"
+msgstr ""
+
+#: build/index.js:1
+msgid "Create a ShortCode"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Go to <strong>Advanced Posts &rsaquo; ShortCode Generator</strong>, click "
+"<strong>Add New ShortCode</strong>, configure your layout and query, then "
+"publish. Note the shortcode from the list table."
+msgstr ""
+
+#: build/index.js:1
+msgid "ShortCode Generator"
+msgstr ""
+
+#: build/index.js:1
+msgid "Showcase Posts with Grid, List, Card Layouts and Filters"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add a Shortcode Widget"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Add the Page Builder <strong>Shortcode</strong> widget to your page and "
+"insert to the page."
+msgstr ""
+
+#: build/index.js:1
+msgid "Enter & Preview"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Type <code>[apb id=YOUR_ID]</code> into the widget's Shortcode field "
+"(replace <em>YOUR_ID</em> with your actual post ID) and click "
+"<strong>Preview</strong> to see the posts rendered live."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Advanced Post Block is a powerful and flexible block plugin that allows you "
+"to display posts, display blog posts, and embed custom posts in a fully "
+"customizable and responsive layout."
+msgstr ""
+
+#: build/index.js:1
+msgid "View More Changelogs"
+msgstr ""
+
+#: build/index.js:1
+msgid "More Layouts: Grid 1 and Timeline layouts."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Accordion Pro Themes: Thumbnail, Numbered FAQ, Split Panel, and Minimal "
+"Lines."
+msgstr ""
+
+#: build/index.js:1
+msgid "Ticker and News Ticker options."
+msgstr ""
+
+#: build/index.js:1
+msgid "Advanced Query: Presets, Custom Taxonomies, and Search."
+msgstr ""
+
+#: build/index.js:1
+msgid "Tags and Custom Taxonomies in the meta row, each with its own icon."
+msgstr ""
+
+#: build/index.js:1
+msgid "Infinity Scroll with a trigger offset, spinner, and loading label."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Meta sorting and gaps, custom meta icons, date formats, and reading time "
+"seconds."
+msgstr ""
+
+#: build/index.js:1
+msgid "Image Lazy Loading, the Scale Up hover animation, and title ellipsis."
+msgstr ""
+
+#: build/index.js:1
+msgid "See All Demos"
+msgstr ""
+
+#: build/index.js:1
+msgid "Grid"
+msgstr ""
+
+#: build/index.js:1
+msgid "Retro Print Teal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Strata Daily"
+msgstr ""
+
+#: build/index.js:1
+msgid "Willow Journal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sable Folio"
+msgstr ""
+
+#: build/index.js:1
+msgid "Solstice Review"
+msgstr ""
+
+#: build/index.js:1
+msgid "Slate Ledger"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lumen Review"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vellum Folio"
+msgstr ""
+
+#: build/index.js:1
+msgid "Meridian Ledger"
+msgstr ""
+
+#: build/index.js:1
+msgid "Meridian Journal Gallery"
+msgstr ""
+
+#: build/index.js:1
+msgid "Slate Stand Gallery"
+msgstr ""
+
+#: build/index.js:1
+msgid "Slate Edition"
+msgstr ""
+
+#: build/index.js:1
+msgid "Meridian Edition"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vellum Ledger"
+msgstr ""
+
+#: build/index.js:1
+msgid "Obsidian Review"
+msgstr ""
+
+#: build/index.js:1
+msgid "Obsidian Journal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Start Now"
+msgstr ""
+
+#: build/index.js:1
+msgid "Obsidian Press"
+msgstr ""
+
+#: build/index.js:1
+msgid "Meridian Daily"
+msgstr ""
+
+#: build/index.js:1
+msgid "Aurora Daily"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vista Daily"
+msgstr ""
+
+#: build/index.js:1
+msgid "Compact Cyber Neon"
+msgstr ""
+
+#: build/index.js:1
+msgid "Compact Neo Brutal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Compact Elite Clean"
+msgstr ""
+
+#: build/index.js:1
+msgid "Minimal Cyber Neon"
+msgstr ""
+
+#: build/index.js:1
+msgid "Minimal Neo Brutal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Minimal Elite Clean"
+msgstr ""
+
+#: build/index.js:1
+msgid "News Ticker"
+msgstr ""
+
+#: build/index.js:1
+msgid "Accordion"
+msgstr ""
+
+#: build/index.js:1
+msgid "Magazine 2"
+msgstr ""
+
+#: build/index.js:1
+msgid "Grid 1"
+msgstr ""
+
+#: build/index.js:1
+msgid "Basalt Press"
+msgstr ""
+
+#: build/index.js:1
+msgid "Layouts"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lumen Folio"
+msgstr ""
+
+#: build/index.js:1
+msgid "Masonry"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vista Dispatch"
+msgstr ""
+
+#: build/index.js:1
+msgid "Default"
+msgstr ""
+
+#: build/index.js:1
+msgid "Title Meta"
+msgstr ""
+
+#: build/index.js:1
+msgid "Slider"
+msgstr ""
+
+#: build/index.js:1
+msgid "Magazine 1"
+msgstr ""
+
+#: build/index.js:1
+msgid "Mica Gazette"
+msgstr ""
+
+#: build/index.js:1
+msgid "Quartz Stand"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ticker"
+msgstr ""
+
+#: build/index.js:1
+msgid "Side Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Section"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Section (Design 1)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Section (Design 2)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add the APB Block"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Section (Design 3)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Section (Design 4)"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Open the block editor on any post or page. Click the <strong>+</strong> "
+"icon in the top-left corner or type <strong>/Advanced Posts</strong> to "
+"find and insert the Advanced Posts block."
+msgstr ""
+
+#: build/index.js:1
+msgid "Post Section (Design 5)"
+msgstr ""
+
+#: build/index.js:1
+msgid "All Posts"
+msgstr ""
+
+#: build/index.js:1
+msgid "Buy Now ➜"
+msgstr ""
+
+#: build/index.js:1
 msgid "All shortcode posts (apb post type)"
 msgstr ""
 
@@ -1037,7 +1508,71 @@ msgid "Post view tracking data"
 msgstr ""
 
 #: build/index.js:1
+msgid "Choose a Layout"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Select the layout from - <strong>Grid</strong>, <strong>Grid 1</strong>, "
+"<strong>Masonry</strong>, <strong>Slider</strong>, <strong>Ticker</strong>, "
+"<strong>News Ticker</strong>, <strong>Accordion</strong>, <strong>Magazine "
+"1</strong>, <strong>Magazine 2</strong>, or <strong>Timeline</strong>. "
+"Switching layouts is non-destructive; your query settings are preserved."
+msgstr ""
+
+#: build/index.js:1
+msgid "Configure the Posts Query"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"In the <strong>Posts Query</strong> panel, filter by categories, tags, or "
+"authors, skip posts with <strong>Post Offset</strong>, target exact posts "
+"with <strong>Include/Exclude Posts</strong>, and control the number and "
+"order of posts. Then pick a <strong>Load More / Pagination</strong> type to "
+"split long lists across pages."
+msgstr ""
+
+#: build/index.js:1
+msgid "Style Elements & Publish"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Use the <strong>Elements</strong> tab to toggle and reorder post content "
+"(image, title, meta, excerpt, read more), then the <strong>Style</strong> "
+"tab to set colors, typography, borders, and hover effects. Publish when "
+"ready."
+msgstr ""
+
+#: build/index.js:1
 msgid "Template Library"
+msgstr ""
+
+#: build/index.js:1
+msgid "Open the Template Library"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"In the block editor, click the <strong>Template Library</strong> button in "
+"the top toolbar (next to the block inserter) to open the templates modal."
+msgstr ""
+
+#: build/index.js:1
+msgid "Open Editor"
+msgstr ""
+
+#: build/index.js:1
+msgid "Browse & Filter Templates"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Switch between the <strong>Patterns</strong> and <strong>Favorites</strong> "
+"tabs, then narrow the gallery by access (<strong>All</strong>, "
+"<strong>Free</strong>, <strong>Pro</strong>), by category (Grid, List, "
+"Magazine, Masonry, Overlay), or search templates by name."
 msgstr ""
 
 #: build/index.js:1
@@ -1091,10 +1626,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: build/index.js:1
-msgid "News Ticker"
-msgstr ""
-
-#: build/index.js:1
 msgid "General"
 msgstr ""
 
@@ -1119,10 +1650,6 @@ msgid "H4"
 msgstr ""
 
 #: build/index.js:1
-msgid "Magazine 1"
-msgstr ""
-
-#: build/index.js:1
 msgid "H5"
 msgstr ""
 
@@ -1143,14 +1670,6 @@ msgid "p"
 msgstr ""
 
 #: build/index.js:1
-msgid "Magazine 2"
-msgstr ""
-
-#: build/index.js:1
-msgid "Accordion"
-msgstr ""
-
-#: build/index.js:1
 msgid "Classic"
 msgstr ""
 
@@ -1168,14 +1687,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Long Arrow"
-msgstr ""
-
-#: build/index.js:1
-msgid "Default"
-msgstr ""
-
-#: build/index.js:1
-msgid "Title Meta"
 msgstr ""
 
 #: build/index.js:1
@@ -1223,10 +1734,6 @@ msgid "Load More Button"
 msgstr ""
 
 #: build/index.js:1
-msgid "Grid"
-msgstr ""
-
-#: build/index.js:1
 msgid "Slide"
 msgstr ""
 
@@ -1236,10 +1743,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Creative"
-msgstr ""
-
-#: build/index.js:1
-msgid "Masonry"
 msgstr ""
 
 #: build/index.js:1
@@ -1259,10 +1762,6 @@ msgid "Descending"
 msgstr ""
 
 #: build/index.js:1
-msgid "Slider"
-msgstr ""
-
-#: build/index.js:1
 msgid "Cover"
 msgstr ""
 
@@ -1276,10 +1775,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Right"
-msgstr ""
-
-#: build/index.js:1
-msgid "Ticker"
 msgstr ""
 
 #: build/index.js:1
@@ -1304,4 +1799,1975 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Right Long"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid ""
+"You're receiving security updates, new features and priority support for "
+"<strong>%s</strong>."
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid ""
+"Enter the license key you received with your purchase to unlock premium "
+"features and updates for <strong>%s</strong>."
+msgstr ""
+
+#: build/index.js:1
+msgid "Plugin"
+msgstr ""
+
+#: build/index.js:1
+msgid "Activated"
+msgstr ""
+
+#: build/index.js:1
+msgid "Not activated"
+msgstr ""
+
+#: build/index.js:1
+msgid "Talking to the license server…"
+msgstr ""
+
+#: build/index.js:1
+msgid "License verified"
+msgstr ""
+
+#: build/index.js:1
+msgid "Your purchase code is bound to this site and is in good standing."
+msgstr ""
+
+#: build/index.js:1
+msgid "Hide license"
+msgstr ""
+
+#: build/index.js:1
+msgid "Show license"
+msgstr ""
+
+#: build/index.js:1
+msgid "Copy license to clipboard"
+msgstr ""
+
+#: build/index.js:1
+msgid "Copied"
+msgstr ""
+
+#: build/index.js:1
+msgid "Change license"
+msgstr ""
+
+#: build/index.js:1
+msgid "Deactivate license"
+msgstr ""
+
+#: build/index.js:1
+msgid "License key"
+msgstr ""
+
+#: build/index.js:1
+msgid "Activating…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Update License"
+msgstr ""
+
+#: build/index.js:1
+msgid "Activate License"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Can't find your key? <recover>Recover license</recover> or <help>activation "
+"help</help>"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid "%s needs the following to deliver updates & security patches"
+msgstr ""
+
+#: build/index.js:1
+msgid "License essentials"
+msgstr ""
+
+#: build/index.js:1
+msgid "Homepage URL · Plugin version · SDK version"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plugin state"
+msgstr ""
+
+#: build/index.js:1
+msgid "Whether the plugin is active, deactivated or uninstalled"
+msgstr ""
+
+#: build/index.js:1
+msgid "Powered by Freemius"
+msgstr ""
+
+#: build/index.js:1
+msgid "Privacy Policy"
+msgstr ""
+
+#: build/index.js:1
+msgid "License Agreement"
+msgstr ""
+
+#: build/index.js:1
+msgid "Cancel and keep current license"
+msgstr ""
+
+#: build/index.js:1
+msgid "Deactivate this license?"
+msgstr ""
+
+#: build/index.js:1
+msgid "You can re-activate it later on this site or move it to a different one."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Premium features and automatic updates will stop on this site until you "
+"re-activate."
+msgstr ""
+
+#: build/index.js:1
+msgid "Keep license active"
+msgstr ""
+
+#: build/index.js:1
+msgid "Yes, deactivate"
+msgstr ""
+
+#: build/index.js:1
+msgid "License"
+msgstr ""
+
+#: build/index.js:1
+msgid "Your license is active"
+msgstr ""
+
+#: build/index.js:1
+msgid "Change your license key"
+msgstr ""
+
+#: build/index.js:1
+msgid "Activate your license"
+msgstr ""
+
+#: build/index.js:1
+msgid "Please enter a license key"
+msgstr ""
+
+#: build/index.js:1
+msgid "Activation failed"
+msgstr ""
+
+#: build/index.js:1
+msgid "Deactivation failed"
+msgstr ""
+
+#: build/index.js:1
+msgid "An error occurred"
+msgstr ""
+
+#: build/index.js:1
+#. 1: Number of demos, 2: Demo category name.
+msgid "<strong>%1$d</strong> demo in %2$s"
+msgid_plural "<strong>%1$d</strong> demos in %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: Number of demos. <search /> is replaced with the search term.
+msgid "<strong>%d</strong> demo matching \"<search />\""
+msgid_plural "<strong>%d</strong> demos matching \"<search />\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: Number of demos.
+msgid "<strong>%d</strong> demo"
+msgid_plural "<strong>%d</strong> demos"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+msgid "Live Demos"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid "See the %s in action"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Browse ready-made demos - click any card to open a live, interactive "
+"preview."
+msgstr ""
+
+#: build/index.js:1
+msgid "Search demos…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Clear search"
+msgstr ""
+
+#: build/index.js:1
+msgid "All"
+msgstr ""
+
+#: build/index.js:1
+msgid "No demos found"
+msgstr ""
+
+#: build/index.js:1
+msgid "Try a different search or category."
+msgstr ""
+
+#: build/index.js:1
+msgid "Preview"
+msgstr ""
+
+#: build/index.js:1
+#. 1: Current demo position, 2: Total number of demos.
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: build/index.js:1
+msgid "Open in new tab"
+msgstr ""
+
+#: build/index.js:1
+msgid "Close demo"
+msgstr ""
+
+#: build/index.js:1
+msgid "Previous demo"
+msgstr ""
+
+#: build/index.js:1
+msgid "Loading demo…"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Demo title.
+msgid "%s demo"
+msgstr ""
+
+#: build/index.js:1
+msgid "Next demo"
+msgstr ""
+
+#: build/index.js:1
+#. 1: Number of demos, 2: Demo category name. <search /> is replaced with the search term.
+msgid "<strong>%1$d</strong> demo in %2$s matching \"<search />\""
+msgid_plural "<strong>%1$d</strong> demos in %2$s matching \"<search />\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+msgid "Compare"
+msgstr ""
+
+#: build/index.js:1
+msgid "Free vs Pro at a glance"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ready to unlock everything?"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Upgrade to Pro and get every feature, future updates, and priority support "
+"— backed by a 14 days money-back guarantee."
+msgstr ""
+
+#: build/index.js:1
+msgid "Get Pro now →"
+msgstr ""
+
+#: build/index.js:1
+msgid "See exactly what unlocks when you upgrade."
+msgstr ""
+
+#: build/index.js:1
+#. %d: Number of Pro-only features.
+msgid "<strong>%d</strong> feature is exclusive to Pro."
+msgid_plural "<strong>%d</strong> features are exclusive to Pro."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: Annual savings percentage.
+msgid "Save %d%%"
+msgstr ""
+
+#: build/index.js:1
+msgid "Free forever — all the essentials to get started."
+msgstr ""
+
+#: build/index.js:1
+msgid "Everything in Free, plus advanced features and priority support."
+msgstr ""
+
+#: build/index.js:1
+msgid "forever"
+msgstr ""
+
+#: build/index.js:1
+msgid "You Already Have It"
+msgstr ""
+
+#: build/index.js:1
+msgid "Get Pro →"
+msgstr ""
+
+#: build/index.js:1
+msgid "Feature breakdown"
+msgstr ""
+
+#: build/index.js:1
+msgid "Filter features…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Clear filter"
+msgstr ""
+
+#: build/index.js:1
+msgid "Feature"
+msgstr ""
+
+#: build/index.js:1
+msgid "Free"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "No features match your search."
+msgstr ""
+
+#: build/index.js:1
+msgid "Pro only"
+msgstr ""
+
+#: build/index.js:1
+msgid "Included"
+msgstr ""
+
+#: build/index.js:1
+msgid "Not included"
+msgstr ""
+
+#: build/index.js:1
+msgid "Monthly"
+msgstr ""
+
+#: build/index.js:1
+msgid "/mo · billed monthly"
+msgstr ""
+
+#: build/index.js:1
+msgid "Yearly"
+msgstr ""
+
+#: build/index.js:1
+msgid "/yr · billed yearly"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lifetime"
+msgstr ""
+
+#: build/index.js:1
+msgid "one-time"
+msgstr ""
+
+#: build/index.js:1
+msgid "Loading feature comparison…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plugin from bPlugins"
+msgstr ""
+
+#: build/index.js:1
+msgid "Toggle navigation"
+msgstr ""
+
+#: build/index.js:1
+msgid "Our Plugins"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "Activate"
+msgstr ""
+
+#: build/index.js:1
+msgid "Installing…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Failed"
+msgstr ""
+
+#: build/index.js:1
+msgid "Install & Activate"
+msgstr ""
+
+#: build/index.js:1
+msgid "Active"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fetching plugins from the WordPress directory…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Made by bPlugins"
+msgstr ""
+
+#: build/index.js:1
+msgid "Discover more plugins from our team"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Hand-crafted WordPress plugins built with the same care and quality. "
+"Install any of them with a single click."
+msgstr ""
+
+#: build/index.js:1
+msgid "Search plugins…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/index.js:1
+msgid "Popular"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Rated"
+msgstr ""
+
+#: build/index.js:1
+msgid "A–Z"
+msgstr ""
+
+#: build/index.js:1
+#. %d: Number of plugins. <search /> is replaced with the search term.
+msgid "<strong>%d</strong> plugin matching \"<search />\""
+msgid_plural "<strong>%d</strong> plugins matching \"<search />\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+#. %d: Number of plugins.
+msgid "<strong>%d</strong> plugin"
+msgid_plural "<strong>%d</strong> plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+msgid "No plugins match"
+msgstr ""
+
+#: build/index.js:1
+msgid "Try a different keyword."
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin rating, e.g. 4.5.
+msgid "%s out of 5"
+msgstr ""
+
+#: build/index.js:1
+msgid "Video"
+msgstr ""
+
+#: build/index.js:1
+msgid "Your browser does not support the video tag."
+msgstr ""
+
+#: build/index.js:1
+msgid "Pick the plan that fits your project"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Same powerful features on every plan — just choose how many sites you need. "
+"Upgrade or downgrade any time."
+msgstr ""
+
+#: build/index.js:1
+msgid "Same on every plan"
+msgstr ""
+
+#: build/index.js:1
+msgid "Everything you get, on every license"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Every feature is available on every license tier. The only difference is "
+"how many sites you can activate the plugin on."
+msgstr ""
+
+#: build/index.js:1
+msgid "14 days money back"
+msgstr ""
+
+#: build/index.js:1
+msgid "Risk-free purchase"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lifetime updates"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plugins updates"
+msgstr ""
+
+#: build/index.js:1
+msgid "On every plan"
+msgstr ""
+
+#: build/index.js:1
+msgid "Priority support"
+msgstr ""
+
+#: build/index.js:1
+msgid "Get help when you need it"
+msgstr ""
+
+#: build/index.js:1
+msgid "Secure checkout"
+msgstr ""
+
+#: build/index.js:1
+msgid "Can I upgrade my plan later?"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Yes — you can upgrade any time from your account. We prorate the difference "
+"automatically."
+msgstr ""
+
+#: build/index.js:1
+msgid "Will I receive updates if I purchase a lifetime license?"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Yes, a lifetime license holds lifetime updates and never expires, ensuring "
+"you always have access to the latest features and bug fixes without "
+"recurring fees."
+msgstr ""
+
+#: build/index.js:1
+msgid "What happens after my license expires?"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"The plugin keeps working forever. You only lose access to premium features, "
+"updates and premium support unless you renew."
+msgstr ""
+
+#: build/index.js:1
+msgid "Do you offer refunds?"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Absolutely. Every plan is backed by a 14 days no-questions-asked money-back "
+"guarantee."
+msgstr ""
+
+#: build/index.js:1
+msgid "Unlimited Sites"
+msgstr ""
+
+#: build/index.js:1
+msgid "Single Site"
+msgstr ""
+
+#: build/index.js:1
+#. %d: Number of sites.
+msgid "%d Site"
+msgid_plural "%d Sites"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:1
+msgid "For agencies & enterprise"
+msgstr ""
+
+#: build/index.js:1
+msgid "For solo creators"
+msgstr ""
+
+#: build/index.js:1
+msgid "For freelancers"
+msgstr ""
+
+#: build/index.js:1
+msgid "Most Popular"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Price per site.
+msgid "≈ $%s per site"
+msgstr ""
+
+#: build/index.js:1
+msgid "Use on every site you build."
+msgstr ""
+
+#: build/index.js:1
+#. %s: Monthly equivalent price.
+msgid "Billed yearly · $%s/mo"
+msgstr ""
+
+#: build/index.js:1
+msgid "One-time payment, pay once forever."
+msgstr ""
+
+#: build/index.js:1
+msgid "Billed monthly, cancel anytime."
+msgstr ""
+
+#: build/index.js:1
+msgid "No plans available right now."
+msgstr ""
+
+#: build/index.js:1
+msgid "Frequently asked questions"
+msgstr ""
+
+#: build/index.js:1
+msgid "/mo"
+msgstr ""
+
+#: build/index.js:1
+msgid "/yr"
+msgstr ""
+
+#: build/index.js:1
+msgid "Loading the latest pricing…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Danger Zone"
+msgstr ""
+
+#: build/index.js:1
+msgid "Delete plugin data on uninstall"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid ""
+"When enabled, every piece of %s data is wiped from your database the moment "
+"the plugin is uninstalled."
+msgstr ""
+
+#: build/index.js:1
+msgid "What will be permanently deleted:"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"This action cannot be undone. Deactivating the plugin alone is "
+"non-destructive — your data is only deleted when you also click \"Delete\" "
+"on the plugins screen."
+msgstr ""
+
+#: build/index.js:1
+msgid "Toggle data deletion on uninstall"
+msgstr ""
+
+#: build/index.js:1
+msgid "Deletion is ON"
+msgstr ""
+
+#: build/index.js:1
+msgid "Deletion is OFF"
+msgstr ""
+
+#: build/index.js:1
+msgid "Data will be removed on uninstall"
+msgstr ""
+
+#: build/index.js:1
+msgid "Data will be preserved on uninstall"
+msgstr ""
+
+#: build/index.js:1
+msgid "Saving…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable data deletion on uninstall?"
+msgstr ""
+
+#: build/index.js:1
+msgid "Close"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Switching this on means that the next time this plugin is uninstalled, all "
+"data, configurations, and settings will be permanently removed from your "
+"database."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"There is no recovery once data is deleted. Make sure you have a recent "
+"backup."
+msgstr ""
+
+#: build/index.js:1
+#. Keep <code>DELETE</code> untranslated, the user has to type that exact word.
+msgid "Type <code>DELETE</code> to confirm"
+msgstr ""
+
+#: build/index.js:1
+msgid "Cancel"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable deletion"
+msgstr ""
+
+#: build/index.js:1
+msgid "Failed to save setting."
+msgstr ""
+
+#: build/index.js:1
+msgid "All plugin posts and custom post types"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plugin settings and options"
+msgstr ""
+
+#: build/index.js:1
+msgid "Layout configuration and meta data"
+msgstr ""
+
+#: build/index.js:1
+msgid "Taxonomy terms and associations"
+msgstr ""
+
+#: build/index.js:1
+msgid "All tracking and analytics data"
+msgstr ""
+
+#: build/index.js:1
+msgid "Manage plugin preferences"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid ""
+"Control how %s behaves on your site. Destructive options live in their own "
+"clearly-marked zone."
+msgstr ""
+
+#: build/index.js:1
+msgid "Data deletion is enabled"
+msgstr ""
+
+#: build/index.js:1
+msgid "Your data is protected"
+msgstr ""
+
+#: build/index.js:1
+msgid "All plugin data will be permanently removed if the plugin is uninstalled."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Even if you deactivate or uninstall the plugin, your settings and data stay "
+"intact."
+msgstr ""
+
+#: build/index.js:1
+msgid "Release Notes(Changelog)..."
+msgstr ""
+
+#: build/index.js:1
+msgid "Watch Tutorial"
+msgstr ""
+
+#: build/index.js:1
+msgid "Getting Started"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Pick how you'd like to start with the plugin - the steps below adapt to "
+"your workflow."
+msgstr ""
+
+#: build/index.js:1
+#. %s: Getting started tab label.
+msgid "Read the %s Documentation"
+msgstr ""
+
+#: build/index.js:1
+msgid "Read the Full Documentation"
+msgstr ""
+
+#: build/index.js:1
+msgid "Browse guides, settings reference, and examples for every feature."
+msgstr ""
+
+#: build/index.js:1
+msgid "Read Documentation →"
+msgstr ""
+
+#: build/index.js:1
+msgid "Need any Assistance?"
+msgstr ""
+
+#: build/index.js:1
+msgid "Our Expert Support Team is always ready to help you out promptly."
+msgstr ""
+
+#: build/index.js:1
+msgid "Contact Support"
+msgstr ""
+
+#: build/index.js:1
+msgid "Join Our Community"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Get tutorials, plugin updates, feature announcements, and support from "
+"other WordPress users."
+msgstr ""
+
+#: build/index.js:1
+msgid "Join Now →"
+msgstr ""
+
+#: build/index.js:1
+msgid "Request a Feature"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Have an idea that would make this plugin even better? Let us know — we love "
+"hearing from you."
+msgstr ""
+
+#: build/index.js:1
+msgid "Submit Request →"
+msgstr ""
+
+#: build/index.js:1
+msgid "Loving This Plugin? ⭐"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"We're a small team pouring our heart into this plugin — your honest review "
+"keeps us going and helps others discover it. It only takes 30 seconds."
+msgstr ""
+
+#: build/index.js:1
+msgid "Leave a Review"
+msgstr ""
+
+#: build/index.js:1
+msgid "Read Documentation"
+msgstr ""
+
+#: build/index.js:1
+msgid "View Demos"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "Close video"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid "%s walkthrough"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plugin active"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pro Plan"
+msgstr ""
+
+#: build/index.js:1
+msgid "Free Plan"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid "Welcome to %s"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Current user's first name.
+msgid "Hi <strong>%s</strong>,"
+msgstr ""
+
+#: build/index.js:1
+msgid "Play product walkthrough"
+msgstr ""
+
+#: build/index.js:1
+msgid "Watch quick start · 2 min"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid "Go %s Pro & Unlock More!"
+msgstr ""
+
+#: build/index.js:1
+msgid "View Pricing Plan"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Plugin name.
+msgid "%s Pro features"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Background control name, e.g. Background.
+msgid "%s Video"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upload Video"
+msgstr ""
+
+#: build/index.js:1
+msgid "Inline Upload"
+msgstr ""
+
+#: build/index.js:1
+msgid "Insert your video link.."
+msgstr ""
+
+#: build/index.js:1
+msgid "Loop"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Background control name, e.g. Background.
+msgid "%s Color"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Background control name, e.g. Background.
+msgid "%s Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upload Image"
+msgstr ""
+
+#: build/index.js:1
+msgid "Position"
+msgstr ""
+
+#: build/index.js:1
+msgid "X Position"
+msgstr ""
+
+#: build/index.js:1
+msgid "Y Position"
+msgstr ""
+
+#: build/index.js:1
+msgid "Attachment"
+msgstr ""
+
+#: build/index.js:1
+msgid "Repeat"
+msgstr ""
+
+#: build/index.js:1
+msgid "Size"
+msgstr ""
+
+#: build/index.js:1
+msgid "Width"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fixed"
+msgstr ""
+
+#: build/index.js:1
+msgid "Scroll"
+msgstr ""
+
+#: build/index.js:1
+msgid "Center Center"
+msgstr ""
+
+#: build/index.js:1
+msgid "Center Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Center Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Center"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom Center"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Repeat-X"
+msgstr ""
+
+#: build/index.js:1
+msgid "Repeat-Y"
+msgstr ""
+
+#: build/index.js:1
+msgid "No-Repeat"
+msgstr ""
+
+#: build/index.js:1
+msgid "Custom"
+msgstr ""
+
+#: build/index.js:1
+msgid "Color"
+msgstr ""
+
+#: build/index.js:1
+msgid "Gradient"
+msgstr ""
+
+#: build/index.js:1
+msgid "Image"
+msgstr ""
+
+#: build/index.js:1
+#. %d: Button number.
+msgid "Button %d"
+msgstr ""
+
+#: build/index.js:1
+msgid "Button Group"
+msgstr ""
+
+#: build/index.js:1
+msgid "Repeat:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Clear"
+msgstr ""
+
+#: build/index.js:1
+msgid "Type:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Attachment:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Initial"
+msgstr ""
+
+#: build/index.js:1
+msgid "Local"
+msgstr ""
+
+#: build/index.js:1
+msgid "No Repeat"
+msgstr ""
+
+#: build/index.js:1
+msgid "Repeat X"
+msgstr ""
+
+#: build/index.js:1
+msgid "Repeat Y"
+msgstr ""
+
+#: build/index.js:1
+msgid "Solid"
+msgstr ""
+
+#: build/index.js:1
+msgid "Reset"
+msgstr ""
+
+#: build/index.js:1
+msgid "Background:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Background Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top-left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top-right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom-right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom-left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Style:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sides:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Radius:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Image:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upload"
+msgstr ""
+
+#: build/index.js:1
+msgid "Replace"
+msgstr ""
+
+#: build/index.js:1
+msgid "Alt Text (Alternative Text):"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select Size:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Edit Image:"
+msgstr ""
+
+#: build/index.js:1
+msgid " Image:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Horizontal Offset:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vertical Offset:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Blur:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Blur cannot be negative value!"
+msgstr ""
+
+#: build/index.js:1
+msgid "Spreed:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Shadow Inset?"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Bottom:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Left Right:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Right:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Left:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Space:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Vertical, Horizontal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top, Right, Bottom, Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Gradient Type"
+msgstr ""
+
+#: build/index.js:1
+msgid "Linear"
+msgstr ""
+
+#: build/index.js:1
+msgid "Radial"
+msgstr ""
+
+#: build/index.js:1
+msgid "Radial Type"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ellipse"
+msgstr ""
+
+#: build/index.js:1
+msgid "Circle"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add Color"
+msgstr ""
+
+#: build/index.js:1
+msgid "Center X Position"
+msgstr ""
+
+#: build/index.js:1
+msgid "Center Y Position"
+msgstr ""
+
+#: build/index.js:1
+msgid "Angle"
+msgstr ""
+
+#: build/index.js:1
+msgid "Help"
+msgstr ""
+
+#: build/index.js:1
+msgid "Rate Plugin"
+msgstr ""
+
+#: build/index.js:1
+msgid "Other Plugins"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select Icon:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Search & Select Icon"
+msgstr ""
+
+#: build/index.js:1
+msgid "Icon Size:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Color Type:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Icon Library"
+msgstr ""
+
+#: build/index.js:1
+msgid "Filter by name..."
+msgstr ""
+
+#: build/index.js:1
+msgid "Insert"
+msgstr ""
+
+#: build/index.js:1
+msgid "All Icons"
+msgstr ""
+
+#: build/index.js:1
+msgid "Duplicate"
+msgstr ""
+
+#: build/index.js:1
+msgid "Item"
+msgstr ""
+
+#: build/index.js:1
+#. 1: Item label, e.g. Card. 2: Item number.
+msgid "%1$s %2$d:"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Item label, e.g. Slide.
+msgid "Add New %s"
+msgstr ""
+
+#: build/index.js:1
+msgid "Loading..."
+msgstr ""
+
+#: build/index.js:1
+msgid "Choose"
+msgstr ""
+
+#: build/index.js:1
+msgid "Paste or type a image URL"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Media type name, e.g. image.
+msgid "Upload %s"
+msgstr ""
+
+#: build/index.js:1
+#. 1: Media type name, e.g. image.
+msgid "Upload a %1$s or paste/write %1$s url to get started."
+msgstr ""
+
+#: build/index.js:1
+msgid "Or"
+msgstr ""
+
+#: build/index.js:1
+msgid "URL"
+msgstr ""
+
+#: build/index.js:1
+msgid "Apply"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enter URL"
+msgstr ""
+
+#: build/index.js:1
+msgid "Normal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Multiply"
+msgstr ""
+
+#: build/index.js:1
+msgid "Screen"
+msgstr ""
+
+#: build/index.js:1
+msgid "Darken"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lighten"
+msgstr ""
+
+#: build/index.js:1
+msgid "Color Dodge"
+msgstr ""
+
+#: build/index.js:1
+msgid "Luminosity"
+msgstr ""
+
+#: build/index.js:1
+msgid "Enable"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overlay Position"
+msgstr ""
+
+#: build/index.js:1
+msgid "Opacity"
+msgstr ""
+
+#: build/index.js:1
+msgid "Blend Mode"
+msgstr ""
+
+#: build/index.js:1
+msgid "CSS Filter"
+msgstr ""
+
+#: build/index.js:1
+msgid "Filter"
+msgstr ""
+
+#: build/index.js:1
+msgid "Backdrop Filter"
+msgstr ""
+
+#: build/index.js:1
+msgid "Blur"
+msgstr ""
+
+#: build/index.js:1
+msgid "Brightness"
+msgstr ""
+
+#: build/index.js:1
+msgid "Contrast"
+msgstr ""
+
+#: build/index.js:1
+msgid "Saturation"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hue"
+msgstr ""
+
+#: build/index.js:1
+msgid "Z Index"
+msgstr ""
+
+#: build/index.js:1
+msgid "Select an option"
+msgstr ""
+
+#: build/index.js:1
+msgid "Separator"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add New Shadow"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sort:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Drag and drop to sort"
+msgstr ""
+
+#: build/index.js:1
+msgid "Font Style:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Text Transform:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Text Decoration:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Line Height:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Letter Spacing:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Typography:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Font Family:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Search Font"
+msgstr ""
+
+#: build/index.js:1
+msgid "Load Google Font"
+msgstr ""
+
+#: build/index.js:1
+msgid "Weight:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Font Size:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Capitalize"
+msgstr ""
+
+#: build/index.js:1
+msgid "Uppercase"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lowercase"
+msgstr ""
+
+#: build/index.js:1
+msgid "Underline"
+msgstr ""
+
+#: build/index.js:1
+msgid "Overline"
+msgstr ""
+
+#: build/index.js:1
+msgid "Line Through"
+msgstr ""
+
+#: build/index.js:1
+msgid "Italic"
+msgstr ""
+
+#: build/index.js:1
+msgid "Oblique"
+msgstr ""
+
+#: build/index.js:1
+msgid "Need more block like this? Checkout the bundle ➡ <a>bBlocks</a>"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: build/index.js:1
+msgid "Explore new features in Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "To unlock those features! Upgrade to Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade Now"
+msgstr ""
+
+#: build/index.js:1
+msgid "Stuck!! Get Support"
+msgstr ""
+
+#: build/index.js:1
+msgid "If you are facing any issues, please contact us."
+msgstr ""
+
+#: build/index.js:1
+msgid "Get Support"
+msgstr ""
+
+#: build/index.js:1
+msgid "Recommended"
+msgstr ""
+
+#: build/index.js:1
+msgid "Go for Pro Plan"
+msgstr ""
+
+#: build/index.js:1
+msgid "Remove barriers and unlock premium features."
+msgstr ""
+
+#: build/index.js:1
+msgid "Get Pro Access"
+msgstr ""
+
+#: build/index.js:1
+msgid "Copy the shortcode and use it anywhere."
+msgstr ""
+
+#: build/index.js:1
+msgid "Get Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "Premium Deal"
+msgstr ""
+
+#: build/index.js:1
+msgid "Go Professional"
+msgstr ""
+
+#: build/index.js:1
+msgid "Power Up The Site"
+msgstr ""
+
+#: build/index.js:1
+msgid "Get access to premium features and enhance your website."
+msgstr ""
+
+#: build/index.js:1
+msgid "Unlock Now"
+msgstr ""
+
+#: build/index.js:1
+msgid "RECOMMENDED"
+msgstr ""
+
+#: build/index.js:1
+msgid "Premium Plan"
+msgstr ""
+
+#: build/index.js:1
+msgid "Use every premium features."
+msgstr ""
+
+#: build/index.js:1
+msgid "Go Premium"
+msgstr ""
+
+#: build/index.js:1
+msgid "PRO SUBSCRIPTION"
+msgstr ""
+
+#: build/index.js:1
+msgid "Unlock More with Plugin Pro!"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"The free features of Plugin do a lot-still, without PRO, you're holding "
+"yourself back from getting more."
+msgstr ""
+
+#: build/index.js:1
+msgid "Gain full access to all pro campaigns"
+msgstr ""
+
+#: build/index.js:1
+msgid "Create unlimited discount offers"
+msgstr ""
+
+#: build/index.js:1
+msgid "No campaign feature restrictions"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fast support guaranteed"
+msgstr ""
+
+#: build/index.js:1
+msgid "Access New Pro features at launch"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fluid experience ensured"
+msgstr ""
+
+#: build/index.js:1
+msgid "With PRO, You’ll Get:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Close modal"
+msgstr ""
+
+#: build/index.js:1
+#. %s: Option label.
+msgid "%s - Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "Filters & Categories"
+msgstr ""
+
+#: build/index.js:1
+msgid "Patterns"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pages"
+msgstr ""
+
+#: build/index.js:1
+msgid "Favorites"
+msgstr ""
+
+#: build/index.js:1
+msgid "Search templates…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Categories"
+msgstr ""
+
+#: build/index.js:1
+msgid "Remove from favorites"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add to favorites"
+msgstr ""
+
+#: build/index.js:1
+msgid "Import"
+msgstr ""
+
+#: build/index.js:1
+msgid "No Templates Found!!"
+msgstr ""
+
+#: build/index.js:1
+msgid "Dashed"
+msgstr ""
+
+#: build/index.js:1
+msgid "Flip Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Flip Up"
+msgstr ""
+
+#: build/index.js:1
+msgid "Flip Down"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom In Up"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom In Down"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom In Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom In Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom Out Up"
+msgstr ""
+
+#: build/index.js:1
+msgid "Dotted"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom Out Down"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom Out Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Zoom Out Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Double"
+msgstr ""
+
+#: build/index.js:1
+msgid "Groove"
+msgstr ""
+
+#: build/index.js:1
+msgid "Inset"
+msgstr ""
+
+#: build/index.js:1
+msgid "Outset"
+msgstr ""
+
+#: build/index.js:1
+msgid "Ridge"
+msgstr ""
+
+#: build/index.js:1
+msgid "All Sides"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top"
+msgstr ""
+
+#: build/index.js:1
+msgid "Bottom"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Bottom"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Right Bottom"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Right Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Top Bottom Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Right Bottom"
+msgstr ""
+
+#: build/index.js:1
+msgid "Right Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Right Bottom Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Rose Pink"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hover"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sky Blue"
+msgstr ""
+
+#: build/index.js:1
+msgid "Sunset Orange"
+msgstr ""
+
+#: build/index.js:1
+msgid "Emerald Green"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lavender Red"
+msgstr ""
+
+#: build/index.js:1
+msgid "Violet Purple"
+msgstr ""
+
+#: build/index.js:1
+msgid "Hidden"
+msgstr ""
+
+#: build/index.js:1
+msgid "Visible"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Up"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Down"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Up Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Up Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Down Left"
+msgstr ""
+
+#: build/index.js:1
+msgid "Fade Down Right"
+msgstr ""
+
+#: build/index.js:1
+msgid "Flip Left"
 msgstr ""

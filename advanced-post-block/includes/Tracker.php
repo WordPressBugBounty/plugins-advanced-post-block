@@ -97,7 +97,7 @@ class Tracker {
 			'samesite'	=> 'Lax',
 		] );
 
-		wp_send_json_success( 'View incremented' );
+		wp_send_json_success( __( 'View incremented', 'advanced-post-block' ) );
 	}
 }
 new Tracker();

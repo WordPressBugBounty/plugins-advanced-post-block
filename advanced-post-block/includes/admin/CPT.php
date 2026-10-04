@@ -166,8 +166,8 @@ class CPT{
 	 */
 	public function manageAPBPostsColumns( $defaults ) {
 		unset( $defaults['date'] );
-		$defaults['shortcode'] = 'ShortCode';
-		$defaults['date'] = 'Date';
+		$defaults['shortcode'] = __( 'ShortCode', 'advanced-post-block' );
+		$defaults['date'] = __( 'Date', 'advanced-post-block' );
 		return $defaults;
 	}
 

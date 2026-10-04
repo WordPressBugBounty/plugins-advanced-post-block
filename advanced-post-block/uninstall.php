@@ -34,7 +34,7 @@ if ( ! empty( $apb_post_ids ) ) {
 	}
 }
 
-// 2. Delete post view tracking meta from every post — the helper clears the meta cache too.
+// 2. Delete post view tracking meta from every post - the helper clears the meta cache too.
 delete_post_meta_by_key( 'apb_post_views_count' );
 
 // 3. Delete plugin options.
