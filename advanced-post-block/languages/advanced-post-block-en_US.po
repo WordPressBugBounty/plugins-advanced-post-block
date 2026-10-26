@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Post Block 2.5.1\n"
+"Project-Id-Version: Advanced Post Block 2.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-post-block\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-03T14:11:16+00:00\n"
+"POT-Creation-Date: 2026-10-26T03:32:19+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: advanced-post-block\n"
@@ -1338,17 +1338,17 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
+msgid "Start Now"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
 msgid "Obsidian Review"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Obsidian Journal"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Start Now"
 msgstr ""
 
 #: build/index.js:1
@@ -1418,17 +1418,17 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
+msgid "Layouts"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
 msgid "Grid 1"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Basalt Press"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -1493,6 +1493,11 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
+msgid "Add the APB Block"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
 msgid "Post Section"
 msgstr ""
 
@@ -1508,7 +1513,7 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Add the APB Block"
+msgid "Open the block editor on any post or page. Click the <strong>+</strong> icon in the top-left corner or type <strong>/Advanced Posts</strong> to find and insert the Advanced Posts block."
 msgstr ""
 
 #: build/index.js:1
@@ -1519,11 +1524,6 @@ msgstr ""
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Post Section (Design 4)"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open the block editor on any post or page. Click the <strong>+</strong> icon in the top-left corner or type <strong>/Advanced Posts</strong> to find and insert the Advanced Posts block."
 msgstr ""
 
 #: build/index.js:1
@@ -3214,6 +3214,10 @@ msgid "Solid"
 msgstr ""
 
 #: build/index.js:1
+msgid "Edit Content"
+msgstr ""
+
+#: build/index.js:1
 msgid "Reset"
 msgstr ""
 
@@ -3410,6 +3414,10 @@ msgid "Color Type:"
 msgstr ""
 
 #: build/index.js:1
+msgid "All Icons"
+msgstr ""
+
+#: build/index.js:1
 msgid "Icon Library"
 msgstr ""
 
@@ -3418,11 +3426,15 @@ msgid "Filter by name..."
 msgstr ""
 
 #: build/index.js:1
-msgid "Insert"
+msgid "Could not load the icons. Please close and reopen the library to try again."
 msgstr ""
 
 #: build/index.js:1
-msgid "All Icons"
+msgid "Loading icons..."
+msgstr ""
+
+#: build/index.js:1
+msgid "Insert"
 msgstr ""
 
 #: build/index.js:1

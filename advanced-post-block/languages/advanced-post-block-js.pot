@@ -1333,15 +1333,15 @@ msgid "Vellum Ledger"
 msgstr ""
 
 #: build/index.js:1
+msgid "Start Now"
+msgstr ""
+
+#: build/index.js:1
 msgid "Obsidian Review"
 msgstr ""
 
 #: build/index.js:1
 msgid "Obsidian Journal"
-msgstr ""
-
-#: build/index.js:1
-msgid "Start Now"
 msgstr ""
 
 #: build/index.js:1
@@ -1397,15 +1397,15 @@ msgid "Magazine 2"
 msgstr ""
 
 #: build/index.js:1
+msgid "Layouts"
+msgstr ""
+
+#: build/index.js:1
 msgid "Grid 1"
 msgstr ""
 
 #: build/index.js:1
 msgid "Basalt Press"
-msgstr ""
-
-#: build/index.js:1
-msgid "Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -1457,6 +1457,10 @@ msgid "Overlay"
 msgstr ""
 
 #: build/index.js:1
+msgid "Add the APB Block"
+msgstr ""
+
+#: build/index.js:1
 msgid "Post Section"
 msgstr ""
 
@@ -1469,7 +1473,10 @@ msgid "Post Section (Design 2)"
 msgstr ""
 
 #: build/index.js:1
-msgid "Add the APB Block"
+msgid ""
+"Open the block editor on any post or page. Click the <strong>+</strong> "
+"icon in the top-left corner or type <strong>/Advanced Posts</strong> to "
+"find and insert the Advanced Posts block."
 msgstr ""
 
 #: build/index.js:1
@@ -1478,13 +1485,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Post Section (Design 4)"
-msgstr ""
-
-#: build/index.js:1
-msgid ""
-"Open the block editor on any post or page. Click the <strong>+</strong> "
-"icon in the top-left corner or type <strong>/Advanced Posts</strong> to "
-"find and insert the Advanced Posts block."
 msgstr ""
 
 #: build/index.js:1
@@ -2962,6 +2962,10 @@ msgid "Solid"
 msgstr ""
 
 #: build/index.js:1
+msgid "Edit Content"
+msgstr ""
+
+#: build/index.js:1
 msgid "Reset"
 msgstr ""
 
@@ -3158,6 +3162,10 @@ msgid "Color Type:"
 msgstr ""
 
 #: build/index.js:1
+msgid "All Icons"
+msgstr ""
+
+#: build/index.js:1
 msgid "Icon Library"
 msgstr ""
 
@@ -3166,11 +3174,15 @@ msgid "Filter by name..."
 msgstr ""
 
 #: build/index.js:1
-msgid "Insert"
+msgid "Could not load the icons. Please close and reopen the library to try again."
 msgstr ""
 
 #: build/index.js:1
-msgid "All Icons"
+msgid "Loading icons..."
+msgstr ""
+
+#: build/index.js:1
+msgid "Insert"
 msgstr ""
 
 #: build/index.js:1

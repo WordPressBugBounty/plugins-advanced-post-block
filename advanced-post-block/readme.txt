@@ -5,7 +5,7 @@ Tags: block, post grid, post slider, post filter, post list
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.5.1
+Stable tag: 2.5.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -353,6 +353,13 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.5.2 - 26 Oct 2026 =
+* **Security:** Read More Icon: Custom SVG icons are now sanitized on the server and again in the browser before they are rendered. Scripts, animation triggers, and event handler attributes are removed, closing a stored XSS that a Contributor could trigger from a post (reported by Patchstack).
+* **Security:** Accordion Layout: The custom Up/Down indicator icons go through the same SVG sanitization.
+* **Security:** Block Output: Block settings embedded in the front-end markup are now hex-encoded, so saved HTML entities can no longer turn back into live markup in the browser.
+* **Fix:** Admin Dashboard: Quick links (Open Editor, ShortCode Generator) no longer contain a double slash and now open the correct admin screens.
+* **Fix:** Admin Dashboard: The dashboard script no longer throws an error when the Freemius opt-in screen is shown in its place.
 
 = 2.5.1 - 4 Oct 2026 =
 * **New:** Template Library: Imports and favorites now help rank the most popular templates - only reported when you allow usage tracking.

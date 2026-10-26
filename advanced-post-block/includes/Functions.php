@@ -173,4 +173,74 @@ class Functions{
 
 		return $arranged;
 	}
+
+	/**
+	 * Strips everything but a safe, static subset of SVG from a string.
+	 * No <script>, no SMIL (<animate>, <set>), no event handler attributes,
+	 * no <use>/<image>/<foreignObject> references.
+	 *
+	 * @param mixed $svg Raw SVG markup from a block attribute.
+	 * @return string Sanitized SVG markup, or '' if the input is not a string.
+	 */
+	public static function sanitizeSvg( $svg ) {
+		if ( ! is_string( $svg ) || '' === trim( $svg ) ) {
+			return '';
+		}
+
+		$common = [
+			'id' => true, 'class' => true, 'style' => true, 'transform' => true, 'opacity' => true,
+			'fill' => true, 'fill-opacity' => true, 'fill-rule' => true,
+			'stroke' => true, 'stroke-width' => true, 'stroke-linecap' => true, 'stroke-linejoin' => true,
+			'stroke-opacity' => true, 'stroke-dasharray' => true, 'stroke-dashoffset' => true,
+			'd' => true, 'x' => true, 'y' => true, 'cx' => true, 'cy' => true, 'r' => true, 'rx' => true, 'ry' => true,
+			'x1' => true, 'y1' => true, 'x2' => true, 'y2' => true, 'points' => true,
+			'width' => true, 'height' => true, 'clip-path' => true, 'clip-rule' => true, 'mask' => true,
+		];
+
+		// wp_kses lower-cases attribute names, so viewBox must be listed as viewbox.
+		$allowed = [
+			'svg'            => $common + [ 'xmlns' => true, 'viewbox' => true, 'preserveaspectratio' => true, 'aria-hidden' => true, 'role' => true, 'focusable' => true, 'version' => true ],
+			'g'              => $common,
+			'path'           => $common,
+			'rect'           => $common,
+			'circle'         => $common,
+			'ellipse'        => $common,
+			'line'           => $common,
+			'polyline'       => $common,
+			'polygon'        => $common,
+			'defs'           => [],
+			'clippath'       => [ 'id' => true, 'clippathunits' => true ],
+			'lineargradient' => [ 'id' => true, 'x1' => true, 'y1' => true, 'x2' => true, 'y2' => true, 'gradientunits' => true, 'gradienttransform' => true ],
+			'radialgradient' => [ 'id' => true, 'cx' => true, 'cy' => true, 'r' => true, 'fx' => true, 'fy' => true, 'gradientunits' => true, 'gradienttransform' => true ],
+			'stop'           => [ 'offset' => true, 'stop-color' => true, 'stop-opacity' => true, 'style' => true ],
+			'title'          => [],
+			'desc'           => [],
+		];
+
+		return wp_kses( $svg, $allowed );
+	}
+
+	/**
+	 * Sanitizes an icon attribute that may hold inline SVG or an image URL.
+	 *
+	 * @param mixed $icon Raw attribute value.
+	 * @return string Safe SVG markup, a URL with no dangerous protocol, or ''.
+	 */
+	public static function sanitizeIcon( $icon ) {
+		if ( ! is_string( $icon ) || '' === $icon ) {
+			return '';
+		}
+
+		if ( 0 === strpos( ltrim( $icon ), '<svg' ) ) {
+			return self::sanitizeSvg( $icon );
+		}
+
+		// Anything else is an image URL. Entity-encoded markup (what kses leaves a
+		// Contributor) is not a URL, so it is dropped rather than echoed back.
+		if ( false !== strpos( html_entity_decode( $icon, ENT_QUOTES | ENT_HTML5 ), '<' ) ) {
+			return '';
+		}
+
+		return wp_kses_bad_protocol( $icon, wp_allowed_protocols() );
+	}
 }
