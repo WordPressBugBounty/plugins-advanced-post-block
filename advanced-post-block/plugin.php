@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advanced Post Block
  * Description: Enhance your WordPress posts with customizable layouts, responsive design, and feature-rich elements.
- * Version: 2.5.2
+ * Version: 2.5.3
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * Plugin URI: https://bplugins.com/products/advanced-post-block/
@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 if ( function_exists( 'apb_fs' ) ) {
 	apb_fs()->set_basename( true, __FILE__ );
 }else{
-	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.5.2' );
+	define( 'APB_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : '2.5.3' );
 	define( 'APB_DIR_URL', plugin_dir_url( __FILE__ ) );
 	define( 'APB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'APB_OPTIONS_KEY', 'apb_options' );
@@ -53,6 +53,67 @@ if ( function_exists( 'apb_fs' ) ) {
 				add_action( 'enqueue_block_assets', [$this, 'enqueueBlockAssets'] );
 
 				add_filter( 'plugin_action_links', [$this, 'pluginActionLinks'], 10, 2 );
+				add_action( 'wp_ajax_apb_dismiss_bfcm_banner', [$this, 'ajaxDismissBFCM'] );
+			}
+
+			/**
+			 * Checks whether the current user has dismissed the BFCM promotion in wp_options.
+			 *
+			 * @param int $user_id
+			 * @return bool
+			 */
+			public static function isBFCMPromotionDismissed( $user_id = 0 ) {
+				if ( ! $user_id ) {
+					$user_id = get_current_user_id();
+				}
+				if ( ! $user_id ) {
+					return false;
+				}
+				$options   = get_option( APB_OPTIONS_KEY, [] );
+				$dismissed = isset( $options['bfcm_2026_dismissed'] ) && is_array( $options['bfcm_2026_dismissed'] )
+					? $options['bfcm_2026_dismissed']
+					: [];
+				return in_array( (int) $user_id, array_map( 'intval', $dismissed ), true );
+			}
+
+			/**
+			 * Records the user dismissal inside the apb_options array in wp_options.
+			 *
+			 * @param int $user_id
+			 * @return bool
+			 */
+			public static function dismissBFCMPromotion( $user_id = 0 ) {
+				if ( ! $user_id ) {
+					$user_id = get_current_user_id();
+				}
+				if ( ! $user_id ) {
+					return false;
+				}
+				$options   = get_option( APB_OPTIONS_KEY, [] );
+				if ( ! is_array( $options ) ) {
+					$options = [];
+				}
+				$dismissed = isset( $options['bfcm_2026_dismissed'] ) && is_array( $options['bfcm_2026_dismissed'] )
+					? array_map( 'intval', $options['bfcm_2026_dismissed'] )
+					: [];
+				$user_id = (int) $user_id;
+				if ( ! in_array( $user_id, $dismissed, true ) ) {
+					$dismissed[] = $user_id;
+					$options['bfcm_2026_dismissed'] = array_values( array_unique( $dismissed ) );
+					update_option( APB_OPTIONS_KEY, $options );
+				}
+				return true;
+			}
+
+			/**
+			 * Handles AJAX request to dismiss the BFCM promotional banner.
+			 *
+			 * @return void
+			 */
+			public function ajaxDismissBFCM() {
+				check_ajax_referer( 'apb_dismiss_bfcm', 'nonce' );
+				self::dismissBFCMPromotion();
+				wp_send_json_success();
 			}
 
 			/**
@@ -67,6 +128,19 @@ if ( function_exists( 'apb_fs' ) ) {
 					$helpDemosLink = admin_url( 'edit.php?post_type=apb&page=advanced-post-block#/welcome' );
 
 					$links['help-and-demos'] = sprintf( '<a href="%s" style="%s">%s</a>', $helpDemosLink, 'color:#FF7A00;font-weight:bold', __( 'Help & Demos', 'advanced-post-block' ) );
+
+					$isExpired = time() > strtotime( '2026-12-05 23:59:59' );
+					$isPremium = function_exists( 'apb_fs' ) && apb_fs()->can_use_premium_code();
+
+					if ( ! $isExpired && ! $isPremium ) {
+						$bfcmUrl = 'https://bplugins.com/products/advanced-post-block/pricing/?utm_source=admin&utm_medium=plugins&utm_campaign=bfcm2026';
+						$links['bfcm-deal'] = sprintf(
+							'<a href="%s" style="%s" target="_blank" rel="noopener noreferrer">%s</a>',
+							esc_url( $bfcmUrl ),
+							'color: #dc2626; font-weight: 700;',
+							__( 'Get Pro Now and Save 45% in this BFCM!', 'advanced-post-block' )
+						);
+					}
 				}
 
 				return $links;
@@ -154,7 +228,13 @@ if ( function_exists( 'apb_fs' ) ) {
 					id='apbDashboard'
 					data-info='<?php echo esc_attr( wp_json_encode( [
 						'version' => APB_VERSION,
+						'isPremium' => function_exists( 'apb_fs' ) && apb_fs()->can_use_premium_code(),
+						'isBFCMDismissed' => self::isBFCMPromotionDismissed(),
+						'dismissNonce' => wp_create_nonce( 'apb_dismiss_bfcm' ),
 						'adminUrl' => admin_url(),
+						'currentUser' => [
+							'name' => wp_get_current_user()->display_name,
+						],
 						'deleteDataOnUninstall' => (bool) \APB\Options::getOptions()['delete_data_on_uninstall'],
 						'uninstallNonce' => wp_create_nonce( 'apbSaveUninstallOption' ),
 					] ) ); ?>'

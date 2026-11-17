@@ -23,6 +23,7 @@ class CPT{
 	public function __construct(){
 		add_action( 'admin_menu', [ $this, 'adminMenu' ] );
 		add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
+		add_action( 'admin_notices', [$this, 'renderBFCMBannerNotice'] );
 		add_action( 'init', [$this, 'onInit'] );
 		add_shortcode( 'apb', [$this, 'onAddShortcode'] );
 		add_filter( 'manage_apb_posts_columns', [$this, 'manageAPBPostsColumns'], 10 );
@@ -199,6 +200,82 @@ class CPT{
 			return true;
 		}
 		return $use;
+	}
+
+	/**
+	 * Renders the BFCM promotional banner on the CPT list table screen (edit.php?post_type=apb).
+	 *
+	 * @return void
+	 */
+	public function renderBFCMBannerNotice() {
+		$screen = get_current_screen();
+		if ( ! $screen || 'apb' !== $screen->post_type || 'edit' !== $screen->base ) {
+			return;
+		}
+
+		if ( time() > strtotime( '2026-12-05 23:59:59' ) ) {
+			return;
+		}
+
+		if ( function_exists( 'apb_fs' ) && apb_fs()->can_use_premium_code() ) {
+			return;
+		}
+
+		if ( class_exists( '\APBPlugin' ) && \APBPlugin::isBFCMPromotionDismissed() ) {
+			return;
+		}
+
+		$pricingUrl = 'https://bplugins.com/products/advanced-post-block/pricing/?utm_source=admin&utm_medium=dashboard&utm_campaign=bfcm2026';
+		$nonce = wp_create_nonce( 'apb_dismiss_bfcm' );
+		?>
+		<div class="bPlBFCMBanner apb-cpt-bfcm-banner" id="apbBFCMBanner" data-nonce="<?php echo esc_attr( $nonce ); ?>" style="margin: 16px 20px 16px 0;">
+			<div class="bPlBFCMBrand" style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);">
+				<img src="https://ps.w.org/advanced-post-block/assets/icon-256x256.png" alt="ADVANCED POST BLOCK" class="bPlBFCMBrandLogo" />
+				<span class="bPlBFCMBrandTitle">ADVANCED POST BLOCK</span>
+			</div>
+			<div class="bPlBFCMContent">
+				<div class="bPlBFCMHeadingRow">
+					<h3 class="bPlBFCMHeading"><?php esc_html_e( 'Black Friday Sale: Upgrade to Advanced Post Block Pro', 'advanced-post-block' ); ?></h3>
+					<span class="bPlBFCMBadge"><?php esc_html_e( 'Save 45%', 'advanced-post-block' ); ?></span>
+				</div>
+				<p class="bPlBFCMDescription"><?php echo wp_kses( __( 'Get 45% off on Advanced Post Block Pro this Black Friday!<br />Adds precision filtering, layout enhancements, and deeper content control.', 'advanced-post-block' ), [ 'br' => [] ] ); ?></p>
+				<ul class="bPlBFCMFeatures">
+					<li class="bPlBFCMFeatureItem">
+						<span class="bPlBFCMCheck">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="14" height="14" fill="#111827"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+						</span>
+						<span><?php esc_html_e( 'Premium Templates', 'advanced-post-block' ); ?></span>
+					</li>
+					<li class="bPlBFCMFeatureItem">
+						<span class="bPlBFCMCheck">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="14" height="14" fill="#111827"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+						</span>
+						<span><?php esc_html_e( 'Timeline & Grid 1 Layouts', 'advanced-post-block' ); ?></span>
+					</li>
+					<li class="bPlBFCMFeatureItem">
+						<span class="bPlBFCMCheck">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="14" height="14" fill="#111827"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+						</span>
+						<span><?php esc_html_e( 'Query Presets & Deeper Filtering', 'advanced-post-block' ); ?></span>
+					</li>
+					<li class="bPlBFCMFeatureItem">
+						<span class="bPlBFCMCheck">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="14" height="14" fill="#111827"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+						</span>
+						<span><?php esc_html_e( 'Infinite Scroll', 'advanced-post-block' ); ?></span>
+					</li>
+				</ul>
+			</div>
+			<div class="bPlBFCMActions">
+				<a href="<?php echo esc_url( $pricingUrl ); ?>" target="_blank" rel="noopener noreferrer" class="bPlBFCMCtaButton">
+					<?php esc_html_e( 'Unlock PRO Features →', 'advanced-post-block' ); ?>
+				</a>
+			</div>
+			<button type="button" class="bPlBFCMDismiss" id="apbBFCMDismissBtn" aria-label="<?php esc_attr_e( 'Dismiss BFCM offer', 'advanced-post-block' ); ?>" title="<?php esc_attr_e( 'Dismiss', 'advanced-post-block' ); ?>">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="16" height="16" fill="currentColor"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z"/></svg>
+			</button>
+		</div>
+		<?php
 	}
 }
 new CPT();

@@ -1081,6 +1081,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: build/index.js:1
+msgid "Pricing"
+msgstr ""
+
+#: build/index.js:1
 msgid "Feature Comparison"
 msgstr ""
 
@@ -1097,7 +1101,7 @@ msgid "Demos"
 msgstr ""
 
 #: build/index.js:1
-msgid "Pricing"
+msgid "Copied Successfully!"
 msgstr ""
 
 #: build/index.js:1
@@ -1105,7 +1109,90 @@ msgid "Copy To Clipboard"
 msgstr ""
 
 #: build/index.js:1
-msgid "Copied Successfully!"
+msgid "Add the APB Block"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Open the block editor on any post or page. Click the <strong>+</strong> "
+"icon in the top-left corner or type <strong>/Advanced Posts</strong> to "
+"find and insert the Advanced Posts block."
+msgstr ""
+
+#: build/index.js:1
+msgid "Choose a Layout"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Select the layout from - <strong>Grid</strong>, <strong>Grid 1</strong>, "
+"<strong>Masonry</strong>, <strong>Slider</strong>, <strong>Ticker</strong>, "
+"<strong>News Ticker</strong>, <strong>Accordion</strong>, <strong>Magazine "
+"1</strong>, <strong>Magazine 2</strong>, or <strong>Timeline</strong>. "
+"Switching layouts is non-destructive; your query settings are preserved."
+msgstr ""
+
+#: build/index.js:1
+msgid "Configure the Posts Query"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"In the <strong>Posts Query</strong> panel, filter by categories, tags, or "
+"authors, skip posts with <strong>Post Offset</strong>, target exact posts "
+"with <strong>Include/Exclude Posts</strong>, and control the number and "
+"order of posts. Then pick a <strong>Load More / Pagination</strong> type to "
+"split long lists across pages."
+msgstr ""
+
+#: build/index.js:1
+msgid "Style Elements & Publish"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Use the <strong>Elements</strong> tab to toggle and reorder post content "
+"(image, title, meta, excerpt, read more), then the <strong>Style</strong> "
+"tab to set colors, typography, borders, and hover effects. Publish when "
+"ready."
+msgstr ""
+
+#: build/index.js:1
+msgid "Template Library"
+msgstr ""
+
+#: build/index.js:1
+msgid "Save 45%"
+msgstr ""
+
+#: build/index.js:1
+msgid "Open the Template Library"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"In the block editor, click the <strong>Template Library</strong> button in "
+"the top toolbar (next to the block inserter) to open the templates modal."
+msgstr ""
+
+#: build/index.js:1
+msgid "Open Editor"
+msgstr ""
+
+#: build/index.js:1
+msgid "Browse & Filter Templates"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Switch between the <strong>Patterns</strong> and <strong>Favorites</strong> "
+"tabs, then narrow the gallery by access (<strong>All</strong>, "
+"<strong>Free</strong>, <strong>Pro</strong>), by category (Grid, List, "
+"Magazine, Masonry, Overlay), or search templates by name."
+msgstr ""
+
+#: build/index.js:1
+msgid "Black Friday Sale: Upgrade to Advanced Post Block Pro"
 msgstr ""
 
 #: build/index.js:1
@@ -1129,6 +1216,12 @@ msgid ""
 "content as editable blocks - then tweak the query, elements, and styles as "
 "usual. Pro templates show <strong>Get Pro</strong> until your license is "
 "active."
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Get 45% off on Advanced Post Block Pro this Black Friday!<br />Adds "
+"precision filtering, layout enhancements, and deeper content control."
 msgstr ""
 
 #: build/index.js:1
@@ -1157,6 +1250,10 @@ msgid ""
 msgstr ""
 
 #: build/index.js:1
+msgid "Premium Templates"
+msgstr ""
+
+#: build/index.js:1
 msgid "Publish & Copy the Shortcode"
 msgstr ""
 
@@ -1175,6 +1272,10 @@ msgstr ""
 msgid ""
 "Paste the copied shortcode (e.g. <code>[apb id=123]</code>) into any post, "
 "page, widget area, or block using the <strong>Shortcode</strong> block."
+msgstr ""
+
+#: build/index.js:1
+msgid "Timeline & Grid 1 Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -1197,7 +1298,7 @@ msgid "ShortCode Generator"
 msgstr ""
 
 #: build/index.js:1
-msgid "Showcase Posts with Grid, List, Card Layouts and Filters"
+msgid "Query Presets & Deeper Filtering"
 msgstr ""
 
 #: build/index.js:1
@@ -1222,10 +1323,11 @@ msgid ""
 msgstr ""
 
 #: build/index.js:1
-msgid ""
-"Advanced Post Block is a powerful and flexible block plugin that allows you "
-"to display posts, display blog posts, and embed custom posts in a fully "
-"customizable and responsive layout."
+msgid "Infinite Scroll"
+msgstr ""
+
+#: build/index.js:1
+msgid "Unlock PRO Features →"
 msgstr ""
 
 #: build/index.js:1
@@ -1333,10 +1435,6 @@ msgid "Vellum Ledger"
 msgstr ""
 
 #: build/index.js:1
-msgid "Start Now"
-msgstr ""
-
-#: build/index.js:1
 msgid "Obsidian Review"
 msgstr ""
 
@@ -1345,11 +1443,22 @@ msgid "Obsidian Journal"
 msgstr ""
 
 #: build/index.js:1
+msgid "Showcase Posts with Grid, List, Card Layouts and Filters"
+msgstr ""
+
+#: build/index.js:1
 msgid "Obsidian Press"
 msgstr ""
 
 #: build/index.js:1
 msgid "Meridian Daily"
+msgstr ""
+
+#: build/index.js:1
+msgid ""
+"Advanced Post Block is a powerful and flexible block plugin that allows you "
+"to display posts, display blog posts, and embed custom posts in a fully "
+"customizable and responsive layout."
 msgstr ""
 
 #: build/index.js:1
@@ -1382,22 +1491,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Minimal Elite Clean"
-msgstr ""
-
-#: build/index.js:1
-msgid "News Ticker"
-msgstr ""
-
-#: build/index.js:1
-msgid "Accordion"
-msgstr ""
-
-#: build/index.js:1
-msgid "Magazine 2"
-msgstr ""
-
-#: build/index.js:1
-msgid "Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -1457,10 +1550,6 @@ msgid "Overlay"
 msgstr ""
 
 #: build/index.js:1
-msgid "Add the APB Block"
-msgstr ""
-
-#: build/index.js:1
 msgid "Post Section"
 msgstr ""
 
@@ -1470,13 +1559,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Post Section (Design 2)"
-msgstr ""
-
-#: build/index.js:1
-msgid ""
-"Open the block editor on any post or page. Click the <strong>+</strong> "
-"icon in the top-left corner or type <strong>/Advanced Posts</strong> to "
-"find and insert the Advanced Posts block."
 msgstr ""
 
 #: build/index.js:1
@@ -1508,71 +1590,23 @@ msgid "Post view tracking data"
 msgstr ""
 
 #: build/index.js:1
-msgid "Choose a Layout"
+msgid "Start Now"
 msgstr ""
 
 #: build/index.js:1
-msgid ""
-"Select the layout from - <strong>Grid</strong>, <strong>Grid 1</strong>, "
-"<strong>Masonry</strong>, <strong>Slider</strong>, <strong>Ticker</strong>, "
-"<strong>News Ticker</strong>, <strong>Accordion</strong>, <strong>Magazine "
-"1</strong>, <strong>Magazine 2</strong>, or <strong>Timeline</strong>. "
-"Switching layouts is non-destructive; your query settings are preserved."
+msgid "News Ticker"
 msgstr ""
 
 #: build/index.js:1
-msgid "Configure the Posts Query"
+msgid "Accordion"
 msgstr ""
 
 #: build/index.js:1
-msgid ""
-"In the <strong>Posts Query</strong> panel, filter by categories, tags, or "
-"authors, skip posts with <strong>Post Offset</strong>, target exact posts "
-"with <strong>Include/Exclude Posts</strong>, and control the number and "
-"order of posts. Then pick a <strong>Load More / Pagination</strong> type to "
-"split long lists across pages."
+msgid "Magazine 2"
 msgstr ""
 
 #: build/index.js:1
-msgid "Style Elements & Publish"
-msgstr ""
-
-#: build/index.js:1
-msgid ""
-"Use the <strong>Elements</strong> tab to toggle and reorder post content "
-"(image, title, meta, excerpt, read more), then the <strong>Style</strong> "
-"tab to set colors, typography, borders, and hover effects. Publish when "
-"ready."
-msgstr ""
-
-#: build/index.js:1
-msgid "Template Library"
-msgstr ""
-
-#: build/index.js:1
-msgid "Open the Template Library"
-msgstr ""
-
-#: build/index.js:1
-msgid ""
-"In the block editor, click the <strong>Template Library</strong> button in "
-"the top toolbar (next to the block inserter) to open the templates modal."
-msgstr ""
-
-#: build/index.js:1
-msgid "Open Editor"
-msgstr ""
-
-#: build/index.js:1
-msgid "Browse & Filter Templates"
-msgstr ""
-
-#: build/index.js:1
-msgid ""
-"Switch between the <strong>Patterns</strong> and <strong>Favorites</strong> "
-"tabs, then narrow the gallery by access (<strong>All</strong>, "
-"<strong>Free</strong>, <strong>Pro</strong>), by category (Grid, List, "
-"Magazine, Masonry, Overlay), or search templates by name."
+msgid "Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -1974,6 +2008,22 @@ msgstr ""
 
 #: build/index.js:1
 msgid "An error occurred"
+msgstr ""
+
+#: build/index.js:1
+msgid "Dismiss BFCM offer"
+msgstr ""
+
+#: build/index.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade to %s Pro"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade to Pro"
 msgstr ""
 
 #: build/index.js:1
@@ -2529,10 +2579,6 @@ msgid "Saving…"
 msgstr ""
 
 #: build/index.js:1
-msgid "Dismiss"
-msgstr ""
-
-#: build/index.js:1
 msgid "Enable data deletion on uninstall?"
 msgstr ""
 
@@ -2714,10 +2760,6 @@ msgstr ""
 
 #: build/index.js:1
 msgid "View Demos"
-msgstr ""
-
-#: build/index.js:1
-msgid "Upgrade to Pro"
 msgstr ""
 
 #: build/index.js:1

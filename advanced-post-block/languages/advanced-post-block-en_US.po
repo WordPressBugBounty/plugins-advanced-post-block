@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Post Block 2.5.2\n"
+"Project-Id-Version: Advanced Post Block 2.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-post-block\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T03:32:19+00:00\n"
+"POT-Creation-Date: 2026-11-16T13:08:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: advanced-post-block\n"
@@ -179,7 +179,7 @@ msgid "Custom author icons are available in the Premium version."
 msgstr ""
 
 #: build/index.js:1
-#: includes/admin/CPT.php:170
+#: includes/admin/CPT.php:171
 msgid "Date"
 msgstr ""
 
@@ -1059,6 +1059,11 @@ msgstr[1] ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
+msgid "Pricing"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
 msgid "Feature Comparison"
 msgstr ""
 
@@ -1078,19 +1083,97 @@ msgid "Demos"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Pricing"
+#: build/admin/post.js:1
+msgid "Copied Successfully!"
 msgstr ""
 
 #: build/index.js:1
-#: includes/admin/CPT.php:185
+#: includes/admin/CPT.php:186
 #: build/admin/post.js:1
 msgid "Copy To Clipboard"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/post.js:1
-msgid "Copied Successfully!"
+#: build/admin/dashboard.js:1
+msgid "Add the APB Block"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Open the block editor on any post or page. Click the <strong>+</strong> icon in the top-left corner or type <strong>/Advanced Posts</strong> to find and insert the Advanced Posts block."
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Choose a Layout"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Select the layout from - <strong>Grid</strong>, <strong>Grid 1</strong>, <strong>Masonry</strong>, <strong>Slider</strong>, <strong>Ticker</strong>, <strong>News Ticker</strong>, <strong>Accordion</strong>, <strong>Magazine 1</strong>, <strong>Magazine 2</strong>, or <strong>Timeline</strong>. Switching layouts is non-destructive; your query settings are preserved."
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Configure the Posts Query"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "In the <strong>Posts Query</strong> panel, filter by categories, tags, or authors, skip posts with <strong>Post Offset</strong>, target exact posts with <strong>Include/Exclude Posts</strong>, and control the number and order of posts. Then pick a <strong>Load More / Pagination</strong> type to split long lists across pages."
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Style Elements & Publish"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Use the <strong>Elements</strong> tab to toggle and reorder post content (image, title, meta, excerpt, read more), then the <strong>Style</strong> tab to set colors, typography, borders, and hover effects. Publish when ready."
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+#: build/template-library.js:1
+msgid "Template Library"
+msgstr ""
+
+#: build/index.js:1
+#: includes/admin/CPT.php:239
+#: build/admin/dashboard.js:1
+msgid "Save 45%"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Open the Template Library"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "In the block editor, click the <strong>Template Library</strong> button in the top toolbar (next to the block inserter) to open the templates modal."
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Open Editor"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Browse & Filter Templates"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Switch between the <strong>Patterns</strong> and <strong>Favorites</strong> tabs, then narrow the gallery by access (<strong>All</strong>, <strong>Free</strong>, <strong>Pro</strong>), by category (Grid, List, Magazine, Masonry, Overlay), or search templates by name."
+msgstr ""
+
+#: build/index.js:1
+#: includes/admin/CPT.php:238
+#: build/admin/dashboard.js:1
+msgid "Black Friday Sale: Upgrade to Advanced Post Block Pro"
 msgstr ""
 
 #: build/index.js:1
@@ -1114,8 +1197,14 @@ msgid "Hit <strong>+ Import</strong> and the template is inserted right into you
 msgstr ""
 
 #: build/index.js:1
-#: includes/admin/CPT.php:74
-#: includes/admin/CPT.php:169
+#: includes/admin/CPT.php:241
+#: build/admin/dashboard.js:1
+msgid "Get 45% off on Advanced Post Block Pro this Black Friday!<br />Adds precision filtering, layout enhancements, and deeper content control."
+msgstr ""
+
+#: build/index.js:1
+#: includes/admin/CPT.php:75
+#: includes/admin/CPT.php:170
 #: build/admin/dashboard.js:1
 msgid "ShortCode"
 msgstr ""
@@ -1141,6 +1230,12 @@ msgid "In the block editor, use the sidebar to choose your layout, set the Posts
 msgstr ""
 
 #: build/index.js:1
+#: includes/admin/CPT.php:247
+#: build/admin/dashboard.js:1
+msgid "Premium Templates"
+msgstr ""
+
+#: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Publish & Copy the Shortcode"
 msgstr ""
@@ -1161,6 +1256,12 @@ msgid "Paste the copied shortcode (e.g. <code>[apb id=123]</code>) into any post
 msgstr ""
 
 #: build/index.js:1
+#: includes/admin/CPT.php:253
+#: build/admin/dashboard.js:1
+msgid "Timeline & Grid 1 Layouts"
+msgstr ""
+
+#: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Page Builder"
 msgstr ""
@@ -1176,14 +1277,15 @@ msgid "Go to <strong>Advanced Posts &rsaquo; ShortCode Generator</strong>, click
 msgstr ""
 
 #: build/index.js:1
-#: includes/admin/CPT.php:75
+#: includes/admin/CPT.php:76
 #: build/admin/dashboard.js:1
 msgid "ShortCode Generator"
 msgstr ""
 
 #: build/index.js:1
+#: includes/admin/CPT.php:259
 #: build/admin/dashboard.js:1
-msgid "Showcase Posts with Grid, List, Card Layouts and Filters"
+msgid "Query Presets & Deeper Filtering"
 msgstr ""
 
 #: build/index.js:1
@@ -1207,8 +1309,15 @@ msgid "Type <code>[apb id=YOUR_ID]</code> into the widget's Shortcode field (rep
 msgstr ""
 
 #: build/index.js:1
+#: includes/admin/CPT.php:265
 #: build/admin/dashboard.js:1
-msgid "Advanced Post Block is a powerful and flexible block plugin that allows you to display posts, display blog posts, and embed custom posts in a fully customizable and responsive layout."
+msgid "Infinite Scroll"
+msgstr ""
+
+#: build/index.js:1
+#: includes/admin/CPT.php:271
+#: build/admin/dashboard.js:1
+msgid "Unlock PRO Features →"
 msgstr ""
 
 #: build/index.js:1
@@ -1338,11 +1447,6 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Start Now"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Obsidian Review"
 msgstr ""
 
@@ -1353,12 +1457,22 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
+msgid "Showcase Posts with Grid, List, Card Layouts and Filters"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
 msgid "Obsidian Press"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Meridian Daily"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Advanced Post Block is a powerful and flexible block plugin that allows you to display posts, display blog posts, and embed custom posts in a fully customizable and responsive layout."
 msgstr ""
 
 #: build/index.js:1
@@ -1399,26 +1513,6 @@ msgstr ""
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Minimal Elite Clean"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "News Ticker"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Accordion"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Magazine 2"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -1493,11 +1587,6 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Add the APB Block"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Post Section"
 msgstr ""
 
@@ -1509,11 +1598,6 @@ msgstr ""
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "Post Section (Design 2)"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open the block editor on any post or page. Click the <strong>+</strong> icon in the top-left corner or type <strong>/Advanced Posts</strong> to find and insert the Advanced Posts block."
 msgstr ""
 
 #: build/index.js:1
@@ -1553,63 +1637,27 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Choose a Layout"
+msgid "Start Now"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Select the layout from - <strong>Grid</strong>, <strong>Grid 1</strong>, <strong>Masonry</strong>, <strong>Slider</strong>, <strong>Ticker</strong>, <strong>News Ticker</strong>, <strong>Accordion</strong>, <strong>Magazine 1</strong>, <strong>Magazine 2</strong>, or <strong>Timeline</strong>. Switching layouts is non-destructive; your query settings are preserved."
+msgid "News Ticker"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Configure the Posts Query"
+msgid "Accordion"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "In the <strong>Posts Query</strong> panel, filter by categories, tags, or authors, skip posts with <strong>Post Offset</strong>, target exact posts with <strong>Include/Exclude Posts</strong>, and control the number and order of posts. Then pick a <strong>Load More / Pagination</strong> type to split long lists across pages."
+msgid "Magazine 2"
 msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Style Elements & Publish"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Use the <strong>Elements</strong> tab to toggle and reorder post content (image, title, meta, excerpt, read more), then the <strong>Style</strong> tab to set colors, typography, borders, and hover effects. Publish when ready."
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-#: build/template-library.js:1
-msgid "Template Library"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open the Template Library"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "In the block editor, click the <strong>Template Library</strong> button in the top toolbar (next to the block inserter) to open the templates modal."
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open Editor"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Browse & Filter Templates"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Switch between the <strong>Patterns</strong> and <strong>Favorites</strong> tabs, then narrow the gallery by access (<strong>All</strong>, <strong>Free</strong>, <strong>Pro</strong>), by category (Grid, List, Magazine, Masonry, Overlay), or search templates by name."
+msgid "Layouts"
 msgstr ""
 
 #: build/index.js:1
@@ -2061,6 +2109,26 @@ msgstr ""
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "An error occurred"
+msgstr ""
+
+#: build/index.js:1
+#: includes/admin/CPT.php:274
+msgid "Dismiss BFCM offer"
+msgstr ""
+
+#: build/index.js:1
+#: includes/admin/CPT.php:274
+#: build/admin/dashboard.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upgrade to %s Pro"
+msgstr ""
+
+#: build/index.js:1
+#: build/admin/dashboard.js:1
+msgid "Upgrade to Pro"
 msgstr ""
 
 #. 1: Number of demos, 2: Demo category name.
@@ -2736,11 +2804,6 @@ msgstr ""
 
 #: build/index.js:1
 #: build/admin/dashboard.js:1
-msgid "Dismiss"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Enable data deletion on uninstall?"
 msgstr ""
 
@@ -2948,11 +3011,6 @@ msgstr ""
 #: build/index.js:1
 #: build/admin/dashboard.js:1
 msgid "View Demos"
-msgstr ""
-
-#: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Upgrade to Pro"
 msgstr ""
 
 #: build/index.js:1
@@ -4047,7 +4105,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plugin.php
-#: plugin.php:98
+#: plugin.php:172
 msgid "Advanced Post Block"
 msgstr ""
 
@@ -4071,41 +4129,41 @@ msgstr ""
 msgid "https://bplugins.com"
 msgstr ""
 
-#: includes/admin/CPT.php:41
+#: includes/admin/CPT.php:42
 msgid "Help & Demos - Advanced Posts"
 msgstr ""
 
-#: includes/admin/CPT.php:42
-#: plugin.php:69
+#: includes/admin/CPT.php:43
+#: plugin.php:130
 msgid "Help & Demos"
 msgstr ""
 
-#: includes/admin/CPT.php:73
+#: includes/admin/CPT.php:74
 msgid "Advanced Posts"
 msgstr ""
 
-#: includes/admin/CPT.php:76
 #: includes/admin/CPT.php:77
+#: includes/admin/CPT.php:78
 msgid "Add New ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:78
+#: includes/admin/CPT.php:79
 msgid "Edit ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:79
+#: includes/admin/CPT.php:80
 msgid "New ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:80
+#: includes/admin/CPT.php:81
 msgid "View ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:81
+#: includes/admin/CPT.php:82
 msgid "Search ShortCode"
 msgstr ""
 
-#: includes/admin/CPT.php:82
+#: includes/admin/CPT.php:83
 msgid "Sorry, we couldn't find the ShortCode you are looking for."
 msgstr ""
 
@@ -4168,6 +4226,10 @@ msgstr ""
 
 #: includes/Tracker.php:100
 msgid "View incremented"
+msgstr ""
+
+#: plugin.php:141
+msgid "Get Pro Now and Save 45% in this BFCM!"
 msgstr ""
 
 #: build/block.json
